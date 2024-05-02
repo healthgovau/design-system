@@ -20,6 +20,14 @@
     }
   }
 
+  // Additional wider container for larger breakpoint $AU-media-xxl
+  // See /health/_variables.scss
+  .container {
+    @media (min-width: #{$AU-media-xxl}) {
+      width: ($AU-media-xxl - (2 * $AU-grid-12-gutter-width));
+    }
+  }
+
   // On full width pages, stop nested containers from pushing out wide.
   // This allows us to nest containers in other elements and for them to still work.
   .full-width .container .container {
@@ -80,6 +88,17 @@
     .col-lg-5ths {
       width: 20%;
       float: left;
+    }
+  }
+}
+
+@media print {
+  .au-grid .container {
+    width: 100%;
+
+    // Force content-pane full-width
+    #content {
+      width: 100%;
     }
   }
 }

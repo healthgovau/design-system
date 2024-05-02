@@ -63,6 +63,12 @@
 
   background-color: white;
 
+  @media print {
+    margin: inherit;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid $colour-darkest;
+  }
+
   // a.au-header__logo {
   //   &:hover,
   //   &:focus {
