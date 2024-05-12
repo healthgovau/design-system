@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v2.0.0-beta.3 */
+/*! @health.gov.au/health-design-system v2.0.0-beta.4 */
 @charset "UTF-8";
 /*! PANCAKE v2.0.0 PANCAKE-SASS v3.0.0 */
 /*
@@ -3695,6 +3695,7 @@ p:empty,
   --hero-image-width--md: 100%;
   --hero-image-width--lg: 50%;
   --hero-image-focus: right;
+  --hero-minheight: 300px;
   --hero-minheight--md: 400px;
   --hero-minheight--lg: 500px;
   --hero-overlap-top: 75px;
@@ -5793,6 +5794,13 @@ textarea.au-text-input {
   .au-body .health-hero__content {
     background: var(--hero-bg);
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 24px;
     padding: 1.5rem;
     border-radius: 6px;
@@ -5928,6 +5936,54 @@ textarea.au-text-input {
         background: -webkit-gradient(linear, left top, right top, from(var(--hero-bg)), color-stop(var(--hero-bg)), color-stop(transparent), to(transparent));
         background: -o-linear-gradient(left, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%);
         background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%); } }
+  .au-body .health-hero.health-hero--bg-gradient--vertical {
+    position: relative;
+    background: var(--hero-bg); }
+    .au-body .health-hero.health-hero--bg-gradient--vertical .health-hero__content {
+      background: none;
+      -webkit-backdrop-filter: none;
+              backdrop-filter: none;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      z-index: 400;
+      padding: 0;
+      width: 100%;
+      min-height: var(--hero-minheight);
+      padding-bottom: 24px;
+      padding-bottom: 1.5rem; }
+      @media (min-width: 768px) {
+        .au-body .health-hero.health-hero--bg-gradient--vertical .health-hero__content {
+          padding-bottom: 48px;
+          padding-bottom: 3rem;
+          min-height: var(--hero-minheight--md); } }
+      @media (min-width: 992px) {
+        .au-body .health-hero.health-hero--bg-gradient--vertical .health-hero__content {
+          min-height: var(--hero-minheight--lg); } }
+    .au-body .health-hero.health-hero--bg-gradient--vertical .health-hero__image-container {
+      position: absolute;
+      inset: 0;
+      max-height: none; }
+    .au-body .health-hero.health-hero--bg-gradient--vertical .health-hero__image {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: var(--hero-image-focus);
+         object-position: var(--hero-image-focus); }
+    .au-body .health-hero.health-hero--bg-gradient--vertical .health-hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 300;
+      background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), color-stop(70%, transparent));
+      background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent 70%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), transparent 70%); }
+      @media (min-width: 768px) {
+        .au-body .health-hero.health-hero--bg-gradient--vertical .health-hero__bg {
+          background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), color-stop(50%, transparent));
+          background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent 50%);
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), transparent 50%); } }
 
 .au-body .health-image-text {
   margin-top: 24px;
