@@ -6,12 +6,13 @@ No more than one primary call-to-action button.
 
 ## Variants
 
-Four variants:
+Five variants:
 
 1. Default
 2. Inset box
 3. Inset box (with overlap of image)
 4. Background/image gradient
+5. Background/image gradient (vertical)
 
 ## Tokens
 

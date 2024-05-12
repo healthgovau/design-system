@@ -8,11 +8,20 @@
   <div class="container">
     <div class="health-hero__content">
       <h1 class="health-hero__title">{{title}}</h1>
-      <p class="health-hero__summary">{{summary}}</p>
+      {{#if summary}}
+        <p class="health-hero__summary">{{summary}}</p>
+      {{/if}}
+      {{#if cta-primary }}
       <p class="health-hero__call-to-action">
-        <a href="#" class="au-btn au-btn--dark au-btn--large">Primary CTA</a>
-        <a href="#" class="au-cta-link au-cta-link--dark">Secondary CTA</a>
+        {{#if cta-primary}}
+        <a href="#" class="au-btn au-btn--dark au-btn--large">{{cta-primary}}</a>
+        {{/if}}
+
+        {{#if cta-secondary}}
+          <a href="#" class="au-btn au-btn--dark au-btn--large au-btn--secondary">{{cta-secondary}}</a>
+        {{/if}}
       </p>
+      {{/if}}
     </div>
   </div>
 </div>
