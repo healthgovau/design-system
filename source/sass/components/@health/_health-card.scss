@@ -14,7 +14,8 @@ $card-padding--mobile: $component-padding--mobile;
     flex-direction: column;
     transition: all ease 0.2s;
 
-    // ========================================================
+    // Top margin by default - to accommodate erroneous markup where *+.health-card won't work
+    @include AU-space(margin-top, 2unit) // ========================================================
     // Elements
     // ========================================================
 
@@ -379,7 +380,7 @@ $card-padding--mobile: $component-padding--mobile;
   }
 }
 
-// Add margin if any content precedes the card
-.au-body *:not(.health-card)+.health-card {
-  @include AU-space(margin-top, 2unit)
+// Remove margin in listings
+.health-listing .health-card {
+  margin-top: 0;
 }

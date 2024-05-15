@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v2.0.0-beta.3 */
+/*! @health.gov.au/health-design-system v2.0.0-beta.5 */
 (function ($) {
   $(document).ready(function () {
     if ($.fancybox !== undefined) {

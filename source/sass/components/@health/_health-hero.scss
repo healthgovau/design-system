@@ -46,6 +46,8 @@
     &__content {
       background: var(--hero-bg);
       position: relative;
+      display: flex;
+      flex-direction: column;
       @include AU-space('padding', 1.5unit);
       @include border-radius(6px);
       width: 100%;
@@ -194,6 +196,56 @@
           background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%);
         }
 
+      }
+    }
+
+    // 5 - vertical gradient align text to bottom
+    &.health-hero--bg-gradient--vertical {
+      position: relative;
+      background: var(--hero-bg);
+
+      .health-hero__content {
+        background: none;
+        backdrop-filter: none;
+        justify-content: flex-end;
+        z-index: 400;
+        padding: 0;
+        width: 100%;
+        min-height: var(--hero-minheight);
+        @include AU-space('padding-bottom', 1.5unit);
+        @include AU-media(md) {
+          @include AU-space('padding-bottom', 3unit);
+          min-height: var(--hero-minheight--md);
+        }
+        @include AU-media(lg) {;
+          min-height: var(--hero-minheight--lg);
+        }
+      }
+
+      .health-hero__image-container {
+        position: absolute;
+        inset: 0;
+        max-height: none;
+      }
+      .health-hero__image {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: var(--hero-image-focus);
+      }
+
+      .health-hero__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 300;
+
+        // Add dark BG background to increase contraxt with text
+        background: linear-gradient(0deg,rgba(0,0,0,0.9),transparent 70%);
+
+        @include AU-media(md) {
+          background: linear-gradient(0deg,rgba(0,0,0,0.9),transparent 50%);
+        }
       }
     }
   }

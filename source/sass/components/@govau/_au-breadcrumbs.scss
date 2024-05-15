@@ -8,15 +8,21 @@
 
 .au-breadcrumbs {
   display: none;
+
   @include AU-media(sm) {
     display: block;
   }
 
   @media print {
     display: block;
+
+    a {
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
   }
 
-  * + &--flush {
+  *+&--flush {
     margin-top: 0
   }
 }

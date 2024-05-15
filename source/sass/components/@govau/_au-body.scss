@@ -84,6 +84,10 @@
     a[href]:after {
       content: '' !important;
     }
+
+    p {
+      max-width: 100%;
+    }
   }
 
   // IE 11.
