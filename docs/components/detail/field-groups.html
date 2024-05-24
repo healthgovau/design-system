@@ -18,14 +18,14 @@
     }
 </style>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.10.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.10.3" type="text/css">
 
-<link rel="stylesheet" href="../../subtheme/css/style.css?cachebust=1.10.1" type="text/css">
+<link rel="stylesheet" href="../../subtheme/css/style.css?cachebust=1.10.3" type="text/css">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.10.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.10.3" type="text/css">
 
 
-<title>Field: Inline Wide | Health Design System</title>
+<title>Field groups | Health Design System</title>
 
 </head>
 <body>
@@ -57,7 +57,7 @@
   </a>
   <ul class="Header-menu">
     
-      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 2.0.0-beta.5</a></li>
+      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 2.0.0-beta.6</a></li>
     
     <li>
       <a href="https://github.com/healthgovau/health-design-system">
@@ -75,14 +75,14 @@
             <div class="Frame-inner" id="pjax-container">
             
 
-<div class="Pen" data-behaviour="pen" id="pen-97a68d34825c23d62bbe2fbe15334e40">
+<div class="Pen" data-behaviour="pen" id="pen-089307b4d127406b09df5b762b225350">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/field--inline---wide.html" title="Preview">
-            Field: Inline Wide
+        <a class="Pen-previewLink" href="../preview/field-groups.html" title="Preview">
+            Field groups
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -105,13 +105,13 @@
 </div>
 
 
-    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-97a68d34825c23d62bbe2fbe15334e40">
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-089307b4d127406b09df5b762b225350">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
              <iframe
                 class="Preview-iframe"
                 data-role="window"
-                src="../preview/field--inline---wide.html"
+                src="../preview/field-groups.html"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
             </iframe>
@@ -125,7 +125,7 @@
     <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
 
     <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-97a68d34825c23d62bbe2fbe15334e40">
+    <div class="Browser" data-behaviour="browser" id="browser-089307b4d127406b09df5b762b225350">
 
     
 
@@ -134,7 +134,7 @@
         
         
         <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-97a68d34825c23d62bbe2fbe15334e40-panel-notes">
+            <a href="#browser-089307b4d127406b09df5b762b225350-panel-notes">
                 Notes
             </a>
         </li>
@@ -142,7 +142,7 @@
         
         
         <li class="Browser-tab Browser-tab--html" data-role="tab">
-            <a href="#browser-97a68d34825c23d62bbe2fbe15334e40-panel-html">
+            <a href="#browser-089307b4d127406b09df5b762b225350-panel-html">
                 HTML
             </a>
         </li>
@@ -150,10 +150,12 @@
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-97a68d34825c23d62bbe2fbe15334e40-panel-info">
+            <a href="#browser-089307b4d127406b09df5b762b225350-panel-info">
                 Info
             </a>
         </li>
+        
+        
         
         
         
@@ -165,33 +167,130 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-97a68d34825c23d62bbe2fbe15334e40-panel-notes">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-089307b4d127406b09df5b762b225350-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">No notes defined.</p>
+        <h1 id="field-groups">Field groups</h1>
+<p>Field groups are wrappers for multiple fields and determine their layout and repsonsive behaviour.</p>
+<h2 id="variants">Variants</h2>
+<p>There are 2 (and a half) variants:</p>
+<ol>
+<li>Vertical/stacked (default)</li>
+<li>Horizontal/inline
+2.5. As 2 but doesn’t responsively stack on mobile (to be used only with few fields and short values).</li>
+</ol>
+<h3 id="rules-for-application">Rules for application</h3>
+<p>Field layouts (e.g. stacked/inline) or styles (e.g. label/icon-only) should not be mixed within a group.</p>
+
         
     </div>
 </div>
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-97a68d34825c23d62bbe2fbe15334e40-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-089307b4d127406b09df5b762b225350-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--inline--wide&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Last updated and reviewed:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>20 June 2019<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Vertical group variant<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The default vertical group stacks fields on top of each other on all devices.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Vertical group of stacked fields<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field-group &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Date published:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>23 May 2024<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Duration:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>30 minutes<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Type:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>News article<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Vertical group of stacked (label with icon) fields<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field-group &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--icon health-field--icon-date&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Date published:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>23 May 2024<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--icon health-field--icon-duration&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Duration:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>30 minutes<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--icon health-field--icon-type&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Type:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>News article<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Vertical group of inline fields<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field-group &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--inline&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Date published:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>23 May 2024<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--inline&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Duration:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>30 minutes<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--inline&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Type:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>News article<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Vertical group of inline (label with icon) fields<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field-group &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--inline health-field--icon health-field--icon-date&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Date published:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>23 May 2024<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--inline health-field--icon health-field--icon-duration&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Duration:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>30 minutes<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--inline health-field--icon health-field--icon-type&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Type:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>News article<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Vertical group of icon-only fields<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field-group &quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--icon-only health-field--icon-date&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Date published:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>23 May 2024<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--icon-only health-field--icon-duration&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Duration:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>30 minutes<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--icon-only health-field--icon-type&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Type:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>News article<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-97a68d34825c23d62bbe2fbe15334e40-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-089307b4d127406b09df5b762b225350-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@field--inline---wide</span>
+            <span class="Meta-value">@field-groups</span>
         </li>
         
         
@@ -200,27 +299,19 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(5)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="./field--default.html">
-                    <span>Default</span>
+                <a href="./field-groups--vertical-group.html">
+                    <span>Vertical Group</span>
                 </a>, 
             
-                <a href="./field--label-light.html">
-                    <span>Label Light</span>
+                <a href="./field-groups--horizontal-group.html">
+                    <span>Horizontal Group</span>
                 </a>, 
             
-                <a href="./field--inline.html">
-                    <span>Inline</span>
-                </a>, 
-            
-                <a href="./field--inline---wide.html">
-                    <span>Inline Wide</span>
-                </a>, 
-            
-                <a href="./field--no-label.html">
-                    <span>No Label</span>
+                <a href="./field-groups--horizontal-(fixed)-group.html">
+                    <span>Horizontal Fixed Group</span>
                 </a>
             
             </span>
@@ -231,12 +322,12 @@
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
-                    <li><a data-no-pjax href="../preview/field--inline---wide.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../preview/field-groups.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
 </a></li>
-                    <li><a data-no-pjax href="../render/field--inline---wide.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../render/field-groups.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
@@ -246,7 +337,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">components/01-components/field/field.hbs</span>
+            <span class="Meta-value">components/01-components/field-groups/field-groups.hbs</span>
         </li>
         
         
@@ -255,6 +346,8 @@
 
     
     
+
+
 
 
     
@@ -2142,40 +2235,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./compare.html"
-                data-role="tree-link"
-                
-                data-pjax
-                data-test="compare"
-                data-handle="compare"
-            >
-                <span>Compare</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a
-                class="Tree-entityLink"
                 href="./facet.html"
                 data-role="tree-link"
                 
@@ -2224,14 +2283,14 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./field--default.html"
+                href="./field--stacked.html"
                 data-role="tree-link"
                 
                 data-pjax
-                data-test="field--default"
-                data-handle="field--default"
+                data-test="field--stacked"
+                data-handle="field--stacked"
             >
-                <span>Default</span>
+                <span>Stacked</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2258,14 +2317,14 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./field--label-light.html"
+                href="./field--stacked---label-with-icon.html"
                 data-role="tree-link"
                 
                 data-pjax
-                data-test="field--label-light"
-                data-handle="field--label-light"
+                data-test="field--stacked---label-with-icon"
+                data-handle="field--stacked---label-with-icon"
             >
-                <span>Label Light</span>
+                <span>Stacked Label With Icon</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2323,17 +2382,17 @@
         
         
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+        <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./field--inline---wide.html"
+                href="./field--inline-(label-with-icon).html"
                 data-role="tree-link"
                 
                 data-pjax
-                data-test="field--inline---wide"
-                data-handle="field--inline---wide"
+                data-test="field--inline-(label-with-icon)"
+                data-handle="field--inline-(label-with-icon)"
             >
-                <span>Inline Wide</span>
+                <span>Inline Label With Icon</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2360,14 +2419,170 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./field--no-label.html"
+                href="./field--icon-only.html"
                 data-role="tree-link"
                 
                 data-pjax
-                data-test="field--no-label"
-                data-handle="field--no-label"
+                data-test="field--icon-only"
+                data-handle="field--icon-only"
             >
-                <span>No Label</span>
+                <span>Icon Only</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./field--list-of-icons.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="field--list-of-icons"
+                data-handle="field--list-of-icons"
+            >
+                <span>List Of Icons</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-field-groups">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-field-groups-items">
+                    Field Groups
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-field-groups-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./field-groups--vertical-group.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="field-groups--vertical-group"
+                data-handle="field-groups--vertical-group"
+            >
+                <span>Vertical Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./field-groups--horizontal-group.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="field-groups--horizontal-group"
+                data-handle="field-groups--horizontal-group"
+            >
+                <span>Horizontal Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./field-groups--horizontal-(fixed)-group.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="field-groups--horizontal-(fixed)-group"
+                data-handle="field-groups--horizontal-(fixed)-group"
+            >
+                <span>Horizontal Fixed Group</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -6224,7 +6439,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.1"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.3"></script>
 
 
 

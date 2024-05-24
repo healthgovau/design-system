@@ -7,9 +7,7 @@
     },
     "image": {
       "link": true,
-      "url": "/images/trex_small_16x9.jpg",
-      "width": 200,
-      "height": 113,
+      "url": "/images/trex_16x9.jpg",
       "ratio": 56.25,
       "modifier": "image--link image--border"
     }

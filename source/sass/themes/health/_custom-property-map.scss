@@ -154,4 +154,6 @@
     --footer-btn-bg: #{$AU-colordark-foreground-text};
     --footer-btn-bg--hover: #{darken($AU-colordark-foreground-text, 10%)};
     --footer-btn-text: #{$AU-color-foreground-text};
+    // Fields/labels
+    --label-icon: #{$colour-darker};
 }

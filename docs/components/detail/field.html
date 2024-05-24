@@ -18,11 +18,11 @@
     }
 </style>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.10.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.10.3" type="text/css">
 
-<link rel="stylesheet" href="../../subtheme/css/style.css?cachebust=1.10.1" type="text/css">
+<link rel="stylesheet" href="../../subtheme/css/style.css?cachebust=1.10.3" type="text/css">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.10.1" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.10.3" type="text/css">
 
 
 <title>Field | Health Design System</title>
@@ -57,7 +57,7 @@
   </a>
   <ul class="Header-menu">
     
-      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 2.0.0-beta.5</a></li>
+      <li class="Header-version"><a href="https://github.com/healthgovau/health-design-system" title="Health Design System on Github">version 2.0.0-beta.6</a></li>
     
     <li>
       <a href="https://github.com/healthgovau/health-design-system">
@@ -170,7 +170,38 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-f9793b9976eb3527d7117b30ca5f5cb1-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">No notes defined.</p>
+        <h1 id="fields">Fields</h1>
+<p>Fields are supplementary content elements via the output of information/metedata.</p>
+<h2 id="elements">Elements</h2>
+<p>Fields comprise of the following elements:</p>
+<ul>
+<li>Label</li>
+<li>Value</li>
+<li>Icon (optional)</li>
+</ul>
+<h2 id="layouts">Layouts</h2>
+<p>Label/value pairs are available in 2 layouts:</p>
+<ul>
+<li>Stacked</li>
+<li>Inline</li>
+</ul>
+<h2 id="icons">Icons</h2>
+<p>Icons can be output in 2 ways:</p>
+<ul>
+<li>Icon to supplement the label</li>
+<li>Icon only (label visibly hidden but available to screen readers)</li>
+</ul>
+<h2 id="icon-set">Icon set</h2>
+<p>The HDS uses the Font Awesome icon set and applies these via the <code>::before</code> pseudo-element as dataURIs via an icon class, such as <code>health-field--icon-DATE</code> (where <code>DATE</code> is replaced by the appropriate class). This means that application doens’t require image references or additional HTML mark-up in the DOM.</p>
+<h3 id="application-of-icons">Application of icons</h3>
+<p>Icon-oonly must not be used if:</p>
+<ul>
+<li>it does not describe the meaning of a value (such as a link); OR</li>
+<li>if multiple fields use the same icon (e.g. multiple date fields)</li>
+</ul>
+<h3 id="field-groups">Field groups</h3>
+<p>See <a href="/components/detail/field-groups--vertical-group">field groups</a> for information about output multiple fields.</p>
+
         
     </div>
 </div>
@@ -180,9 +211,9 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-f9793b9976eb3527d7117b30ca5f5cb1-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Genus:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>Tyranasuarus Rex<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field health-field--icon-date&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__label&quot;</span>&gt;</span>Date published:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;health-field__item&quot;</span>&gt;</span>23 May 2024<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -202,27 +233,31 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(5)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(6)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="./field--default.html">
-                    <span>Default</span>
+                <a href="./field--stacked.html">
+                    <span>Stacked</span>
                 </a>, 
             
-                <a href="./field--label-light.html">
-                    <span>Label Light</span>
+                <a href="./field--stacked---label-with-icon.html">
+                    <span>Stacked Label With Icon</span>
                 </a>, 
             
                 <a href="./field--inline.html">
                     <span>Inline</span>
                 </a>, 
             
-                <a href="./field--inline---wide.html">
-                    <span>Inline Wide</span>
+                <a href="./field--inline-(label-with-icon).html">
+                    <span>Inline Label With Icon</span>
                 </a>, 
             
-                <a href="./field--no-label.html">
-                    <span>No Label</span>
+                <a href="./field--icon-only.html">
+                    <span>Icon Only</span>
+                </a>, 
+            
+                <a href="./field--list-of-icons.html">
+                    <span>List Of Icons</span>
                 </a>
             
             </span>
@@ -2159,40 +2194,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./compare.html"
-                data-role="tree-link"
-                
-                data-pjax
-                data-test="compare"
-                data-handle="compare"
-            >
-                <span>Compare</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a
-                class="Tree-entityLink"
                 href="./facet.html"
                 data-role="tree-link"
                 
@@ -2241,14 +2242,14 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./field--default.html"
+                href="./field--stacked.html"
                 data-role="tree-link"
                 
                 data-pjax
-                data-test="field--default"
-                data-handle="field--default"
+                data-test="field--stacked"
+                data-handle="field--stacked"
             >
-                <span>Default</span>
+                <span>Stacked</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2275,14 +2276,14 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./field--label-light.html"
+                href="./field--stacked---label-with-icon.html"
                 data-role="tree-link"
                 
                 data-pjax
-                data-test="field--label-light"
-                data-handle="field--label-light"
+                data-test="field--stacked---label-with-icon"
+                data-handle="field--stacked---label-with-icon"
             >
-                <span>Label Light</span>
+                <span>Stacked Label With Icon</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2343,14 +2344,14 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./field--inline---wide.html"
+                href="./field--inline-(label-with-icon).html"
                 data-role="tree-link"
                 
                 data-pjax
-                data-test="field--inline---wide"
-                data-handle="field--inline---wide"
+                data-test="field--inline-(label-with-icon)"
+                data-handle="field--inline-(label-with-icon)"
             >
-                <span>Inline Wide</span>
+                <span>Inline Label With Icon</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2377,14 +2378,170 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
-                href="./field--no-label.html"
+                href="./field--icon-only.html"
                 data-role="tree-link"
                 
                 data-pjax
-                data-test="field--no-label"
-                data-handle="field--no-label"
+                data-test="field--icon-only"
+                data-handle="field--icon-only"
             >
-                <span>No Label</span>
+                <span>Icon Only</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./field--list-of-icons.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="field--list-of-icons"
+                data-handle="field--list-of-icons"
+            >
+                <span>List Of Icons</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-field-groups">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-field-groups-items">
+                    Field Groups
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-field-groups-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./field-groups--vertical-group.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="field-groups--vertical-group"
+                data-handle="field-groups--vertical-group"
+            >
+                <span>Vertical Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./field-groups--horizontal-group.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="field-groups--horizontal-group"
+                data-handle="field-groups--horizontal-group"
+            >
+                <span>Horizontal Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./field-groups--horizontal-(fixed)-group.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="field-groups--horizontal-(fixed)-group"
+                data-handle="field-groups--horizontal-(fixed)-group"
+            >
+                <span>Horizontal Fixed Group</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -6241,7 +6398,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.1"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.3"></script>
 
 
 

@@ -1,0 +1,58 @@
+// Groups of fields for multi-field layouts
+
+// Two (and a half) types
+// 1. Vertical/stacked (default)
+// 2. Horizontal/inline
+// 2b. As 2 but doesn't responsively stack on mobile (to be used only with few fields and short values).
+
+// 1. Vertical/stacked (default)
+.health-field-group {
+    @include AU-space(margin-top, 1.5unit);
+    display: flex;
+
+    // Label/value pair default stacked
+    flex-direction: column;
+    @include AU-space(gap, 1unit);
+
+    .health-field {
+        // Remove atomic margin given flex gap use
+        margin-top: 0;
+    }
+}
+
+// 2. Horizontal/inline
+.health-field-group--horizontal {
+    @extend .health-field-group;
+    @include AU-space(gap, 1.5unit);
+
+    @include AU-media(sm) {
+        flex-direction: row;
+    }
+
+    // Override the inline field labels
+    .health-field--inline {
+        .health-field__label {
+            width: auto;
+            @include AU-space(margin-right, 0.5unit);
+        }
+    }
+
+}
+
+// 2b. Horizontal/inline non-responsive
+.health-field-group--horizontal-stubborn {
+    @extend .health-field-group--horizontal;
+    flex-direction: row;
+
+    @include AU-space(gap, 1unit);
+
+    @include AU-media(sm) {
+        @include AU-space(gap, 1.5unit);
+    }
+
+    .health-field {
+        .health-field__item {
+            text-wrap: nowrap;
+        }
+    }
+}

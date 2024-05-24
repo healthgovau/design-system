@@ -70,9 +70,9 @@
       }
     }
 
-  &__title {
-    color: var(--hero-text);
-  }
+    &__title {
+      color: var(--hero-text);
+    }
 
     &__summary {
       @include health-fontgrid(lg, default, light);
@@ -212,12 +212,16 @@
         padding: 0;
         width: 100%;
         min-height: var(--hero-minheight);
+        margin-top: 0;
         @include AU-space('padding-bottom', 1.5unit);
+
         @include AU-media(md) {
           @include AU-space('padding-bottom', 3unit);
           min-height: var(--hero-minheight--md);
         }
-        @include AU-media(lg) {;
+
+        @include AU-media(lg) {
+          ;
           min-height: var(--hero-minheight--lg);
         }
       }
@@ -227,6 +231,7 @@
         inset: 0;
         max-height: none;
       }
+
       .health-hero__image {
         display: inline-block;
         width: 100%;
@@ -241,10 +246,10 @@
         z-index: 300;
 
         // Add dark BG background to increase contraxt with text
-        background: linear-gradient(0deg,rgba(0,0,0,0.9),transparent 70%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), transparent 70%);
 
         @include AU-media(md) {
-          background: linear-gradient(0deg,rgba(0,0,0,0.9),transparent 50%);
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), transparent 50%);
         }
       }
     }
