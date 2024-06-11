@@ -1,0 +1,22 @@
+{
+  "title": "Steps timeline",
+  "context": {
+    "title": "Timeline title"
+  },
+  "variants": [
+    {
+      "name": "Numbered",
+      "context": {
+        "title": "Numbered timeline",
+        "modifier": "health-steps--numbered"
+      }
+    },
+    {
+      "name": "Status",
+      "context": {
+        "title": "Status timeline",
+        "modifier": "health-steps--status"
+      }
+    }
+  ]
+}

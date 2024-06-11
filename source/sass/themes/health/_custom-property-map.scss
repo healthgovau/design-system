@@ -98,7 +98,6 @@
     --main-nav-dropdown-bg: #{$colour-primary-blue-very-pale};
     --main-nav-active-dropdown-link-bg--hover: #{$colour-primary-blue-pale}; // Drop-down link BG
     --main-nav-active-dropdown-border: #{$colour-complementary-skyblue-lighter-2};
-
     // Accordion
     --accordion-title-bg: #{$colour-lightest};
     --accordion-title-bg--active: #{$colour-light};
@@ -156,4 +155,6 @@
     --footer-btn-text: #{$AU-color-foreground-text};
     // Fields/labels
     --label-icon: #{$colour-darker};
+    // Steps
+    --step-colour: #{$step-colour};
 }
