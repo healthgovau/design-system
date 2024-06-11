@@ -1,6 +1,14 @@
-.health-steps {
-  margin: 0;
-  padding: 0;
+$border-width: 3px;
+$node-size: 22px;
+
+.au-body .health-steps {
+  
+  // Reset list container
+  ul {
+    margin: 0;
+    padding: 0;
+    @include AU-space(margin-top, 1.5unit);
+  }
 
   // Intro title and summary
   &__intro {}
@@ -8,15 +16,14 @@
   // Step item
   &__item {
     position: relative;
+    margin-top: 0;
     list-style-type: none; // For <li> implementation
 
     // Last item
     &:last-child {
       .health-steps__item-content {
-        padding-bottom: 0;
-
         &::before {
-          bottom: 0;
+          display: none;
         }
       }
     }
@@ -27,15 +34,16 @@
       &::before {
         content: '';
         position: absolute;
-        top: 1px;
+        top: 0;
         left: 0;
-        width: 32px;
-        height: 32px;
-        border: 4px solid var(--step-colour);
+        width: $node-size;
+        height: $node-size;
+        border: $border-width solid var(--step-border-colour);
         border-radius: 100%;
 
         @include AU-media('lg') {
           width: 48px;
+
           height: 48px;
           top: -4px;
         }
@@ -54,7 +62,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--step-colour);
+        color: var(--step-border-colour);
         visibility: hidden;
 
         @include AU-media('lg') {
@@ -68,37 +76,42 @@
     // Step content
     &-content {
       position: relative;
-      padding: 0 0 24px 48px;
-
-      @include AU-media('lg') {
-        padding: 0 0 32px 72px;
-      }
+      padding: 4px 0 30px ($node-size*2);
+      display: flex;
+      flex-direction: column;
+      @include AU-space(gap, 0.4unit);
 
       &::before {
         content: '';
         position: absolute;
-        top: 33px;
-        bottom: -1px;
-        left: 14px;
-        width: 4px;
-        background-color: var(--step-colour);
-
-        @include AU-media('lg') {
-          top: 44px;
-          left: 22px;
-          bottom: 4px;
-        }
+        top: $node-size + $border-width;
+        bottom: -($border-width+7);
+        left: ($node-size/2)+2;
+        width: $border-width;
+        background-color: var(--step-border-colour);
       }
     }
 
     // Fields
-    &-date {}
+    &-date {
+      @include health-fontgrid(xs, default, light);
+      color: var(--step-text-colour-minor); // TODO - replce with var
+      margin: 0;
+    }
 
-    &-title {}
+    &-title {
+      @include health-fontgrid(md);
+      // @include AU-space(margin-bottom, 0.5unit);
+      margin-top: -5px;
+    }
 
-    &-desc {}
+    &-desc {
+      // @include AU-space(margin-bottom, 1unit);
+      margin: 0;
+    }
 
-    &-link {}
+    &-link {
+    }
 
   }
 
@@ -115,16 +128,23 @@
   &--fill {
     .health-steps__item {
       &::before {
-        background-color: var(--step-colour);
+        background-color: var(--step-border-colour);
       }
 
       &::after {
-        color: var(--nsw-text-light);
+        color: var(--step-border-colour);
       }
     }
   }
 
   // Status variant
-  &--status {}
+  &--status {
+    .health-steps__item-indicator {
+      // Variants here 
+      &--complete {
+
+      }
+    }
+  }
 
 }

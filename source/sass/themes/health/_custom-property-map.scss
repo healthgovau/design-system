@@ -156,5 +156,6 @@
     // Fields/labels
     --label-icon: #{$colour-darker};
     // Steps
-    --step-colour: #{$step-colour};
+    --step-border-colour: #{$step-border-colour};
+    --step-text-colour-minor: #{$step-text-colour--minor};
 }
