@@ -56,7 +56,7 @@
         bottom: calc((var(--step-border-width) * -1) - 7px);
         left: calc((var(--step-node-size) / 2) + (var(--step-border-width) / 2));
         width: var(--step-border-width);
-        background-color: var(--step-border-colour);
+        border-left: var(--step-border-width) solid var(--step-border-colour);
       }
     }
 
