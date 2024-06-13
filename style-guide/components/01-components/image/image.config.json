@@ -3,7 +3,7 @@
   "context": {
     "image": {
       "link": false,
-      "url": "/images/hero_1600x900-alt.jpg",
+      "url": "https://picsum.photos/1600/900",
       "width": 800,
       "height": 450,
       "ratio": 56.25

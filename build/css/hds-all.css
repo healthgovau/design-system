@@ -5380,6 +5380,23 @@ textarea.au-text-input {
             box-shadow: 0px 0.125em 0.375em rgba(0, 0, 0, 0.2); }
   .au-body .health-card.health-card--border {
     border: 1px solid var(--card-border); }
+  .au-body .health-card.health-card--borderless {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    border: none !important; }
+    .au-body .health-card.health-card--borderless .health-card__body {
+      padding: 0; }
+    .au-body .health-card.health-card--borderless .health-card__image img {
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px; }
+    .au-body .health-card.health-card--borderless .health-card__image + .health-card__body {
+      padding-top: 1.5rem; }
+      @media (min-width: 576px) {
+        .au-body .health-card.health-card--borderless .health-card__image + .health-card__body {
+          padding-top: 2rem; } }
+    .au-body .health-card.health-card--borderless:after {
+      display: none !important; }
   .au-body .health-card.health-card--clickable a::after {
     content: '';
     position: absolute;
