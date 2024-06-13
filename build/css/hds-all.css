@@ -801,10 +801,19 @@ a.au-btn {
   a.au-btn {
     color: #ffffff;
     text-decoration: none; }
-  .au-btn.au-btn--block + .au-btn.au-btn--block,
+  .au-btn.au-btn--block + .au-btn.au-btn--block, .health-btn--sticky-bottom .au-btn + .au-btn.au-btn--block, .health-btn--sticky-bottom .au-btn.au-btn--block + .au-btn, .health-btn--sticky-bottom .au-btn + .au-btn,
   .au-btn.au-btn--block + a.au-btn.au-btn--block,
+  .health-btn--sticky-bottom .au-btn + a.au-btn.au-btn--block,
+  .health-btn--sticky-bottom .au-btn.au-btn--block + a.au-btn,
+  .health-btn--sticky-bottom .au-btn + a.au-btn,
   a.au-btn.au-btn--block + .au-btn.au-btn--block,
-  a.au-btn.au-btn--block + a.au-btn.au-btn--block {
+  .health-btn--sticky-bottom a.au-btn + .au-btn.au-btn--block,
+  .health-btn--sticky-bottom a.au-btn.au-btn--block + .au-btn,
+  .health-btn--sticky-bottom a.au-btn + .au-btn,
+  a.au-btn.au-btn--block + a.au-btn.au-btn--block,
+  .health-btn--sticky-bottom a.au-btn + a.au-btn.au-btn--block,
+  .health-btn--sticky-bottom a.au-btn.au-btn--block + a.au-btn,
+  .health-btn--sticky-bottom a.au-btn + a.au-btn {
     margin-top: 8px;
     margin-top: 0.5rem; }
   .au-btn:focus,
@@ -913,8 +922,9 @@ a.au-btn {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(16.66667%, rgba(255, 62, 24, 0.5)), color-stop(16.66667%, rgba(252, 154, 0, 0.5)), color-stop(33.33333%, rgba(252, 154, 0, 0.52)), color-stop(33.33333%, rgba(255, 216, 0, 0.5)), color-stop(33.33333%, rgba(255, 216, 0, 0.5)), color-stop(50%, rgba(255, 216, 0, 0.5)), color-stop(50%, rgba(57, 234, 124, 0.5)), color-stop(66.66667%, rgba(57, 234, 124, 0.5)), color-stop(66.66667%, rgba(11, 178, 255, 0.5)), color-stop(83.33333%, rgba(11, 178, 255, 0.5)), color-stop(83.33333%, rgba(152, 90, 255, 0.5)));
     background: linear-gradient(to bottom, rgba(255, 62, 24, 0.5) 16.66667%, rgba(252, 154, 0, 0.5) 16.66667%, rgba(252, 154, 0, 0.52) 33.33333%, rgba(255, 216, 0, 0.5) 33.33333%, rgba(255, 216, 0, 0.5) 33.33333%, rgba(255, 216, 0, 0.5) 50%, rgba(57, 234, 124, 0.5) 50%, rgba(57, 234, 124, 0.5) 66.66667%, rgba(11, 178, 255, 0.5) 66.66667%, rgba(11, 178, 255, 0.5) 83.33333%, rgba(152, 90, 255, 0.5) 83.33333%);
     color: #313131; }
-  .au-btn.au-btn--block,
-  a.au-btn.au-btn--block {
+  .au-btn.au-btn--block, .health-btn--sticky-bottom .au-btn,
+  a.au-btn.au-btn--block,
+  .health-btn--sticky-bottom a.au-btn {
     display: block;
     width: 100%;
     -webkit-box-sizing: border-box;
@@ -5266,6 +5276,30 @@ textarea.au-text-input {
       .pillars-container #pillars {
         display: none; } }
 
+.health-btn--sticky-bottom {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100vw;
+  padding: 2rem;
+  margin-left: -18px;
+  margin-right: -18px;
+  -webkit-box-shadow: 0 -7px 11px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -7px 11px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999; }
+  @media (min-width: 576px) {
+    .health-btn--sticky-bottom {
+      position: relative;
+      background: none;
+      width: auto;
+      padding: 0;
+      margin: 0;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+      .health-btn--sticky-bottom .au-btn {
+        display: inline-block;
+        width: auto; } }
+
 .au-body .health-card {
   background: var(--card-bg);
   color: var(--card-text);
@@ -7589,7 +7623,7 @@ form[class*='col-'].health-search__form .health-search__form__submit {
   .au-body .health-steps__item-desc {
     margin: 0; }
 
-.au-body .health-steps--label-only .health-steps__item-title {
+.au-body .health-steps--title-only .health-steps__item-title {
   margin-top: 0;
   font-size: 1rem; }
 

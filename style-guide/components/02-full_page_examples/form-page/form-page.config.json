@@ -35,6 +35,15 @@
       "context": {
         "error": true
       }
+    },
+    {
+      "name": "Sticky button",
+      "context": {
+        "subheader": {
+          "title": "Vaccinations and outbreak preparedness",
+          "summary": "Residential aged care providers must minimise infection-related risks. This means preparing for and managing infectious disease outbreaks and providing access to timely vaccinations. This webinar helps providers and workers prepare and manage outbreaks and organise vaccination clinics."
+        }
+      }
     }
   ]
 }
