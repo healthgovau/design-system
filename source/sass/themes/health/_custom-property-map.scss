@@ -157,5 +157,12 @@
     --label-icon: #{$colour-darker};
     // Steps
     --step-border-colour: #{$step-border-colour};
+    --step-border-colour--complete: #{$step-border-colour--complete};
+    --step-bg-colour--complete: #{$step-bg-colour--complete};
+    --step-border-colour--inprogress: #{$step-border-colour--inprogress};
+    --step-bg-colour--inprogress: #{$step-bg-colour--inprogress};
     --step-text-colour-minor: #{$step-text-colour--minor};
+    --step-border-width: #{$step-border-width};
+    --step-node-size: #{$step-node-size};
+    --step-node-size--value: #{$step-node-size--value};
 }

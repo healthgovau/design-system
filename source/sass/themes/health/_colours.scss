@@ -89,6 +89,12 @@ $beta-background: #d34600;
 $beta-text: #FFF;
 $live-background: #158839; // WCAG compliant with #FFF
 
+// Status colours
+$colour-success: #0b996c;
+$colour-info: #00bfe9;
+$colour-warning: #f69900;
+$colour-error: #d60000;
+
 // Unpublished
 $colour-unpublished-foreground: #e42622; //#ff6562;
 $colour-unpublished-background: #ffe5e5;
@@ -170,8 +176,12 @@ $search-text-colour--date: $colour-dark;
 // Statistic
 $stat-border-colour: $colour-light;
 
-// Steps
-$step-border-colour: $colour-darker;
+// Step indicator
+$step-border-colour: $colour-dark;
+$step-bg-colour--complete: $colour-success;
+$step-border-colour--complete: darken($step-bg-colour--complete, 10%);
+$step-bg-colour--inprogress: $colour-primary-blue;
+$step-border-colour--inprogress: darken($step-bg-colour--inprogress, 10%);
 $step-text-colour--minor: $colour-minorText;
 
 // Table

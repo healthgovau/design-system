@@ -74,3 +74,8 @@ $hero-minheight: 300px;
 $hero-minheight--md: 400px;
 $hero-minheight--lg: 500px;
 $hero-overlap-top: 75px; // Amount to nudge mobile hero content over image
+
+// Step
+$step-border-width: 2px;
+$step-node-size: 15px; // Odd numbers are better given centre-alignment
+$step-node-size--value: 33px; // This node has a value in it, such as a counter
