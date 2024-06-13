@@ -15,7 +15,9 @@ $card-padding--mobile: $component-padding--mobile;
     transition: all ease 0.2s;
 
     // Top margin by default - to accommodate erroneous markup where *+.health-card won't work
-    @include AU-space(margin-top, 2unit) // ========================================================
+    @include AU-space(margin-top, 2unit);
+    
+    // ========================================================
     // Elements
     // ========================================================
 
@@ -84,7 +86,7 @@ $card-padding--mobile: $component-padding--mobile;
 
 
     &__footer {
-      // To be developed
+      // TODO - develop when needed
       display: none;
     }
 
@@ -99,6 +101,31 @@ $card-padding--mobile: $component-padding--mobile;
 
     &.health-card--border {
       border: 1px solid var(--card-border);
+    }
+
+    // Borderless (use card as clickable container)
+    &.health-card--borderless {
+      box-shadow: none !important;
+      border: none !important;
+      .health-card__body {
+        padding: 0;
+      }
+      .health-card__image {
+        img {
+          @include border-radius;
+        }
+
+        &+ .health-card__body {
+          @include AU-space(padding-top, $card-padding--mobile);
+
+          @include AU-media('sm') {
+            @include AU-space(padding-top, $card-padding);
+          }
+        }
+      }
+      &:after {
+        display: none !important;
+      }
     }
 
     // Shadow
@@ -353,9 +380,8 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     // Full-image card
-    &.health-card--image-full {
-      // TBC
-    }
+    // TODO - develop when needed
+    &.health-card--image-full {}
 
   }
 }
