@@ -1,9 +1,11 @@
-<div class="health-steps {{#if modifier}} {{modifier}}{{/if}}">
+
+
+<div class="health-steps  health-steps--numbered" data-counter-start="1">
   <div class="health-steps__intro">
-    <h2>Steps title</h2>
-    <p>There are 4 steps in this process.</p>
+    <h2>Numbered steps - all fields</h2>
+    <p>This variant uses an ordered list to create semantically correct numbered steps.</p>
   </div>
-  <ul>
+  <ol>
     <li class="health-steps__item">
       <span class="health-steps__item-indicator"></span>
       <span class="health-steps__item-content">
@@ -13,7 +15,6 @@
         <a href="#" class="health-steps__item-link">Soluta dolore impedit</a>
       </span>
     </li>
-
     <li class="health-steps__item">
       <span class="health-steps__item-indicator"></span>
       <span class="health-steps__item-content">
@@ -23,7 +24,6 @@
         <a href="#" class="health-steps__item-link">Nihil nulla</a>
       </span>
     </li>
-
     <li class="health-steps__item">
       <span class="health-steps__item-indicator"></span>
       <span class="health-steps__item-content">
@@ -33,6 +33,34 @@
         <a href="#" class="health-steps__item-link">Consequuntur necessitatibus tempora</a>
       </span>
     </li>
+  </ol>
+</div>
 
-  </ul>
+<hr />
+
+<div class="health-steps health-steps--label-only  health-steps--numbered">
+  <div class="health-steps__intro">
+    <h2>Numbered steps - label only</h2>
+    <p>As above but outputting only the label.</p>
+  </div>
+  <ol>
+    <li class="health-steps__item">
+      <span class="health-steps__item-indicator"></span>
+      <span class="health-steps__item-content">
+        <p class="health-steps__item-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+      </span>
+    </li>
+    <li class="health-steps__item">
+      <span class="health-steps__item-indicator"></span>
+      <span class="health-steps__item-content">
+        <p class="health-steps__item-title">Corrupti maxime nostrum voluptatem numquam</p>
+      </span>
+    </li>
+    <li class="health-steps__item">
+      <span class="health-steps__item-indicator"></span>
+      <span class="health-steps__item-content">
+        <p class="health-steps__item-title">Animi modi iure dignissimos laboriosam dolorum</p>
+      </span>
+    </li>
+  </ol>
 </div>
