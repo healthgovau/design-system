@@ -7612,7 +7612,6 @@ form[class*='col-'].health-search__form .health-search__form__submit {
       top: calc(var(--step-node-size) + var(--step-border-width));
       bottom: calc((var(--step-border-width) * -1) - 7px);
       left: calc((var(--step-node-size) / 2) + (var(--step-border-width) / 2));
-      width: var(--step-border-width);
       border-left: var(--step-border-width) solid var(--step-border-colour); }
   .au-body .health-steps__item-date {
     font-size: 14px;
