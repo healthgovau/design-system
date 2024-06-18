@@ -1,24 +1,15 @@
 <div class="health-band health-band--full-width-bg{{#if modifier}} health-band--{{ modifier }}{{/if}}">
   <div class="health-band__container">
-    <h2>List of image (vertical) cards</h2>
+    <h2>List of borderless cards</h2>
     <div class="row">
       <div class="col-xs-12 col-sm-4">
-        {{ render '@card' }}
+        {{ render '@card--borderless' }}
       </div>
       <div class="col-xs-12 col-sm-4">
-        {{ render '@card' }}
+        {{ render '@card--borderless' }}
       </div>
       <div class="col-xs-12 col-sm-4">
-        {{ render '@card' }}
-      </div>
-    </div>
-    <h2>List of image (horizontal) cards</h2>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        {{ render '@card--horizontal' }}
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        {{ render '@card--horizontal' }}
+        {{ render '@card--borderless' }}
       </div>
     </div>
     <div class="row standard-gap">
