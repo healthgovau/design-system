@@ -1,0 +1,32 @@
+// Sticky button
+// Sticky region is reserved for registrations so it exists within the button component.
+
+.health-btn--sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 100vw;
+    padding: 2rem;
+    margin-left: -($AU-grid-12-gutter-width / 2);
+    margin-right: -($AU-grid-12-gutter-width / 2);
+    box-shadow: 0 -7px 11px 0px rgba(0, 0, 0, .2);
+    z-index: 9999;
+
+    .au-btn {
+        @extend .au-btn--block;
+    }
+
+    // Above mobile
+    @include AU-media(sm){
+        position: relative;
+        background: none;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        .au-btn {
+            display: inline-block;
+            width: auto;
+        }
+    }
+}

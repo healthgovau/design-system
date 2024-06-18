@@ -1,0 +1,191 @@
+
+.au-body .health-steps {
+  
+  // Reset list types
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    @include AU-space(margin-top, 1.5unit);
+    list-style-type: none;
+  }
+
+  // Intro title and summary
+  &__intro {}
+
+  // Step item
+  &__item {
+    position: relative;
+    margin-top: 0;
+
+    // Last item
+    &:last-child {
+      .health-steps__item-content {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    // Node
+    &-indicator {
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--step-node-size);
+        height: var(--step-node-size);
+        border: var(--step-border-width) solid var(--step-border-colour);
+        border-radius: 100%;
+      }
+    }
+
+    // Step content
+    &-content {
+      position: relative;
+      padding: 0 0 30px calc(var(--step-node-size) * 2.5);
+      display: flex;
+      flex-direction: column;
+      @include AU-space(gap, 0.4unit);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(var(--step-node-size) + var(--step-border-width));
+        bottom: calc((var(--step-border-width) * -1) - 7px);
+        left: calc((var(--step-node-size) / 2) + (var(--step-border-width) / 2));
+        border-left: var(--step-border-width) solid var(--step-border-colour);
+      }
+    }
+
+    // Fields
+    &-date {
+      @include health-fontgrid(xs, default, light);
+      color: var(--step-text-colour-minor); // TODO - replce with var
+      margin: 0;
+    }
+
+    &-title {
+      @include health-fontgrid(md);
+      margin-top: -5px;
+    }
+
+    &-desc {
+      margin: 0;
+    }
+
+    &-link {
+    }
+  }
+
+  // Label only overrides
+  &--title-only {
+    .health-steps__item-title {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+  }
+
+  // Styles common to numbered and status variants (keep it DRY)!
+  &--numbered,
+  &--status {
+    .health-steps {
+      &__item {
+        &::before {
+          position: absolute;
+          font-weight: bold;
+          text-align: center;
+          left: 2px;
+          top: calc(var(--step-node-size--value) / 6 + 1px);
+          width: var(--step-node-size--value);
+          height: var(--step-node-size--value);
+        }
+
+        // Node
+        &-indicator {
+          &::before {
+            width: var(--step-node-size--value);
+            height: var(--step-node-size--value);
+            z-index: 1; // Place on top of line
+          }
+        }
+
+        // Step content
+        &-content {
+          padding: 8px 0 30px calc(var(--step-node-size) * 3.5);
+          &::before {
+            top: calc(var(--step-node-size--value) + var(--step-border-width));
+            left: calc((var(--step-node-size--value) / 2) + (var(--step-border-width) / 2));
+          }
+        }
+      }
+    } 
+  }
+
+  // Numbered variant styles
+  &--numbered {
+    // Generate numbers to match to attr(data-counter-start)
+    @for $i from 1 through 20 {
+      &[data-counter-start="#{$i}"] {
+        counter-reset: number #{$i - 1};
+      }
+    }
+    .health-steps {
+      &__item {
+        counter-increment: number;
+        &::before {
+          content: counter(number);
+        }
+      }
+    } 
+  }
+
+  // Status variant styles
+  &--status {
+    .health-steps__item-indicator {
+      &--incomplete {
+        // No style. Use default.
+      }
+      &--inprogress {
+        // Use to style the node BG and border
+        &::before {
+          border-color: var(--step-border-colour--inprogress);
+        } 
+        // Use to style the node contents and overlay
+        &::after {
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          width: calc(var(--step-node-size--value) / 2);
+          height: calc(var(--step-node-size--value) / 2);
+          border-radius: 100%;
+          background: var(--step-bg-colour--inprogress);
+          z-index: 2;
+        }
+      }
+      &--complete {
+        &::before {
+          background: var(--step-bg-colour--complete);
+          border-color: var(--step-border-colour--complete);
+        }
+        &::after {
+          background: white;
+          content: ' ';
+          // content: ' x '; // TODO - replace with SVGtoURI()
+          mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>');
+          -webkit-mask-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>');
+
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          width: calc(var(--step-node-size--value) / 2);
+          height: calc(var(--step-node-size--value) / 2);
+          z-index: 2;
+        }
+      }
+    } 
+  }
+
+}

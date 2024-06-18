@@ -98,7 +98,6 @@
     --main-nav-dropdown-bg: #{$colour-primary-blue-very-pale};
     --main-nav-active-dropdown-link-bg--hover: #{$colour-primary-blue-pale}; // Drop-down link BG
     --main-nav-active-dropdown-border: #{$colour-complementary-skyblue-lighter-2};
-
     // Accordion
     --accordion-title-bg: #{$colour-lightest};
     --accordion-title-bg--active: #{$colour-light};
@@ -154,4 +153,16 @@
     --footer-btn-bg: #{$AU-colordark-foreground-text};
     --footer-btn-bg--hover: #{darken($AU-colordark-foreground-text, 10%)};
     --footer-btn-text: #{$AU-color-foreground-text};
+    // Fields/labels
+    --label-icon: #{$colour-darker};
+    // Steps
+    --step-border-colour: #{$step-border-colour};
+    --step-border-colour--complete: #{$step-border-colour--complete};
+    --step-bg-colour--complete: #{$step-bg-colour--complete};
+    --step-border-colour--inprogress: #{$step-border-colour--inprogress};
+    --step-bg-colour--inprogress: #{$step-bg-colour--inprogress};
+    --step-text-colour-minor: #{$step-text-colour--minor};
+    --step-border-width: #{$step-border-width};
+    --step-node-size: #{$step-node-size};
+    --step-node-size--value: #{$step-node-size--value};
 }

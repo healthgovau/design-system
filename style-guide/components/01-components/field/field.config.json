@@ -1,5 +1,6 @@
 {
   "title": "Field",
+  "default": "Stacked",
   "context": {
     "field": {
       "label": "Genus",
@@ -8,10 +9,10 @@
   },
   "variants": [
     {
-      "name": "Label light",
+      "name": "Stacked - label with icon",
       "context": {
         "field": {
-          "modifier": "health-field--light"
+          "modifier": "health-field--icon"
         }
       }
     },
@@ -24,12 +25,27 @@
       }
     },
     {
-      "name": "Inline - Wide",
+      "name": "Inline (label with icon)",
       "context": {
         "field": {
-          "label": "Last updated and reviewed",
-          "item": "20 June 2019",
-          "modifier": "health-field--inline--wide"
+          "modifier": "health-field--inline health-field--icon"
+        }
+      }
+    },
+    {
+      "name": "Icon only",
+      "context": {
+        "field": {
+          "modifier": "health-field--icon-only"
+        }
+      }
+    },
+    {
+      "name": "List of icons",
+      "view": "field--icons.hbs",
+      "context": {
+        "field": {
+          "modifier": "health-field--icon-only"
         }
       }
     }

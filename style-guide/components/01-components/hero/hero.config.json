@@ -4,38 +4,34 @@
   "context": {
     "title": "Hero title",
     "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam maxime eum, incidunt quisquam corrupti qui. Tempora, iste? Illum, unde. Assumenda incidunt voluptatum.",
-    "image": "/images/hero_1600x900.jpg",
+    "image": "/images/hero_1600x900-alt.jpg",
     "cta-primary": "Primary call-to-action"
   },
   "variants": [
     {
       "name": "Hero inset box",
       "context": {
-        "title": "Hero inset box",
         "modifer": "inset-box",
-        "image": "/images/hero_1600x900.jpg"
+        "image": "/images/hero_1600x900-alt.jpg"
       }
     },
     {
       "name": "Hero inset box (overlapping)",
       "context": {
-        "title": "Hero inset box (overlapping)",
         "modifer": "inset-box-overlap",
-        "image": "/images/hero_1098x898.jpg"
+        "image": "/images/hero_1098x898.png"
       }
     },
     {
       "name": "Hero gradient",
       "context": {
-        "title": "Hero gradient",
         "modifer": "bg-gradient",
-        "image": "/images/hero_1098x898.jpg"
+        "image": "/images/hero_1098x898.png"
       }
     },
     {
       "name": "Hero gradient (vertical)",
       "context": {
-        "title": "Hero gradient (vertical)",
         "modifer": "bg-gradient--vertical",
         "image": "/images/hero_1600x900-alt.jpg",
         "cta-primary": "",
