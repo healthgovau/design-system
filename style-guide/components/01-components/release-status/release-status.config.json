@@ -1,6 +1,6 @@
 {
   "title": "Release status",
-  "preview": "@preview-full-width",
+  "preview": "@preview-page",
   "context": {
     "status": "Alpha",
     "modifier": "alpha"

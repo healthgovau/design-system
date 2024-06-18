@@ -1,5 +1,6 @@
 {
   "title": "Card",
+  "preview": "@preview-page",
   "context": {
     "title": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
     "date": "20 July 2019",

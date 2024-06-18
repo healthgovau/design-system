@@ -34,13 +34,6 @@
       }
     },
     {
-      "name": "Cards image vertical",
-      "context": {
-        "title": "The best dinosaurs",
-        "modifier": "neutral"
-      }
-    },
-    {
       "name": "Featured",
       "context": {
         "title": "Featured resource"
