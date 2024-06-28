@@ -1,7 +1,7 @@
 {
   "title": "Sub header",
-  "preview": "@preview-full-width",
-  "default": "Content",
+  "preview": "@preview-page",
+  "default": "Dark",
   "context": {
     "subheader": {
       "title": "Page title",
@@ -9,6 +9,15 @@
     }
   },
   "variants": [
+    {
+      "name": "Light",
+      "context": {
+        "subheader": {
+          "summary": "Mauris quis lacinia neque. Nullam tellus sapien, fringilla pharetra ligula et, vulputate luctus erat. Sed ac nibh lacinia, porta justo ac, dignissim dolor.",
+          "color": ""
+        }
+      }
+    },
     {
       "name": "Campaign",
       "view": "sub-header--campaign.hbs",
@@ -20,8 +29,7 @@
           "image": "https://picsum.photos/id/867/1920/700",
           "color": ""
         }
-      },
-      "notes": "The hero image should be 1920x700 pixels to provide the optimal responsive experience. A min-height: 500px is applied to the hero at the largest breakpoint but the sub-header grows and shrinks according the text contained within it."
+      }
     },
     {
       "name": "Campaign secondary",
@@ -35,8 +43,7 @@
           "image": "https://picsum.photos/id/867/1920/700",
           "color": "--secondary"
         }
-      },
-      "notes": "The hero image should be 1920x700 pixels to provide the optimal responsive experience. A min-height: 500px is applied to the hero at the largest breakpoint but the sub-header grows and shrinks according the text contained within it."
+      }
     },
     {
       "name": "Campaign tertiary",
@@ -50,8 +57,7 @@
           "image": "https://picsum.photos/id/867/1920/700",
           "color": "--tertiary"
         }
-      },
-      "notes": "The hero image should be 1920x700 pixels to provide the optimal responsive experience. A min-height: 500px is applied to the hero at the largest breakpoint but the sub-header grows and shrinks according the text contained within it."
+      }
     }
   ]
 }

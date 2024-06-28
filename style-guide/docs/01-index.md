@@ -1,15 +1,13 @@
 ---
 title: Introduction
-label: Introduction
+label: Home
 ---
 <style>
-.Document-header {display: none;} 
-.health-hero {margin: -1.5rem -2rem 2rem;}
-.health-hero__content {margin-left: 3rem;}
-.health-hero__call-to-action {margin-top: 1.5rem;}
+.Document-header {display: none;}
 :root {--hero-minheight--lg: 250px;}
 </style>
-<div class="au-body">
+
+<div class="au-body home">
     <div class="health-hero health-hero--bg-gradient">
         <div class="health-hero__bg">
         </div>
@@ -22,7 +20,7 @@ label: Introduction
         </div>
     </div>
 </div>
-<div class="au-body">
+<div class="au-body home">
     <div class="health-band learn">
         <div class="health-grid health-listing health-grid--2col-md health-grid--4col-lg">
             <div><h2>Learn</h2><p>Learn the principle and foundations that underpin the design system get set-up to use it.</p>
@@ -32,7 +30,7 @@ label: Introduction
                 </div>
                 <div class="health-card__body">
                     <h3 class="health-card__title">
-                        <a class="health-card__link" href="#">Who should use it?</a>
+                        <a class="health-card__link" href="/docs/users">Who should use it?</a>
                     </h3><div class="health-card__text">
       <p>Find out if the design system is for you and how you can use it.</p>
     </div>
@@ -44,7 +42,7 @@ label: Introduction
                 </div>
                 <div class="health-card__body">
                     <h3 class="health-card__title">
-                        <a class="health-card__link" href="#">Getting started</a>
+                        <a class="health-card__link" href="/docs/getting-started">Getting started</a>
                     </h3>
                     <div class="health-card__text">
                       <p>Find out how to incorporate the tool into your product or use it as a prototyping tool.</p>
@@ -57,9 +55,9 @@ label: Introduction
                 </div>
                 <div class="health-card__body">
                     <h3 class="health-card__title">
-                        <a class="health-card__link" href="#">Foundations</a>
+                        <a class="health-card__link" href="/docs/principles">Principles</a>
                     </h3><div class="health-card__text">
-      <p>Learn the fundamentals the underpin the design system to let you get the most out of it.</p>
+      <p>Understand the principles that underpin the design system.</p>
                 </div>
             </div>    
         </div>   
@@ -74,7 +72,7 @@ label: Introduction
                 </div>
                 <div class="health-card__body">
                     <h3 class="health-card__title">
-                        <a class="health-card__link" href="#">Colours and variables</a>
+                        <a class="health-card__link" href="/docs/colours-and-variables">Colours and variables</a>
                     </h3>
                     <div class="health-card__text">
                       <p>Learn how to use colours and other variables to customise your product.</p>
@@ -87,7 +85,7 @@ label: Introduction
                 </div>
                 <div class="health-card__body">
                     <h3 class="health-card__title">
-                        <a class="health-card__link" href="#">Components</a>
+                        <a class="health-card__link" href="/components/detail/accordion--default">Components</a>
                     </h3>
                     <div class="health-card__text">
                       <p>Browse the catalogue of pre-built components and use the code directly.</p>
@@ -100,7 +98,7 @@ label: Introduction
                 </div>
                 <div class="health-card__body">
                     <h3 class="health-card__title">
-                        <a class="health-card__link" href="#">Templates</a>
+                        <a class="health-card__link" href="/components/detail/content-page--default">Templates</a>
                     </h3>
                     <div class="health-card__text">
                       <p>View page-level templates built using the components.</p>

@@ -4,56 +4,146 @@ label: Colours and variables
 ---
 
 ## Colours
-The health brand has a range of colours in the palette which enable users to create clear and accessible colour schemes. Any of these colours can be de-saturated or tinted to create lighter colours. Helper SASS functions `tint($colour, $percent)` and shade($colour, $percent) make this easy.
+
+### Default colours
+The Health Design System is pre-configured to apply the departmental visual identity. The default HDS colours should only be applied to department products that are delivered via the health.gov.au domain.
+
+The Health brand has a range of colours in the palette which enable the creation of clear and accessible colour schemes.
+
+<div class="au-body">
+    <h3>Primary colours</h3>
+    <ul class="colour__swatches">
+        <li class="colour__swatch" style="background-color: #002058;">
+            <p class="colour__info colour__info--dark">#002058</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #041E42;">
+            <p class="colour__info colour__info--dark">#041E42</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #007680;">
+            <p class="colour__info colour__info--dark">#007680</p>
+        </li>
+        <li class="colour__swatch" style="background-color: #006269;">
+            <p class="colour__info colour__info--dark">#006269</p>
+        </li>
+    </ul>
+    <h3>Complementary colours</h3>
+    <ul class="colour__swatches">
+    <li class="colour__swatch" style="background-color: #0077C8;">
+        <p class="colour__info colour__info--dark">#0077C8</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #910048;">
+        <p class="colour__info colour__info--dark">#910048</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #B5BD00;">
+        <p class="colour__info colour__info--light">#B5BD00</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #0057B8;">
+        <p class="colour__info colour__info--dark">#0057B8</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #0093B2;">
+        <p class="colour__info colour__info--dark">#0093B2</p>
+    </li>
+    </ul>
+    <h3>Accents colours</h3>
+    <ul class="colour__swatches">
+    <li class="colour__swatch" style="background-color: #D50032;">
+        <p class="colour__info colour__info--dark">#D50032</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #E86335;">
+        <p class="colour__info colour__info--dark">#E86335</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #CFB5000;">
+        <p class="colour__info colour__info--dark">#CFB5000</p>
+    </li>
+    </ul>
+    <h3>Neutral colours</h3>
+    <ul class="colour__swatches">
+    <li class="colour__swatch" style="background-color: #5B6770;">
+        <p class="colour__info colour__info--dark">#5B6770</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #A2AAAD;">
+        <p class="colour__info colour__info--dark">#A2AAAD</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #C1C6C8;">
+        <p class="colour__info colour__info--dalightk">#C1C6C8</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #ececec;">
+        <p class="colour__info colour__info--light">#ececec</p>
+    </li>
+    <li class="colour__swatch" style="background-color: #f8f8f8;">
+        <p class="colour__info colour__info--light">#f8f8f8</p>
+    </li>
+    </ul>
+</div>
+
+The full range of colours is specified as SCSS variables in `/source/sass/themes/health/_colours.scss`.
+
+### Colours for aligned products
+The above palette is reserved for products delivered via health.gov.au. Other departmental products should generate their own co-branded palette. The HDS has been architected to permit you to override the reserved palette easily.
 
 <div class="au-callout">
-    <h2 class="au-display-md">Scope of application</h2>
-    <p>This colour palette applies to primary Health products, such as www.health.gov.au.</p><p>Aligned products, such as Health applications or portfolio agencies can use their own pallete to co-brand. All colours are provided as SASS variables to allow simple override</p>
-    <p><strong>More information about aligned products coming soon.</strong></p>
+    <p>More information about aligned products coming soon.</p>
 </div>
-<ul class="colour__swatches">
-    <li class="colour__swatch" style="background-color: #002058;">
-        <p class="colour__info colour__info--dark">#002058</p>
-    </li>
-    <li class="colour__swatch" style="background-color: #041E42;">
-        <p class="colour__info colour__info--dark">#041E42</p>
-    </li>
-    <li class="colour__swatch" style="background-color: #007680;">
-        <p class="colour__info colour__info--dark">#007680</p>
-    </li>
-    <li class="colour__swatch" style="background-color: #006269;">
-        <p class="colour__info colour__info--dark">#006269</p>
-    </li>
-</ul>
+
+The HDS contains a `/source/sass/themes/my-theme` folder. Colours and variables should be declared/overridden here, following the process of application described below.
 
 ## Applying to components
-Health's colour palette is applied to components of the Health Design System by default.
+### SCSS colour variables 
+The HDS uses many colours defined in the GOLD Design System.
+It declares its own ones in `/source/sass/themes/health/_colours.scss`
 
-However Health-aligned products such as applications or portfolio agencies can override the colour palette to achieve co-branding.
+### Mapping colours to their applications
+If we declare `$blue: #0077C8` and apply this thoughout the HDS, it creates two issues:
+- What happens when we wish to change blue to green?
+- How do we know what $blue applies to?
 
-### How to override colours
-To simply applying an alternative colour palette, all colours in the Health Design System are provided as SASS variables in sass/themes and are mapped to specific applications.
+Therefore, the HDS applies a mapping of SCSS colour variables to their applications. For example:
 
-### Variable and mappings
-By using SASS variables, colours can be change in one place to be updated globally.
+- Declare variable: `$blue: #0077C8`
+- Map to application: `$header-border-colour: $blue`
 
-By mapping variable names to applications, users of the system are no stuck with a variable called $blue every though they have changed it to red!
+This means that updates and remapping can be done with confidence.
 
-#### Example
-Health's primary blue colour uses the variable $colour-primary-blue and is used in many places in the HDS. Instead of using directly against components, the following SASS variable mapping is used:
+### CSS custom variables
+> New in v2.0.0
 
+SCSS variables are only available pre-compilation. For example, applying the above variable to a selector like this:
 ```
-$header-border-colour: $colour-primary-blue
-$footer-bg-colour: $colour-primary-blue;
-$callout-primary-border-colour: $colour-primary-blue;
+.border {
+    border-color: $header-border-colour;
+}
 ```
+compiles into
+```
+.border{
+    border-color: #0077C8;
+}
+```
+CSS custom variables allow much easier redeclaration/overrides and are accessible client-side (i.e. in the browser).
 
-To predictably apply new colours, new variables can be created and assigned like this: 
+The file at `/source/sass/themes/health/_custom-property-map.scss` maps SCSS variables to CSS custom variables and the v2.0.0 update replaces the SCSS ones used by components.
 
+Inspecting a product using the HDS shows the following CSS custom variables:
+
+<div class="au-body">
+    <div class="health-grid health-listing health-grid--4col-md ">
+        <div><h4>Default variables</h4>
+            <img src="../images/hga-vars.png" />
+        </div>
+        <div><h4>Overridden variables</h4>
+            <img src="../images/cdc-vars.png" />
+        </div>
+    </div>
+</div>
+
+
+## Variables
+Variables work in the same way as colours, but apply to other properties of components, such as a sizes.
 ```
-$my-product-red: #FF0000; 
-$my-product-yellow: #FFFF0;
-$header-border-colour: $my-product-red;
-$footer-bg-colour: $my-product-yellow;
-$callout-primary-border-colour: $my-product-red;
+// Hero
+$hero-content-width--md: 60%;
+$hero-content-width--lg: 60%;
+$hero-image-width--md: 100%;
+$hero-image-width--lg: 50%;
 ```
+These are available in `/source/sass/themes/health/_variables.scss`

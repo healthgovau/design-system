@@ -39,7 +39,7 @@ fractal.components.set('statuses', {
         label: "ready",
         description: "Ready for use.",
         color: "#158839"
-    }
+    },
 });
 
 /*
@@ -75,9 +75,8 @@ const healthTheme = mandelbrot({
         'components'
     ],
     panels: [
-        'notes',
         'html',
-        'view',
+        'notes',
         'resources',
         'info'
     ],
@@ -96,7 +95,7 @@ const healthTheme = mandelbrot({
             value: new Date(),
             type: 'time',
             format: (value) => {
-                return value.toLocaleDateString('en-GB');
+                return value.toLocaleDateString('en-AU');
             },
         },
     ],
