@@ -90,6 +90,11 @@
         "class": "health-card--colour-tertiary",
         "content": "This card uses the tertiary colour as a background."
       }
+    },
+    {
+      "name": "Multple links",
+      "view": "card--multiple-links.hbs",
+      "status": "wip"
     }
   ]
 }

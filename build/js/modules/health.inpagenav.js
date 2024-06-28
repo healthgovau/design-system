@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v2.0.0-beta.7 */
+/*! @health.gov.au/health-design-system v2.0.0 */
 var health = health || {};
 
 (function ($) {

@@ -1,0 +1,27 @@
+
+.Prose,
+.Document-header {
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-heading !important;
+    }
+    h1 {
+        font-size: 2.875rem;
+        line-height: 1.21739;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 2rem;
+        line-height: 1.25;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.33333;
+        font-weight: 700;
+    }
+    h4 {
+        font-size: 1.25rem;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+}

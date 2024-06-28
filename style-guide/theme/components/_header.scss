@@ -1,0 +1,65 @@
+.Header {
+  background-color: $color-header-background;
+  background: linear-gradient(to right,#00205b,#004181);
+  background: #fff;
+  color: #000;
+  @include AU-media(sm){
+    padding: 0.5rem;
+  }
+}
+
+.Header-button {
+  width: 4rem;
+  height: 4rem;
+}
+
+.Header-title {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.Header-logo {
+  display: block;
+  height: 40px;
+}
+
+.Header-menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 1rem;
+
+  list-style: none;
+
+  li + li {
+    margin-left: 1rem;
+  }
+
+  a,
+  a:hover,
+  a:focus {
+    color: #fff;
+  }
+}
+
+// Health pillar
+:root {
+--pillars-pattern: var(--brand-colour-1) 0%,var(--brand-colour-1) 9%,var(--brand-colour-4) 9%,var(--brand-colour-4) 21%,var(--brand-colour-2) 21%,var(--brand-colour-2) 33%,var(--brand-colour-1) 33%,var(--brand-colour-1) 39%,var(--brand-colour-3) 39%,var(--brand-colour-3) 46%,var(--brand-colour-4) 46%,var(--brand-colour-4) 66%,var(--brand-colour-1) 66%,var(--brand-colour-1) 72%,var(--brand-colour-3) 72%,var(--brand-colour-3) 92%,var(--brand-colour-2) 92%,var(--brand-colour-2) 100%;
+}
+
+.Frame-header {
+  position: relative;
+  border-top: 12px solid var(--brand-primary-colour)!important;
+
+  &::before {
+    content: " ";
+    background: linear-gradient(to right, var(--pillars-pattern));
+    position: absolute;
+    top: -12px;
+    left: 0;
+    height: 12px;
+    width: 300px;
+  }
+}
+
+

@@ -1,4 +1,4 @@
-/*! @health.gov.au/health-design-system v2.0.0-beta.7 */
+/*! @health.gov.au/health-design-system v2.0.0 */
 @charset "UTF-8";
 /*! PANCAKE v2.0.0 PANCAKE-SASS v3.0.0 */
 /*
@@ -5600,6 +5600,20 @@ textarea.au-text-input {
 
 .health-listing .health-card {
   margin-top: 0; }
+
+.health-content {
+  margin-top: 32px;
+  margin-top: 2rem; }
+  @media (min-width: 576px) {
+    .health-content {
+      margin-top: 40px;
+      margin-top: 2.5rem; } }
+  .health-content--flush {
+    margin-top: 0px;
+    margin-top: 0rem; }
+  @media print {
+    .health-content {
+      margin-top: 0; } }
 
 .health-compare {
   border: 1px solid #0077C8;

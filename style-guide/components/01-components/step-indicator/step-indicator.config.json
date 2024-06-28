@@ -1,6 +1,5 @@
 {
   "title": "Step indicator",
-  "status": "wip",
   "context": {
     "title": "Simple steps",
     "desc": "The default step timeline uses empty nodes to indicate steps.",

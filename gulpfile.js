@@ -15,7 +15,8 @@ const options = {
     sass: 'source/sass/',
     js: 'source/js/',
     dist: 'build/',
-    styleGuide: 'style-guide/'
+    styleGuide: 'style-guide/',
+    theme: 'style-guide/theme/'
   },
   name: 'hds'
 };
@@ -118,6 +119,14 @@ function styleGuide() {
     .pipe(gulp.dest(options.paths.styleGuide + 'public/build'));
 }
 
+function cssStyleGuide() {
+  return gulp.src(options.paths.styleGuide + '/theme/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(rename("theme.css"))
+    .pipe(gulp.dest(options.paths.styleGuide + 'public/themes/health'));
+}
+
 // ===================================
 // Watch
 // ===================================
@@ -137,7 +146,8 @@ exports.default = gulp.series(
     gulp.series(cssClean, gulp.parallel(cssDev, cssProd)),
     libraries
   ),
-  styleGuide
+  styleGuide,
+  cssStyleGuide
 );
 
 exports.watch = watching;

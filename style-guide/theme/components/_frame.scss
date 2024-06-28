@@ -1,0 +1,12 @@
+.Frame-panel--sidebar {
+  background-color: var(--neutral-bg);
+}
+
+.Frame-body {
+  height: calc(100% - 64px);
+  .Document-content {
+    padding-bottom: 2rem;
+  }
+}
+
+

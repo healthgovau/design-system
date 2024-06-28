@@ -1,0 +1,89 @@
+.Tree-collectionLabel {
+  color: $color-text;
+
+  span::before {
+    width: 0.5rem;
+    top: 0.4rem;
+  }
+
+  &:hover {
+    background-color:#d6d6d6;
+  }
+}
+
+// .Tree-depth-2 {
+//   > h4 {
+//     font-weight: bold;
+//   }
+// }
+
+.Tree-entityLink {
+  color: $color-text;
+
+  &:hover {
+    color: $color-text;
+    background-color:#d6d6d6;
+  }
+
+  .is-current & {
+    color: $color-text;
+    background-color:#d6d6d6;
+  }
+}
+
+.Tree-title {
+  color: $color-sidebar-heading;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+
+.Tree-aside {
+  opacity: 1;
+}
+
+.Tree-asideTerm,  .Tree-asideDescription {
+  color: $color-text;
+}
+
+// .Navigation-panel {
+//     width: $width-sidebar;
+// }
+
+// .Frame-panel--sidebar {
+//     min-width: $width-sidebar;
+//     max-width: $width-sidebar * 2;
+// }
+
+[dir=ltr] .Tree-depth-2 .Tree-collectionLabel {
+  font-weight: bold;
+}
+[dir=ltr] .Tree-depth-3 .Tree-collectionLabel {
+  font-weight: normal;
+}
+
+[dir=ltr] .Tree-depth-3 .Tree-entityLink {
+  position: relative;
+//     &:before{
+//         content: " ";
+//         width: 16px;
+//         width: 1rem;
+//         height: 16px;
+//         height: 1rem;
+//         background-size: 16px;
+//         background-size: 1rem;
+//         margin-left: -24px;
+//         margin-left: -1.5rem;
+//         display: block;
+//         float: left;
+//         background-repeat: no-repeat;
+//         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='gray' d='M2 10h12v1H2zM2 5h1v5H2z'/%3E%3C/svg%3E");
+
+//    }
+}
+
+.Navigation-group {
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 1.5rem;
+}
