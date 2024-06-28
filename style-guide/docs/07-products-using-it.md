@@ -89,7 +89,7 @@ label: Gallery
             </div>
             <div class="health-card health-card--clickable health-card--shadow">
                 <div class="health-card__image">
-                    <img src="../images/sites/amr.png" />
+                    <img src="../images/sites/nst.png" />
                 </div>
                 <div class="health-card__body">
                     <h2 class="health-card__title">
