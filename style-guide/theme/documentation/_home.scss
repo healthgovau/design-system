@@ -1,0 +1,22 @@
+
+// Home page
+.learn,
+.use {
+    .health-card__image svg {
+        margin:2rem 2rem -1rem 2rem;
+        height: 3em;
+        width: 3em;
+    }
+}
+.learn {
+    border-bottom: 1px solid #e0e0e0;
+    .health-card__image svg {
+        color: $brand-colour-3;
+    }
+}
+
+.use {
+    .health-card__image svg {
+        color: $brand-colour-4;
+    }
+}

@@ -1,0 +1,22 @@
+/**
+ * SCSS to theme the style guide 
+ * Run `gulp` in the project root to compile to `style-guide\public\styles\theme.css`
+ */
+
+// Pull-in HDS CSS bits to apply to the Fractal theme
+@import '../../source/sass/themes/theme-functions';
+@import '../../source/sass/themes/health/colours';
+@import '../../source/sass/themes/health/govau-variable-overrides';
+@import '../../source/sass/vendors/govau-ds';
+@import '../../source/sass/abstracts/abstracts';
+@import '../../source/sass/themes/health/variables';
+@import '../../source/sass/themes/health/custom-property-map';
+@import '../../source/sass/base/normalize';
+@import '../../source/sass/components/components';
+
+// Now customise away...
+@import 'settings/settings';
+@import 'documentation/components';
+@import 'components/components';
+
+ 

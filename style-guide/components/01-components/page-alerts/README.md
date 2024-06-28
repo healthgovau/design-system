@@ -1,3 +1,3 @@
 # Page alerts
 
-**⭐ [Design System - Page alerts](https://designsystem.gov.au/components/page-alerts/)**
+**⭐ [Design System - Page alerts](https://gold.designsystemau.org/components/page-alerts/)**

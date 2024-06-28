@@ -1,0 +1,24 @@
+.colour__swatches {
+  list-style: none;
+  padding: 0;
+}
+.colour__swatch {
+  display: inline-block;
+  width: 10rem;
+  height: 5rem;
+  position: relative;
+  text-align: center;
+}
+.colour__info {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+}
+.colour__info--dark {
+  color: #fff;
+}
+.colour__info--light {
+  color: #000;
+}
