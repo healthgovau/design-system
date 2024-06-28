@@ -2,7 +2,7 @@
   "name": "@health.gov.au/health-design-system",
   "author": "Australian Government Department of Health <enquiries@health.gov.au> (https://www.health.gov.au)",
   "description": "Design system for health.gov.au and related products.",
-  "version": "2.0.0-beta.7",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/healthgovau/health-design-system.git"
@@ -66,7 +66,6 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "mandelbrot-healthgovau": "git+https://github.com/healthgovau/mandelbrot-healthgovau.git#1.0.1",
     "sass-versioning": "^0.4.0"
   },
   "engines": {
