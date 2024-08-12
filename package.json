@@ -44,17 +44,17 @@
     "@gold.au/tags": "^5.0.0",
     "@gold.au/text-inputs": "3.0.0",
     "copy": "^0.3.2",
-    "fs-extra": "^10.0.0",
+    "fs-extra": "^10.1.0",
     "get-dependencies": "^1.1.0",
     "get-installed-path": "^4.0.8"
   },
   "devDependencies": {
     "@drupal/once": "^1.0.1",
-    "@frctl/fractal": "^1.5",
-    "@frctl/mandelbrot": "^1.2.1",
+    "@frctl/fractal": "^1.5.15",
+    "@frctl/mandelbrot": "^1.10.3",
     "backstopjs": "^5.3.4",
     "del": "^5.0.0",
-    "eslint": "^8.10.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
@@ -66,10 +66,10 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "sass-versioning": "^0.4.0"
+    "sass-versioning": "^0.4.5"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": "14.x"
   },
   "scripts": {
     "start": "cat .githooks/pre-commit > .git/hooks/pre-commit && chmod a+x .git/hooks/pre-commit && npm rebuild node-sass",
