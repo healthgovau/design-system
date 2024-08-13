@@ -7353,7 +7353,6 @@ table .health-footnotes {
 }
 
 .au-body .health-hero {
-  display: none;
   background: none;
   color: var(--hero-text);
   position: relative;
@@ -7560,9 +7559,6 @@ table .health-footnotes {
   .au-body .health-hero.health-hero--bg-gradient .health-hero__image-container {
     left: calc(100% - var(--hero-image-width--lg));
   }
-}
-.au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
-  background-color: pink;
 }
 @media (min-width: 768px) {
   .au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
