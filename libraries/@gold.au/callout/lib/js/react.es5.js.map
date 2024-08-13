@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "sources": [
+    "react.es5.js"
+  ],
+  "names": [
+    "AUcallout",
+    "title",
+    "level",
+    "srOnlyTitle",
+    "dark",
+    "alt",
+    "description",
+    "children",
+    "className",
+    "attributeOptions",
+    "HeadingTag",
+    "propTypes",
+    "PropTypes",
+    "string",
+    "isRequired",
+    "number",
+    "bool",
+    "node",
+    "defaultProps",
+    "AUcalloutCalendar",
+    "subline",
+    "datetime",
+    "time",
+    "name",
+    "Date",
+    "toJSON"
+  ],
+  "mappings": "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",
+  "sourcesContent": [
+    "/*! @gold.au/callout v4.0.0 */\n/***************************************************************************************************************************************************************\n *\n * Callout function\n *\n * Use callout to notify and alert users of important snippets of information.\n *\n **************************************************************************************************************************************************************/\n\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\n\n// The following line will be replaced automatically with generic imports for the ES5 pipeline.\n// You can safely ignore this bit if you use this module with pancake\n//\nimport '../css/styles.css';\n\n\n/**\n * Default callout\n *\n * @param  {string}  title            - The title of the header\n * @param  {string}  level            - The tag level (<h1/> <h2/> etc), default: '1'\n * @param  {boolean} srOnlyTitle      - Title is visible to screen readers only\n * @param  {boolean} dark             - Add the dark variation class, optional\n * @param  {boolean} alt              - Add the alt variation class, optional\n * @param  {string}  children         - Anything inside\n * @param  {string}  className        - An additional class, optional\n * @param  {object}  attributeOptions - Any other attribute options\n */\nexport const AUcallout = ({ title, level, srOnlyTitle, dark, alt, description, children, className = '', ...attributeOptions }) => {\n\tconst HeadingTag = `h${ level }`;\n\n\treturn (\n\t\t<section\n\t\t\tclassName={ `au-callout ${ className }${ dark ? ' au-callout--dark' : '' }${ alt ? ' au-callout--alt' : '' }` }\n\t\t\t{ ...attributeOptions }\n\t\t>\n\t\t\t<HeadingTag\n\t\t\t\tchildren={ title }\n\t\t\t\tclassName={ `au-callout__heading${ srOnlyTitle ? ' au-callout__heading--sronly' : '' }` }\n\t\t\t/>\n\t\t\t{ children }\n\t\t</section>\n\t)\n};\n\nAUcallout.propTypes = {\n\ttitle: PropTypes.string.isRequired,\n\tlevel: PropTypes.number,\n\tsrOnlyTitle: PropTypes.bool,\n\tdark: PropTypes.bool,\n\talt: PropTypes.bool,\n\tchildren: PropTypes.node.isRequired,\n\tclassName: PropTypes.string,\n};\n\nAUcallout.defaultProps = {\n\tlevel: 2,\n\tsrOnlyTitle: false,\n};\n\n\n/**\n * Calendar callout\n *\n * @param  {string}  title            - The title of the header\n * @param  {string}  level            - The tag level (<h1/> <h2/> etc), default: '1'\n * @param  {boolean} srOnlyTitle      - Title is visible to screen readers only\n * @param  {boolean} dark             - Add the dark variation class, optional\n * @param  {boolean} alt              - Add the alt variation class, optional\n * @param  {string}  subline          - The subline of the event, optional\n * @param  {string}  datetime         - The datetime of the event as ISO datetime\n * @param  {string}  time             - The time that appears on the page\n * @param  {string}  name             - The name of the event, optional\n * @param  {string}  className        - An additional class, optional\n * @param  {object}  attributeOptions - Any other attribute options\n */\nexport const AUcalloutCalendar = ({ title, level, srOnlyTitle, dark, alt, subline, datetime, time, name, className = '', ...attributeOptions }) => {\n\tconst HeadingTag = `h${ level }`;\n\n\treturn (\n\t\t<section\n\t\t\tclassName={ `au-callout au-callout--calendar-event ${ className }${ dark ? ' au-callout--dark' : '' }${ alt ? ' au-callout--alt' : '' }` }\n\t\t\t{ ...attributeOptions }\n\t\t>\n\t\t\t<HeadingTag\n\t\t\t\tchildren={ title }\n\t\t\t\tclassName={ `au-callout__heading${ srOnlyTitle ? ' au-callout__heading--sronly' : '' }` }\n\t\t\t/>\n\t\t\t{ subline && <p className=\"au-callout--calendar-event__lede\">{ subline }</p> }\n\t\t\t<time className=\"au-callout--calendar-event__time\" dateTime={ new Date( datetime ).toJSON() }>{ time }</time>\n\t\t\t{ name && <span className=\"au-callout--calendar-event__name\">{ name }</span> }\n\t\t</section>\n\t)\n}\n\nAUcalloutCalendar.propTypes = {\n\ttitle: PropTypes.string.isRequired,\n\tlevel: PropTypes.number,\n\tsrOnlyTitle: PropTypes.bool,\n\tdark: PropTypes.bool,\n\talt: PropTypes.bool,\n\tsubline: PropTypes.string,\n\tdatetime: PropTypes.string.isRequired,\n\ttime: PropTypes.string.isRequired,\n\tname: PropTypes.string,\n\tclassName: PropTypes.string,\n};\n\nAUcalloutCalendar.defaultProps = {\n\tlevel: 2,\n\tsrOnlyTitle: true,\n};\n"
+  ]
+}

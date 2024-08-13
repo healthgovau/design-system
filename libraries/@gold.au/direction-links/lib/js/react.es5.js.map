@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "sources": [
+    "react.es5.js"
+  ],
+  "names": [
+    "directions",
+    "up",
+    "right",
+    "down",
+    "left",
+    "AUdirectionLink",
+    "linkComponent",
+    "dark",
+    "link",
+    "text",
+    "direction",
+    "className",
+    "attributeOptions",
+    "LinkComponent",
+    "href",
+    "to",
+    "propTypes",
+    "PropTypes",
+    "bool",
+    "string",
+    "isRequired",
+    "oneOf",
+    "oneOfType",
+    "func",
+    "defaultProps",
+    "AUdirectionLinkInner"
+  ],
+  "mappings": "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",
+  "sourcesContent": [
+    "/*! @gold.au/direction-links v4.0.0 */\n/***************************************************************************************************************************************************************\n *\n * direction-links function\n *\n * Use direction links to link up and down within the DOM or back to a parent page.\n *\n **************************************************************************************************************************************************************/\n\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\n\n// The following line will be replaced automatically with generic imports for the ES5 pipeline.\n// You can safely ignore this bit if you use this module with pancake\n//\nimport '../css/styles.css';\n\n\n/**\n * All direction options\n *\n * @type {Object}\n */\nconst directions = {\n\tup: 'au-direction-link__arrow--up',\n\tright: 'au-direction-link__arrow--right',\n\tdown: 'au-direction-link__arrow--down',\n\tleft: 'au-direction-link__arrow--left',\n};\n\n\n/**\n * DEFAULT\n * The direction-links component\n *\n * @param  {string}  linkComponent    - The component used for the link\n * @param  {boolean} dark             - Add the dark variation class, optional\n * @param  {string}  link             - The link target, optional\n * @param  {string}  text             - The text of the CTA link\n * @param  {string}  direction        - The direction for the arrow; can be either: up right down left, default: 'right'\n * @param  {string}  className        - An additional class, optional\n * @param  {object}  attributeOptions - Any other attribute options\n */\nconst AUdirectionLink = ({ linkComponent, dark, link, text, direction, className = '', ...attributeOptions }) => {\n\tconst LinkComponent = linkComponent;\n\n\tif( link ) {\n\t\t// If we are using a normal link\n\t\tif( LinkComponent === 'a' ) {\n\t\t\tattributeOptions.href = link;\n\t\t}\n\t\t// If we are using a link component\n\t\telse if( typeof LinkComponent === 'function' ) {\n\t\t\tattributeOptions.to = link;\n\t\t}\n\t\treturn (\n\t\t\t<LinkComponent\n\t\t\t\tclassName={ `au-direction-link ${ className } ${ dark ? ' au-direction-link--dark' : '' }`}\n\t\t\t\t{ ...attributeOptions }>\n\t\t\t\t\t\t\t\t\t\t<AUdirectionLinkInner direction={ direction } text={text} />\n\t\t\t</LinkComponent>\n\t\t);\n\t\t}\n\telse {\n\t\treturn (\n\t\t\t<button className={ `au-direction-link ${ className } ${ dark ? ' au-direction-link--dark' : '' }`}\n\t\t\t\t\t\t\t{ ...attributeOptions }>\n\t\t\t\t\t\t\t<AUdirectionLinkInner direction={ direction } text={text} />\n\t\t\t</button>\n\t\t);\n\t}\n\n\n};\n\nAUdirectionLink.propTypes = {\n\tdark: PropTypes.bool,\n\tlink: PropTypes.string,\n\ttext: PropTypes.string.isRequired,\n\tdirection: PropTypes.oneOf([ 'up', 'right', 'down', 'left' ]).isRequired,\n\tclassName: PropTypes.string,\n\tlinkComponent: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])\n};\n\nAUdirectionLink.defaultProps = {\n\tdirection: 'right',\n\tlinkComponent: 'a',\n};\n\n/**\n * The inner contents of the direction link. Includes the text and and the arrow.\n * @param  {string}  text             - The text of the direction link\n * @param  {string}  direction        - The direction for the arrow; can be either: up right down left, default: 'right'\n */\nconst AUdirectionLinkInner = ({ direction, text }) => {\n\tif ( direction === \"left\" ) {\n\t\treturn (\n\t\t\t <React.Fragment>\n\t\t\t\t <span className={ `au-direction-link__arrow ${ directions[ direction ] } `} aria-hidden=\"true\"></span>{text}\n\t\t\t\t</React.Fragment>\n\t\t)\n\t}\n\telse {\n\t\treturn (\n\t\t\t<React.Fragment>\n\t\t\t\t{text} <span className={ `au-direction-link__arrow ${ directions[ direction ] } `} aria-hidden=\"true\"></span>\n\t\t\t</React.Fragment>\n\t\t)\n\t}\n};\n\nAUdirectionLinkInner.propTypes = {\n\tdirection: PropTypes.oneOf([ 'up', 'down', 'left', 'right' ]).isRequired,\n\ttext: PropTypes.string.isRequired\n}\n\nAUdirectionLinkInner.defaultProps = {\n\n}\n\nexport default AUdirectionLink;\n"
+  ]
+}

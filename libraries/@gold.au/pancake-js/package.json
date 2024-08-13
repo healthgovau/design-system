@@ -1,0 +1,124 @@
+{
+  "_args": [
+    [
+      "@gold.au/pancake-js@2.0.0",
+      "/home/bgunn/dev/git/health-design-system"
+    ]
+  ],
+  "_from": "@gold.au/pancake-js@2.0.0",
+  "_id": "@gold.au/pancake-js@2.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-iIh/XVpOXMAgNqX1TYEo90ySutoRCDuT/NUpLF8wCP1dh5OoNU4MLIESRdwIru5B8ZNeGvC62yD/zIyCXWQ2GQ==",
+  "_location": "/@gold.au/pancake-js",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@gold.au/pancake-js@2.0.0",
+    "name": "@gold.au/pancake-js",
+    "escapedName": "@gold.au%2fpancake-js",
+    "scope": "@gold.au",
+    "rawSpec": "2.0.0",
+    "saveSpec": null,
+    "fetchSpec": "2.0.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@gold.au/accordion",
+    "/@gold.au/animate",
+    "/@gold.au/main-nav",
+    "/@gold.au/side-nav"
+  ],
+  "_resolved": "https://registry.npmjs.org/@gold.au/pancake-js/-/pancake-js-2.0.0.tgz",
+  "_spec": "2.0.0",
+  "_where": "/home/bgunn/dev/git/health-design-system",
+  "author": {
+    "name": "Design System AU",
+    "email": "maintainers@designsystemau.org",
+    "url": "https://designsystemau.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/designsystemau/pancake/issues"
+  },
+  "contributors": [
+    {
+      "name": "Dominik Wilkowski",
+      "email": "hi@dominik-wilkowski.com",
+      "url": "https://dominik-wilkowski.com/"
+    },
+    {
+      "name": "Sukhraj Ghuman",
+      "email": "sukhrajghuman@live.com",
+      "url": "https://github.com/sukhrajghuman"
+    },
+    {
+      "name": "Adam Zerella",
+      "email": "hello@adamzerella.com",
+      "url": "https://adamzerella.com/"
+    }
+  ],
+  "dependencies": {
+    "@gold.au/pancake": "~2.0.0",
+    "uglify-js": "3.4.9"
+  },
+  "description": "A Pancake plugin to minify js files.",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "del": "^4.0.0",
+    "dirsum": "^0.1.1",
+    "jest-cli": "^24.5.0",
+    "onchange": "^5.2.0"
+  },
+  "engines": {
+    "npm": ">=6.0.0"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "homepage": "https://github.com/designsystemau/pancake",
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "\\.spec.js$",
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    }
+  },
+  "keywords": [
+    "npm",
+    "flat",
+    "peerDependencies",
+    "gold.au",
+    "gov.au",
+    "auds",
+    "Commonwealth of Australia",
+    "design guide",
+    "design system",
+    "cli",
+    "pancake-plugin"
+  ],
+  "license": "MIT",
+  "main": "./lib/pancake.js",
+  "name": "@gold.au/pancake-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designsystemau/pancake.git"
+  },
+  "scripts": {
+    "build": "npm run build:js",
+    "build:js": "babel src --out-dir lib",
+    "build:watch": "npm run build:js && jest --coverage",
+    "prepublish": "npm run build && npm run test",
+    "watch": "npm run build:watch && onchange 'src/*.js' '__tests__/*.js' -- npm run build:watch"
+  },
+  "version": "2.0.0"
+}

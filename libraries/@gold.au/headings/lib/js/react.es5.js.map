@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "sources": [
+    "react.es5.js"
+  ],
+  "names": [
+    "sizes",
+    "AUheading",
+    "level",
+    "size",
+    "children",
+    "className",
+    "attributeOptions",
+    "HeadingTag",
+    "propTypes",
+    "PropTypes",
+    "oneOf",
+    "isRequired",
+    "node",
+    "string"
+  ],
+  "mappings": "gGASA,oDACA,6DAMA,6B,kmCAEA;AACA;AACA;AACA;AACA,GACA,GAAMA,CAAAA,KAAK,CAAG,CACb,eADa,CAEb,eAFa,CAGb,eAHa,CAIb,eAJa,CAKb,eALa,CAMb,gBANa,CAOb,iBAPa,CAAd,CAWA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,GACA,GAAMC,CAAAA,SAAS,CAAG,QAAZA,CAAAA,SAAY,MAAoE,IAAjEC,CAAAA,KAAiE,MAAjEA,KAAiE,CAA1DC,IAA0D,MAA1DA,IAA0D,CAApDC,QAAoD,MAApDA,QAAoD,qBAA1CC,SAA0C,CAA1CA,SAA0C,yBAA9B,EAA8B,gBAAvBC,gBAAuB,0CACrF,GAAMC,CAAAA,UAAU,YAAQL,KAAR,CAAhB,CAEA,mBACC,gCAAC,UAAD,WAAY,SAAS,sBAAkBC,IAAlB,aAA4BE,SAA5B,CAArB,EAAqEC,gBAArE,EAA0FF,QAA1F,CAED,CAND,CAQAH,SAAS,CAACO,SAAV,CAAsB,CACrBN,KAAK,CAAEO,sBAAUC,KAAV,CAAgB,CAAE,GAAF,CAAO,GAAP,CAAY,GAAZ,CAAiB,GAAjB,CAAsB,GAAtB,CAA2B,GAA3B,CAAhB,EAAkDC,UADpC,CAErBR,IAAI,CAAEM,sBAAUC,KAAV,CAAgB,CAAE,IAAF,CAAQ,IAAR,CAAc,IAAd,CAAoB,IAApB,CAA0B,IAA1B,CAAgC,KAAhC,CAAuC,MAAvC,CAAhB,EAAiEC,UAFlD,CAGrBP,QAAQ,CAAEK,sBAAUG,IAAV,CAAeD,UAHJ,CAIrBN,SAAS,CAAEI,sBAAUI,MAJA,CAAtB,C,aAOeZ,S",
+  "sourcesContent": [
+    "/*! @gold.au/headings v3.0.0 */\n/***************************************************************************************************************************************************************\n *\n * headings function\n *\n * Class styles for display headings.\n *\n **************************************************************************************************************************************************************/\n\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\n\n// The following line will be replaced automatically with generic imports for the ES5 pipeline.\n// You can safely ignore this bit if you use this module with pancake\n//\nimport '../css/styles.css';\n\n/**\n * All heading options\n *\n * @type {Array}\n */\nconst sizes = [\n\t'au-display-xs',\n\t'au-display-sm',\n\t'au-display-md',\n\t'au-display-lg',\n\t'au-display-xl',\n\t'au-display-xxl',\n\t'au-display-xxxl',\n];\n\n\n/**\n * DEFAULT\n * The headings component\n *\n * @param  {string} level            - The tag level (<h1/> <h2/> etc)\n * @param  {string} size             - The headings size\n * @param  {string} children         - Anything inside\n * @param  {string} className        - An additional class, optional\n * @param  {object} attributeOptions - Any other attribute options\n */\nconst AUheading = ({ level, size, children, className = '', ...attributeOptions }) => {\n\tconst HeadingTag = `h${ level }`;\n\n\treturn (\n\t\t<HeadingTag className={ `au-display-${ size } ${ className }` } { ...attributeOptions }>{ children }</HeadingTag>\n\t);\n};\n\nAUheading.propTypes = {\n\tlevel: PropTypes.oneOf([ '1', '2', '3', '4', '5', '6' ]).isRequired,\n\tsize: PropTypes.oneOf([ 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'xxxl' ]).isRequired,\n\tchildren: PropTypes.node.isRequired,\n\tclassName: PropTypes.string,\n};\n\nexport default AUheading;\n"
+  ]
+}

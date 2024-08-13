@@ -1,0 +1,28 @@
+{
+  "version": 3,
+  "sources": [
+    "react.es5.js"
+  ],
+  "names": [
+    "AUtextInput",
+    "as",
+    "dark",
+    "block",
+    "number",
+    "status",
+    "width",
+    "type",
+    "className",
+    "attributeOptions",
+    "propTypes",
+    "PropTypes",
+    "oneOf",
+    "bool",
+    "string",
+    "defaultProps"
+  ],
+  "mappings": "gGASA,oDACA,6DAMA,6B,6nCAGA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,GACA,GAAMA,CAAAA,WAAW,CAAG,QAAdA,CAAAA,WAAc,UAAGC,CAAAA,EAAH,MAAGA,EAAH,CAAOC,IAAP,MAAOA,IAAP,CAAaC,KAAb,MAAaA,KAAb,CAAoBC,MAApB,MAAoBA,MAApB,CAA4BC,MAA5B,MAA4BA,MAA5B,CAAoCC,KAApC,MAAoCA,KAApC,gBAA2CC,IAA3C,CAA2CA,IAA3C,oBAAkD,MAAlD,+BAA0DC,SAA1D,CAA0DA,SAA1D,yBAAsE,EAAtE,gBAA6EC,gBAA7E,gDACnBR,CAAAA,EAAE,GAAK,UAAP,cACG,qDACA,SAAS,CACR,wBAAkBO,SAAlB,YACIL,KAAK,CAAG,uBAAH,CAA6B,EADtC,YAEID,IAAI,CAAG,sBAAH,CAA4B,EAFpC,YAGIE,MAAM,CAAG,wBAAH,CAA8B,EAHxC,YAIIC,MAAM,GAAK,OAAX,CAAqB,uBAArB,CAA+C,EAJnD,YAKIA,MAAM,GAAK,SAAX,CAAuB,yBAAvB,CAAmD,EALvD,YAMIC,KAAK,CAAG,yBAA2BA,KAA9B,CAAsC,EAN/C,CAFD,EAUKG,gBAVL,EADH,cAaG,kDAAO,SAAS,CACf,wBAAkBD,SAAlB,YACIN,IAAI,CAAG,sBAAH,CAA4B,EADpC,YAEIC,KAAK,CAAG,uBAAH,CAA6B,EAFtC,YAGIC,MAAM,CAAG,wBAAH,CAA8B,EAHxC,YAIIC,MAAM,GAAK,OAAX,CAAqB,uBAArB,CAA+C,EAJnD,YAKIA,MAAM,GAAK,SAAX,CAAuB,yBAAvB,CAAmD,EALvD,YAMIC,KAAK,CAAG,yBAA2BA,KAA9B,CAAsC,EAN/C,CADD,CASA,IAAI,CAAGC,IATP,EASmBE,gBATnB,EAdgB,CAApB,CA2BAT,WAAW,CAACU,SAAZ,CAAwB,CACvBT,EAAE,CAAEU,sBAAUC,KAAV,CAAgB,CAAE,OAAF,CAAW,UAAX,CAAhB,CADmB,CAEvBV,IAAI,CAAES,sBAAUE,IAFO,CAGvBV,KAAK,CAAEQ,sBAAUE,IAHM,CAIvBT,MAAM,CAAEO,sBAAUE,IAJK,CAKvBR,MAAM,CAAEM,sBAAUC,KAAV,CAAgB,CAAE,OAAF,CAAW,SAAX,CAAhB,CALe,CAMvBJ,SAAS,CAAEG,sBAAUG,MANE,CAOvBR,KAAK,CAAEK,sBAAUC,KAAV,CAAgB,CAAE,IAAF,CAAQ,IAAR,CAAc,IAAd,CAAoB,IAApB,CAA0B,IAA1B,CAAhB,CAPgB,CAAxB,CAUAZ,WAAW,CAACe,YAAZ,CAA2B,CAC1Bd,EAAE,CAAE,OADsB,CAA3B,C,aAIeD,W",
+  "sourcesContent": [
+    "/*! @gold.au/text-inputs v3.0.0 */\n/***************************************************************************************************************************************************************\n *\n * text-input function\n *\n * Text inputs include text inputs, labels, hints and textareas. They allow users to input data into a field.\n *\n **************************************************************************************************************************************************************/\n\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\n\n// The following line will be replaced automatically with generic imports for the ES5 pipeline.\n// You can safely ignore this bit if you use this module with pancake\n//\nimport '../css/styles.css';\n\n\n/**\n * DEFAULT\n * The AUtextInput component\n *\n * @param  {string}  as               - The kind of input, can be either 'input' or 'textarea', default: 'input'\n * @param  {boolean} dark             - Add the dark variation class, optional\n * @param  {boolean} block            - Add the block variation class, optional\n * @param  {boolean} number           - Add the number variation class, optional\n * @param  {string}  status           - Mark this field as either 'valid' or 'invalid', optional\n * @param  {string}  type             - The type of the field, optional, default: text\n * @param  {string}  className        - An additional class, optional\n * @param  {object}  attributeOptions - Any other attribute options\n */\nconst AUtextInput = ({ as, dark, block, number, status, width, type = 'text', className = '', ...attributeOptions }) => (\n\tas === 'textarea'\n\t\t? <textarea\n\t\t\t\tclassName={\n\t\t\t\t\t`au-text-input ${ className }` +\n\t\t\t\t\t`${ block ? ' au-text-input--block' : '' }` +\n\t\t\t\t\t`${ dark ? ' au-text-input--dark' : '' }` +\n\t\t\t\t\t`${ number ? ' au-text-input--number' : '' }` +\n\t\t\t\t\t`${ status === 'valid' ? ' au-text-input--valid' : '' }` +\n\t\t\t\t\t`${ status === 'invalid' ? ' au-text-input--invalid' : '' }` + \n\t\t\t\t\t`${ width ? ' au-text-input--width-' + width : '' }`\t\t\t\t\t\n\t\t\t\t}\n\t\t\t\t{ ...attributeOptions } >\n\t\t\t</textarea>\n\t\t: <input className={\n\t\t\t\t\t`au-text-input ${ className }` +\n\t\t\t\t\t`${ dark ? ' au-text-input--dark' : '' }` +\n\t\t\t\t\t`${ block ? ' au-text-input--block' : '' }` +\n\t\t\t\t\t`${ number ? ' au-text-input--number' : '' }` +\n\t\t\t\t\t`${ status === 'valid' ? ' au-text-input--valid' : '' }` +\n\t\t\t\t\t`${ status === 'invalid' ? ' au-text-input--invalid' : '' }` +\n\t\t\t\t\t`${ width ? ' au-text-input--width-' + width : '' }`\n\t\t\t\t}\n\t\t\t\ttype={ type } { ...attributeOptions }\n\t\t\t/>\n);\n\nAUtextInput.propTypes = {\n\tas: PropTypes.oneOf([ 'input', 'textarea' ]),\n\tdark: PropTypes.bool,\n\tblock: PropTypes.bool,\n\tnumber: PropTypes.bool,\n\tstatus: PropTypes.oneOf([ 'valid', 'invalid' ]),\n\tclassName: PropTypes.string,\n\twidth: PropTypes.oneOf([ 'xs', 'sm', 'md', 'lg', 'xl' ])\n};\n\nAUtextInput.defaultProps = {\n\tas: 'input',\n};\n\nexport default AUtextInput;\n"
+  ]
+}
