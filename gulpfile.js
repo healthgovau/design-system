@@ -1,6 +1,6 @@
 const gulp          = require('gulp');
 const del           = require('del');
-const sass          = require('gulp-sass');
+const sass          = require('gulp-sass')(require('sass'));
 const rename        = require("gulp-rename");
 const concat        = require("gulp-concat");
 const minify        = require('gulp-minify');
@@ -23,7 +23,6 @@ const options = {
 
 const banner = '/*! <%= pkg.name %> v<%= pkg.version %> */\n';
 
-sass.compiler = require('node-sass');
 
 // ===================================
 // CSS

@@ -39,11 +39,12 @@
     "gulp-header": "^2.0.9",
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8",
     "sass-versioning": "^0.4.5"
   },
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   },
   "scripts": {
     "start": "cat .githooks/pre-commit > .git/hooks/pre-commit && chmod a+x .git/hooks/pre-commit",
