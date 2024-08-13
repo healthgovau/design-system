@@ -1,5 +1,5 @@
-import gulp from 'gulp';
-import del from 'del';
+import { dest, src, series, parallel, watch } from 'gulp';
+import { deleteSync } from 'del';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
@@ -31,15 +31,17 @@ const banner = '/*! <%= pkg.name %> v<%= pkg.version %> */\n';
 // CSS
 // ===================================
 
-function cssClean() {
-  return del([
+function cssClean(cb) {
+  const deletedFiles = deleteSync([
     options.paths.dist + '*.css',
     options.paths.dist + 'maps'
   ]);
+
+  cb();
 }
 
 function cssDev() {
-  return gulp.src(options.paths.sass + '*.scss', { sourcemaps: true })
+  return src(options.paths.sass + '*.scss', { sourcemaps: true })
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(rename(function (path) {
@@ -47,11 +49,11 @@ function cssDev() {
       path.extname = ".css";
     }))
     .pipe(header(banner, { pkg : pkg } ))
-    .pipe(gulp.dest(options.paths.dist + 'css', { sourcemaps: '.' }));
+    .pipe(dest(options.paths.dist + 'css', { sourcemaps: '.' }));
 }
 
 function cssProd() {
-  return gulp.src(options.paths.sass + '*.scss')
+  return src(options.paths.sass + '*.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
@@ -62,7 +64,7 @@ function cssProd() {
       path.extname = ".min.css";
     }))
     .pipe(header(banner, { pkg : pkg } ))
-    .pipe(gulp.dest(options.paths.dist + 'css'));
+    .pipe(dest(options.paths.dist + 'css'));
 }
 
 // ===================================
@@ -70,8 +72,8 @@ function cssProd() {
 // ===================================
 
 function libraries() {
-  return gulp.src(options.paths.js + 'libraries/*')
-    .pipe(gulp.dest(options.paths.dist + 'js/libraries'));
+  return src(options.paths.js + 'libraries/*')
+    .pipe(dest(options.paths.dist + 'js/libraries'));
 }
 
 
@@ -79,17 +81,19 @@ function libraries() {
 // Javascript
 // ===================================
 
-function jsClean() {
-  return del([
+function jsClean(cb) {
+  const deletedFiles = deleteSync([
     options.paths.dist + 'js/*.js'
   ]);
+
+  cb();
 }
 
 /**
  * Process JavaScript files into a single aggregate file.
  */
 function jsAggregate() {
-  return gulp.src(options.paths.js + 'src/*.js')
+  return src(options.paths.js + 'src/*.js')
     .pipe(concat(options.name + '.js'))
     .pipe(header(banner, { pkg : pkg } ))
     .pipe(minify({
@@ -98,14 +102,14 @@ function jsAggregate() {
       },
       preserveComments: 'some'
     }))
-    .pipe(gulp.dest(options.paths.dist + 'js'));
+    .pipe(dest(options.paths.dist + 'js'));
 }
 
 /**
  * Process individual JavaScript files.
  */
 function js() {
-  return gulp.src(options.paths.js + 'src/*.js')
+  return src(options.paths.js + 'src/*.js')
     .pipe(header(banner, { pkg : pkg } ))
     .pipe(minify({
       ext:{
@@ -113,20 +117,20 @@ function js() {
       },
       preserveComments: 'some'
     }))
-    .pipe(gulp.dest(options.paths.dist + 'js/modules'));
+    .pipe(dest(options.paths.dist + 'js/modules'));
 }
 
 function styleGuide() {
-  return gulp.src(options.paths.dist + '**')
-    .pipe(gulp.dest(options.paths.styleGuide + 'public/build'));
+  return src(options.paths.dist + '**')
+    .pipe(dest(options.paths.styleGuide + 'public/build'));
 }
 
 function cssStyleGuide() {
-  return gulp.src(options.paths.styleGuide + '/theme/*.scss')
+  return src(options.paths.styleGuide + '/theme/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(rename("theme.css"))
-    .pipe(gulp.dest(options.paths.styleGuide + 'public/themes/health'));
+    .pipe(dest(options.paths.styleGuide + 'public/themes/health'));
 }
 
 // ===================================
@@ -134,22 +138,24 @@ function cssStyleGuide() {
 // ===================================
 
 function watching() {
-  gulp.watch([options.paths.js + 'src/*.js'], gulp.series(jsClean, js, styleGuide));
-  gulp.watch([options.paths.sass + '**/*.scss'], gulp.series(cssClean, gulp.parallel(cssDev, cssProd), styleGuide));
+  watch([options.paths.js + 'src/*.js'], series(jsClean, js, styleGuide));
+  watch([options.paths.sass + '**/*.scss'], series(cssClean, parallel(cssDev, cssProd), styleGuide));
 }
 
 // ===================================
 // Exports
 // ===================================
 
-export default gulp.series(
-  gulp.parallel(
-    gulp.series(jsClean, jsAggregate, js),
-    gulp.series(cssClean, gulp.parallel(cssDev, cssProd)),
+export default series(
+  parallel(
+    series(jsClean, jsAggregate, js),
+    series(cssClean, parallel(cssDev, cssProd)),
     libraries
   ),
   styleGuide,
   cssStyleGuide
 );
 
-export const watch = watching;
+export {
+  watching as watch
+};

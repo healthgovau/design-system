@@ -7557,9 +7557,6 @@ table .health-footnotes {
     left: calc(100% - var(--hero-image-width--lg));
   }
 }
-.au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
-  background-color: pink;
-}
 @media (min-width: 768px) {
   .au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
     position: absolute;

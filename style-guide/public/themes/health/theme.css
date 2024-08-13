@@ -7353,6 +7353,7 @@ table .health-footnotes {
 }
 
 .au-body .health-hero {
+  display: none;
   background: none;
   color: var(--hero-text);
   position: relative;
