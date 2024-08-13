@@ -314,7 +314,6 @@
   z-index: 101;
   -webkit-transition: -webkit-transform 0.25s ease-in;
   transition: -webkit-transform 0.25s ease-in;
-  -o-transition: transform 0.25s ease-in;
   transition: transform 0.25s ease-in;
   transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
 }
@@ -634,10 +633,8 @@
   text-decoration: line-through;
 }
 .au-body ins {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  -webkit-text-decoration-style: dashed;
-          text-decoration-style: dashed;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
 }
@@ -910,7 +907,6 @@ a.au-btn {
   cursor: pointer;
   vertical-align: middle;
   -webkit-transition: background 0.1s ease, border 0.1s ease, color 0.1s ease;
-  -o-transition: background 0.1s ease, border 0.1s ease, color 0.1s ease;
   transition: background 0.1s ease, border 0.1s ease, color 0.1s ease;
   /**
   * SECONDARY
@@ -1061,7 +1057,6 @@ a.au-btn.au-btn--tertiary.au-btn--dark:hover:not(:disabled) {
 .au-btn.au-btn--pride,
 a.au-btn.au-btn--pride {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(16.6666666667%, rgba(255, 62, 24, 0.5)), color-stop(16.6666666667%, rgba(252, 154, 0, 0.5)), color-stop(33.3333333333%, rgba(252, 154, 0, 0.52)), color-stop(33.3333333333%, rgba(255, 216, 0, 0.5)), color-stop(33.3333333333%, rgba(255, 216, 0, 0.5)), color-stop(50%, rgba(255, 216, 0, 0.5)), color-stop(50%, rgba(57, 234, 124, 0.5)), color-stop(66.6666666667%, rgba(57, 234, 124, 0.5)), color-stop(66.6666666667%, rgba(11, 178, 255, 0.5)), color-stop(83.3333333333%, rgba(11, 178, 255, 0.5)), color-stop(83.3333333333%, rgba(152, 90, 255, 0.5)));
-  background: -o-linear-gradient(top, rgba(255, 62, 24, 0.5) 16.6666666667%, rgba(252, 154, 0, 0.5) 16.6666666667%, rgba(252, 154, 0, 0.52) 33.3333333333%, rgba(255, 216, 0, 0.5) 33.3333333333%, rgba(255, 216, 0, 0.5) 33.3333333333%, rgba(255, 216, 0, 0.5) 50%, rgba(57, 234, 124, 0.5) 50%, rgba(57, 234, 124, 0.5) 66.6666666667%, rgba(11, 178, 255, 0.5) 66.6666666667%, rgba(11, 178, 255, 0.5) 83.3333333333%, rgba(152, 90, 255, 0.5) 83.3333333333%);
   background: linear-gradient(to bottom, rgba(255, 62, 24, 0.5) 16.6666666667%, rgba(252, 154, 0, 0.5) 16.6666666667%, rgba(252, 154, 0, 0.52) 33.3333333333%, rgba(255, 216, 0, 0.5) 33.3333333333%, rgba(255, 216, 0, 0.5) 33.3333333333%, rgba(255, 216, 0, 0.5) 50%, rgba(57, 234, 124, 0.5) 50%, rgba(57, 234, 124, 0.5) 66.6666666667%, rgba(11, 178, 255, 0.5) 66.6666666667%, rgba(11, 178, 255, 0.5) 83.3333333333%, rgba(152, 90, 255, 0.5) 83.3333333333%);
   color: #313131;
 }
@@ -1679,7 +1674,6 @@ a.au-card.au-card--shadow:hover {
   margin: 0 4px 0 3px;
   margin: 0 0.25rem 0 0.2rem;
   -webkit-transition: margin 0.2s ease;
-  -o-transition: margin 0.2s ease;
   transition: margin 0.2s ease;
   display: inline-block;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23006FB0' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='%23006FB0' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
@@ -3451,7 +3445,6 @@ ul.list--large--checklist > li .au-body * + strong,
 
 .au-main-nav__overlay {
   -webkit-transition: opacity 0.25s ease-out;
-  -o-transition: opacity 0.25s ease-out;
   transition: opacity 0.25s ease-out;
   background-color: #000;
   cursor: pointer;
@@ -3800,8 +3793,7 @@ svg,
           appearance: none;
   border: 3px solid #7f7f7f;
   text-indent: 0.01px;
-  -o-text-overflow: "";
-     text-overflow: "";
+  text-overflow: "";
   background-color: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5327,7 +5319,6 @@ a.au-btn.au-btn--inline {
 .au-footer.au-body.au-body--dark.au-footer--dark {
   background-color: var(--footer-gradient-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--footer-gradient-bg--start)), to(var(--footer-gradient-bg--end)));
-  background: -o-linear-gradient(left, var(--footer-gradient-bg--start), var(--footer-gradient-bg--end));
   background: linear-gradient(to right, var(--footer-gradient-bg--start), var(--footer-gradient-bg--end));
 }
 .au-footer.au-body.au-body--dark.au-footer--dark .au-btn.au-btn.au-btn--primary,
@@ -5771,10 +5762,8 @@ a.au-btn.au-btn--inline {
     height: 16px;
     width: 14px;
     -webkit-transition: margin 0.2s ease;
-    -o-transition: margin 0.2s ease;
     transition: margin 0.2s ease;
     -webkit-transition-property: right;
-    -o-transition-property: right;
     transition-property: right;
     background: #000;
     mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z'/%3E%3C/svg%3E");
@@ -5816,7 +5805,6 @@ a.au-btn.au-btn--inline {
           transform: rotate(180deg);
   -webkit-transition: -webkit-transform 0.25s ease-in;
   transition: -webkit-transform 0.25s ease-in;
-  -o-transition: transform 0.25s ease-in;
   transition: transform 0.25s ease-in;
   transition: transform 0.25s ease-in, -webkit-transform 0.25s ease-in;
 }
@@ -6119,7 +6107,6 @@ textarea.au-text-input {
   filter: alpha(opacity=80);
   z-index: 9999;
   -webkit-transition: all 0.4s ease-in;
-  -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
 
@@ -6216,7 +6203,6 @@ textarea.au-text-input {
 .au-body .health-band.health-band--primary .health-band__container, .au-body .health-band.health-band--primary.health-band--full-width-bg::before {
   background-color: var(--primary-gradient-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--primary-gradient-bg--start)), to(var(--primary-gradient-bg--end)));
-  background: -o-linear-gradient(left, var(--primary-gradient-bg--start), var(--primary-gradient-bg--end));
   background: linear-gradient(to right, var(--primary-gradient-bg--start), var(--primary-gradient-bg--end));
 }
 .au-body .health-band.health-band--primary.health-band--full-width-bg .health-band__container {
@@ -6272,7 +6258,6 @@ textarea.au-text-input {
 .au-body .health-band.health-band--secondary .health-band__container, .au-body .health-band.health-band--secondary.health-band--full-width-bg::before {
   background-color: var(--secondary-gradient-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--secondary-gradient-bg--start)), to(var(--secondary-gradient-bg--end)));
-  background: -o-linear-gradient(left, var(--secondary-gradient-bg--start), var(--secondary-gradient-bg--end));
   background: linear-gradient(to right, var(--secondary-gradient-bg--start), var(--secondary-gradient-bg--end));
 }
 .au-body .health-band.health-band--secondary.health-band--full-width-bg .health-band__container {
@@ -6328,7 +6313,6 @@ textarea.au-text-input {
 .au-body .health-band.health-band--tertiary .health-band__container, .au-body .health-band.health-band--tertiary.health-band--full-width-bg::before {
   background-color: var(--tertiary-gradient-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--tertiary-gradient-bg--start)), to(var(--tertiary-gradient-bg--end)));
-  background: -o-linear-gradient(left, var(--tertiary-gradient-bg--start), var(--tertiary-gradient-bg--end));
   background: linear-gradient(to right, var(--tertiary-gradient-bg--start), var(--tertiary-gradient-bg--end));
 }
 .au-body .health-band.health-band--tertiary.health-band--full-width-bg .health-band__container {
@@ -6556,7 +6540,6 @@ textarea.au-text-input {
   height: 12px;
   width: 300px;
   background: -webkit-gradient(linear, left top, right top, from(var(--pillars-pattern))) !important;
-  background: -o-linear-gradient(left, var(--pillars-pattern)) !important;
   background: linear-gradient(to right, var(--pillars-pattern)) !important;
   background-size: cover;
 }
@@ -6616,7 +6599,6 @@ textarea.au-text-input {
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-transition: all ease 0.2s;
-  -o-transition: all ease 0.2s;
   transition: all ease 0.2s;
   margin-top: 32px;
   margin-top: 2rem;
@@ -6755,10 +6737,8 @@ textarea.au-text-input {
   right: 32px;
   right: 2rem;
   -webkit-transition: margin 0.2s ease;
-  -o-transition: margin 0.2s ease;
   transition: margin 0.2s ease;
   -webkit-transition-property: right;
-  -o-transition-property: right;
   transition-property: right;
   background: var(--card-clickable-icon);
   mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z'/%3E%3C/svg%3E");
@@ -6812,7 +6792,6 @@ textarea.au-text-input {
 .au-body .health-card.health-card--colour-primary {
   background-color: var(--primary-gradient-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--primary-gradient-bg--start)), to(var(--primary-gradient-bg--end)));
-  background: -o-linear-gradient(left, var(--primary-gradient-bg--start), var(--primary-gradient-bg--end));
   background: linear-gradient(to right, var(--primary-gradient-bg--start), var(--primary-gradient-bg--end));
   color: var(--card-text--primary);
 }
@@ -6834,7 +6813,6 @@ textarea.au-text-input {
 .au-body .health-card.health-card--colour-secondary {
   background-color: var(--secondary-gradient-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--secondary-gradient-bg--start)), to(var(--secondary-gradient-bg--end)));
-  background: -o-linear-gradient(left, var(--secondary-gradient-bg--start), var(--secondary-gradient-bg--end));
   background: linear-gradient(to right, var(--secondary-gradient-bg--start), var(--secondary-gradient-bg--end));
   color: var(--card-text--secondary);
 }
@@ -6856,7 +6834,6 @@ textarea.au-text-input {
 .au-body .health-card.health-card--colour-tertiary {
   background-color: var(--tertiary-gradient-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--tertiary-gradient-bg--start)), to(var(--tertiary-gradient-bg--end)));
-  background: -o-linear-gradient(left, var(--tertiary-gradient-bg--start), var(--tertiary-gradient-bg--end));
   background: linear-gradient(to right, var(--tertiary-gradient-bg--start), var(--tertiary-gradient-bg--end));
   color: var(--card-text--tertiary);
 }
@@ -7054,7 +7031,6 @@ textarea.au-text-input {
   filter: alpha(opacity=100);
   height: auto;
   -webkit-transition: opacity 1s;
-  -o-transition: opacity 1s;
   transition: opacity 1s;
   padding: 1.5rem;
   background: #f1f1f2;
@@ -7591,7 +7567,6 @@ table .health-footnotes {
   .au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
     position: absolute;
     background: -webkit-gradient(linear, left top, right top, from(var(--hero-bg)), color-stop(var(--hero-bg)), color-stop(transparent), to(transparent));
-    background: -o-linear-gradient(left, var(--hero-bg) 0%, var(--hero-bg) var(--hero-content-width--md), transparent calc(var(--hero-content-width--md) + 30%), transparent 100%);
     background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) var(--hero-content-width--md), transparent calc(var(--hero-content-width--md) + 30%), transparent 100%);
     inset: 0;
     z-index: 300;
@@ -7600,7 +7575,6 @@ table .health-footnotes {
 @media (min-width: 992px) {
   .au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
     background: -webkit-gradient(linear, left top, right top, from(var(--hero-bg)), color-stop(var(--hero-bg)), color-stop(transparent), to(transparent));
-    background: -o-linear-gradient(left, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%);
     background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%);
   }
 }
@@ -7654,13 +7628,11 @@ table .health-footnotes {
   inset: 0;
   z-index: 300;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), color-stop(70%, transparent));
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent 70%);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), transparent 70%);
 }
 @media (min-width: 768px) {
   .au-body .health-hero.health-hero--bg-gradient--vertical .health-hero__bg {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), color-stop(50%, transparent));
-    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent 50%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), transparent 50%);
   }
 }
@@ -8744,7 +8716,6 @@ a .image-wrapper.image-loading {
 
 ul li {
   -webkit-transition: background-color 1s;
-  -o-transition: background-color 1s;
   transition: background-color 1s;
 }
 ul li.highlight {
@@ -8853,10 +8824,8 @@ ul:has(.au-cta-link) {
   right: 8px;
   right: 0.5rem;
   -webkit-transition: margin 0.2s ease;
-  -o-transition: margin 0.2s ease;
   transition: margin 0.2s ease;
   -webkit-transition-property: right;
-  -o-transition-property: right;
   transition-property: right;
   background: #000;
   mask-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z'/%3E%3C/svg%3E");
@@ -9046,7 +9015,6 @@ ul:has(.au-cta-link) {
 }
 .au-body .quick-exit__subline-key {
   background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), color-stop(80%, #D2D2D2), to(#c0c0c0));
-  background: -o-linear-gradient(top, #f9f9f9 0%, #D2D2D2 80%, #c0c0c0 100%);
   background: linear-gradient(top, #f9f9f9 0%, #D2D2D2 80%, #c0c0c0 100%);
   padding: 0 6px;
   -webkit-box-shadow: 0 0 1px #888, 0 1px 0 #fff, 0 6px 0 #C0C0C0, 0 8px 17px rgba(68, 68, 68, 0.4), 2px 1px 4px rgba(68, 68, 68, 0.25), -2px 1px 4px rgba(68, 68, 68, 0.25), 0 9px 16px rgba(68, 68, 68, 0.1);
@@ -9110,7 +9078,6 @@ ul:has(.au-cta-link) {
  */
 .health-references > li {
   -webkit-transition: background-color 1s;
-  -o-transition: background-color 1s;
   transition: background-color 1s;
 }
 .health-references > li.highlight {
@@ -9694,7 +9661,6 @@ form[class*=col-].health-search__form .health-search__form__submit {
 .health-sub-header.health-sub-header--dark {
   background-color: var(--subheader-gradient-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--subheader-gradient-bg--start)), to(var(--subheader-gradient-bg--end)));
-  background: -o-linear-gradient(left, var(--subheader-gradient-bg--start), var(--subheader-gradient-bg--end));
   background: linear-gradient(to right, var(--subheader-gradient-bg--start), var(--subheader-gradient-bg--end));
 }
 .health-sub-header h1 {
@@ -9776,7 +9742,6 @@ form[class*=col-].health-search__form .health-search__form__submit {
   padding: 1.5rem 18px;
   background-color: var(--subheader-gradient-content-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--subheader-gradient-content-bg--start)), to(var(--subheader-gradient-content-bg--end)));
-  background: -o-linear-gradient(left, var(--subheader-gradient-content-bg--start), var(--subheader-gradient-content-bg--end));
   background: linear-gradient(to right, var(--subheader-gradient-content-bg--start), var(--subheader-gradient-content-bg--end));
 }
 @media (min-width: 576px) {
@@ -10056,7 +10021,6 @@ table thead {
   min-height: 0;
   background-color: var(--subheader-gradient-bg--start);
   background: -webkit-gradient(linear, left top, right top, from(var(--subheader-gradient-bg--start)), to(var(--subheader-gradient-end)));
-  background: -o-linear-gradient(left, var(--subheader-gradient-bg--start), var(--subheader-gradient-end));
   background: linear-gradient(to right, var(--subheader-gradient-bg--start), var(--subheader-gradient-end));
 }
 @media (min-width: 0) {
@@ -10671,7 +10635,6 @@ table thead {
 .Header {
   background-color: #062065;
   background: -webkit-gradient(linear, left top, right top, from(#00205b), to(#004181));
-  background: -o-linear-gradient(left, #00205b, #004181);
   background: linear-gradient(to right, #00205b, #004181);
   background: #fff;
   color: #000;
@@ -10728,7 +10691,6 @@ table thead {
 .Frame-header::before {
   content: " ";
   background: -webkit-gradient(linear, left top, right top, from(var(--pillars-pattern)));
-  background: -o-linear-gradient(left, var(--pillars-pattern));
   background: linear-gradient(to right, var(--pillars-pattern));
   position: absolute;
   top: -12px;

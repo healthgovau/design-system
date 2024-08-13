@@ -1,14 +1,17 @@
-const gulp          = require('gulp');
-const del           = require('del');
-const sass          = require('gulp-sass')(require('sass'));
-const rename        = require("gulp-rename");
-const concat        = require("gulp-concat");
-const minify        = require('gulp-minify');
-const cleanCss      = require('gulp-clean-css');
-const header        = require('gulp-header');
-const autoprefixer  = require('gulp-autoprefixer');
+import gulp from 'gulp';
+import del from 'del';
+import * as dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import rename from 'gulp-rename';
+import concat from 'gulp-concat';
+import minify from 'gulp-minify';
+import cleanCss from 'gulp-clean-css';
+import header from 'gulp-header';
+import autoprefixer from 'gulp-autoprefixer';
 
-const pkg         = require('./package.json');
+import pkg from './package.json' assert { type: "json" };
+
+const sass = gulpSass(dartSass);
 
 const options = {
   paths : {
@@ -139,7 +142,7 @@ function watching() {
 // Exports
 // ===================================
 
-exports.default = gulp.series(
+export default gulp.series(
   gulp.parallel(
     gulp.series(jsClean, jsAggregate, js),
     gulp.series(cssClean, gulp.parallel(cssDev, cssProd)),
@@ -149,4 +152,4 @@ exports.default = gulp.series(
   cssStyleGuide
 );
 
-exports.watch = watching;
+export const watch = watching;
