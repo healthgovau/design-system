@@ -6116,19 +6116,21 @@ textarea.au-text-input {
     @media (min-width: 992px) {
       .au-body .health-hero.health-hero--bg-gradient .health-hero__image-container {
         left: calc(100% - var(--hero-image-width--lg)); } }
-    @media (min-width: 768px) {
-      .au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
-        position: absolute;
-        background: -webkit-gradient(linear, left top, right top, from(var(--hero-bg)), color-stop(var(--hero-bg)), color-stop(transparent), to(transparent));
-        background: -o-linear-gradient(left, var(--hero-bg) 0%, var(--hero-bg) var(--hero-content-width--md), transparent calc(var(--hero-content-width--md) + 30%), transparent 100%);
-        background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) var(--hero-content-width--md), transparent calc(var(--hero-content-width--md) + 30%), transparent 100%);
-        inset: 0;
-        z-index: 300; } }
-    @media (min-width: 992px) {
-      .au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
-        background: -webkit-gradient(linear, left top, right top, from(var(--hero-bg)), color-stop(var(--hero-bg)), color-stop(transparent), to(transparent));
-        background: -o-linear-gradient(left, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%);
-        background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%); } }
+    .au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
+      background-color: pink; }
+      @media (min-width: 768px) {
+        .au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
+          position: absolute;
+          background: -webkit-gradient(linear, left top, right top, from(var(--hero-bg)), color-stop(var(--hero-bg)), color-stop(transparent), to(transparent));
+          background: -o-linear-gradient(left, var(--hero-bg) 0%, var(--hero-bg) var(--hero-content-width--md), transparent calc(var(--hero-content-width--md) + 30%), transparent 100%);
+          background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) var(--hero-content-width--md), transparent calc(var(--hero-content-width--md) + 30%), transparent 100%);
+          inset: 0;
+          z-index: 300; } }
+      @media (min-width: 992px) {
+        .au-body .health-hero.health-hero--bg-gradient .health-hero__bg {
+          background: -webkit-gradient(linear, left top, right top, from(var(--hero-bg)), color-stop(var(--hero-bg)), color-stop(transparent), to(transparent));
+          background: -o-linear-gradient(left, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%);
+          background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%); } }
   .au-body .health-hero.health-hero--bg-gradient--vertical {
     position: relative;
     background: var(--hero-bg); }
