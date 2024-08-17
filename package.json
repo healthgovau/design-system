@@ -56,30 +56,5 @@
     "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
     "fractal:build": "npm run gulp && cd style-guide && fractal build"
-  },
-  "pancake": {
-    "auto-save": false,
-    "plugins": true,
-    "ignore": [],
-    "css": {
-      "name": false
-    },
-    "sass": {
-      "modules": false,
-      "location": "./source/sass/vendors/",
-      "name": "govau-ds.scss"
-    },
-    "js": {
-      "minified": true,
-      "modules": false,
-      "location": "./source/js/src",
-      "name": "govau-ds.js"
-    },
-    "react": {
-      "location": false
-    },
-    "json": {
-      "enable": false
-    }
   }
 }
