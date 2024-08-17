@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // AU vars for reference
 // min-width: breakpoint
 // $AU-media-xs: 0;
@@ -60,9 +62,9 @@ $subheader-minheight--desktop: 500px;
 
 // Component spacing
 $component-padding: 3rem;
-$component-padding--mobile: $component-padding/2;
+$component-padding--mobile: math.div($component-padding, 2);
 $component-margin: 3rem;
-$component-margin--mobile: $component-margin/2;
+$component-margin--mobile: math.div($component-margin, 2);
 
 // Hero
 $hero-content-width--md: 60%;

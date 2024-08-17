@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Sub header variation. This includes our title and HP switcher.
 .health-sub-header {
 
@@ -83,7 +85,7 @@
 
     // Hero content
     .health-sub-header__content {
-      @include AU-space(padding, 1.5unit $AU-grid-12-gutter-width/2);
+      @include AU-space(padding, 1.5unit math.div($AU-grid-12-gutter-width, 2));
 
       @include AU-media(sm) {
         @include AU-space(padding, 3unit);

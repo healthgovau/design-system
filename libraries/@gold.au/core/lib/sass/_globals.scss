@@ -1,5 +1,5 @@
 /*! @gold.au/core v5.0.0 */
-
+@use 'sass:math';
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Core module globals
 //
@@ -47,7 +47,7 @@
 $name: "@gold.au/core";
 $version: "5.0.0";
 $dependencies: (
-	
+
 );
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -114,7 +114,7 @@ $dependencies: (
 	$encoded:'';
 	$slice: 2000;
 	$index: 0;
-	$loops: ceil( str-length( $svg ) / $slice ); // Chunk up string in order to avoid "stack level too deep" error
+	$loops: ceil( math.div(str-length( $svg ), $slice) ); // Chunk up string in order to avoid "stack level too deep" error
 
 	@for $i from 1 through $loops {
 		$chunk: str-slice( $svg, $index, $index + $slice - 1 );
@@ -228,7 +228,7 @@ $dependencies: (
 			@return 0 / 0;
 		}
 
-		$normalized: ( $base / $SQRT2 );
+		$normalized: ( calc($base / $SQRT2) );
 		$log: 0;
 
 		@if $normalized < 0 {
@@ -244,7 +244,7 @@ $dependencies: (
 
 		@else if $normalized >= 1 {
 			@while $normalized >= 1 {
-				$normalized: $normalized / 2;
+				$normalized: calc($normalized / 2);
 				$log: $log + 1;
 			}
 		}
@@ -252,7 +252,7 @@ $dependencies: (
 		$divider: 1;
 		$deviderExponent: $log;
 
-		$baseExponent: if( $deviderExponent >= 0, 2, 1 / 2 );
+		$baseExponent: if( $deviderExponent >= 0, 2, calc(1 / 2) );
 
 		@if $deviderExponent < 0 {
 			$deviderExponent: $deviderExponent * -1;
@@ -266,8 +266,8 @@ $dependencies: (
 			$deviderExponent: floor( $deviderExponent * 0.5 );
 		}
 
-		$base: $base / $divider;
-		$base: ( $base - 1 ) / ( $base + 1 );
+		$base: calc($base / $divider);
+		$base: calc(( $base - 1 ) / ( $base + 1 ));
 		$base2: $base * $base;
 		$iterator: 1;
 		$tempBase: $base;
@@ -277,14 +277,14 @@ $dependencies: (
 			$base: $base * $base2;
 			$iterator: $iterator + 2;
 			$tempBase2: $tempBase;
-			$tempBase: $tempBase + $base / $iterator;
+			$tempBase: $tempBase + calc($base / $iterator);
 		}
 
 		$logarithm: ( $LN2 * $log + 2 * $tempBase ) * $exponent;
 		$return: 0;
 
 		@for $quarter from 0 to 24 {
-			$return: $return + AU-pow( $logarithm, $quarter ) / AU-factorial( $quarter );
+			$return: $return + calc(AU-pow( $logarithm, $quarter ) / AU-factorial( $quarter ));
 		}
 
 		@return $return;
@@ -315,9 +315,9 @@ $dependencies: (
 
 	@for $i from 1 through 3 {
 		$rgb: nth( $rgba, $i );
-		$rgb: $rgb / 255;
+		$rgb: calc($rgb / 255);
 
-		$rgb: if( $rgb < .03928, $rgb / 12.92, AU-pow( ( $rgb + .055 ) / 1.055, 2.4 ) );
+		$rgb: if( $rgb < .03928, calc($rgb / 12.92), AU-pow( calc(( $rgb + .055 ) / 1.055), 2.4 ) );
 
 		$rgba2: append( $rgba2, $rgb );
 	}
@@ -353,10 +353,10 @@ $dependencies: (
 
 	$luminance1: AU-color-luminance( $foreground ) + .05;
 	$luminance2: AU-color-luminance( $background ) + .05;
-	$ratio: $luminance1 / $luminance2;
+	$ratio: calc($luminance1 / $luminance2);
 
 	@if $luminance2 > $luminance1 {
-		$ratio: 1 / $ratio;
+		$ratio: calc(1 / $ratio);
 	}
 
 	@if $ratio < 4.5 and $silent == false {
@@ -414,7 +414,7 @@ $dependencies: (
 
 	// Ratio didn't pass so we need to find the nearest color
 	$a11yLightness: lightness( $toMakeA11y );
-	$minHexDiff: 100 / 255; // 255 Colors / 100% HSL
+	$minHexDiff: calc(100 / 255); // 255 Colors / 100% HSL
 
 	$isBlackBgContrast: AU-color-contrast( #000, $background, true, false ) >= $ratio;
 	$isWhiteBgContrast: AU-color-contrast( #fff, $background, true, false ) >= $ratio;
@@ -448,7 +448,7 @@ $dependencies: (
 
 	// Binary search until we find the colour that meets contrast
 	@while( $foundColor == '' ) {
-		$midLightness: ( $minLightness + $maxLightness ) / 2;
+		$midLightness: math.div( $minLightness + $maxLightness, 2);
 		$midColor: hsl(
 			hue( $toMakeA11y ),
 			saturation( $toMakeA11y ),
@@ -534,8 +534,8 @@ $dependencies: (
 	@each $value in $values {
 		// This is a pixel on unitless unit. Let’s convert it to rems
 		@if type-of( $value ) == 'number' and unit( $value ) == 'unit' {
-			$value: $value / 1unit; // This is to remove the unit value
-			$rem: $value / ( ( $value / $unit ) * 0 + 1 );
+			$value: math.div($value, 1unit); // This is to remove the unit value
+			$rem: math.div($value, math.div( $value, $unit ) * 0 + 1 );
 
 			$fallback: join( $fallback, round( $value * ( $unit * $unit ) ) + 0px );
 			$output: join( $output, #{ $rem }rem );
@@ -703,11 +703,11 @@ $dependencies: (
 
 	// Get the value from supplied key for pixel and calculate the rem value
 	$fontsize-px: map-get( $AU-fontsize-map, $fontsize-key );
-	$fontsize-rem: $fontsize-px / $AU-rem;
+	$fontsize-rem: math.div($fontsize-px, $AU-rem);
 
 	// Change the lineheight if it doesn't hit a AU-unit e.g. 40px font size with 1.5 lineheight = 50px should be 52px
 	$lineheight-pixel: round( ( map-get( $AU-lineheight-map, $lineheight-key ) * $fontsize-px ) / $AU-unit ) * $AU-unit;
-	$lineheight: $lineheight-pixel / $fontsize-px;
+	$lineheight: math.div($lineheight-pixel, $fontsize-px);
 
 	// Mixin output
 	font-size: $fontsize-px + 0px;   // Pixel fallback for non-rem support

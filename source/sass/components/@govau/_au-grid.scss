@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .au-grid {
 
   // On non-full width pages, stop nested containers from pushing out wide.
@@ -44,11 +46,11 @@
         padding-right: 0;
 
         &:first-of-type {
-          padding-left: $AU-grid-12-gutter-width/2;
+          padding-left: math.div($AU-grid-12-gutter-width, 2);
         }
 
         &:last-of-type {
-          padding-right: $AU-grid-12-gutter-width/2;
+          padding-right: math.div($AU-grid-12-gutter-width, 2);
         }
       }
     }
@@ -61,8 +63,8 @@
   .col-lg-5ths {
     position: relative;
     min-height: 1px;
-    padding-right: $AU-grid-12-gutter-width / 2;
-    padding-left: $AU-grid-12-gutter-width / 2;
+    padding-right: math.div($AU-grid-12-gutter-width, 2);
+    padding-left: math.div($AU-grid-12-gutter-width, 2);
   }
 
   .col-xs-5ths {

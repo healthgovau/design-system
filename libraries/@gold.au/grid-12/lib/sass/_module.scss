@@ -5,7 +5,7 @@
 // Content:
 // - stuff
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+@use 'sass:math';
 
 @import '_globals.scss';
 @import '_print.scss';
@@ -49,16 +49,16 @@
 
 		margin-right: auto;
 		margin-left: auto;
-		padding-left: floor( ( $AU-grid-12-gutter-width / 2 ) );
-		padding-right: ceil( ( $AU-grid-12-gutter-width / 2 ) );
+		padding-left: floor( math.div( $AU-grid-12-gutter-width, 2 ) );
+		padding-right: ceil( math.div( $AU-grid-12-gutter-width, 2 ) );
 	}
 
 	//create row and clear floats inside
 	.row {
 		@include AU-clearfix;
 
-		margin-left: ceil( ( $AU-grid-12-gutter-width / -2 ) );
-		margin-right: floor( ( $AU-grid-12-gutter-width / -2 ) );
+		margin-left: ceil( math.div( $AU-grid-12-gutter-width, -2 ) );
+		margin-right: floor( math.div( $AU-grid-12-gutter-width, -2 ) );
 	}
 
 	//create all classes

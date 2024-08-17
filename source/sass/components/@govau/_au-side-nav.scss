@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .au-body {
   .au-side-nav {
 
@@ -92,8 +94,8 @@
 
     @include AU-media(sm) {
       float: right;
-      padding-left: $AU-grid-12-gutter-width/2;
-      padding-right: $AU-grid-12-gutter-width/2;
+      padding-left: math.div($AU-grid-12-gutter-width, 2);
+      padding-right: math.div($AU-grid-12-gutter-width, 2);
     }
   }
 }
