@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Sticky button
 // Sticky region is reserved for registrations so it exists within the button component.
 
@@ -7,8 +9,8 @@
     background: #fff;
     width: 100vw;
     padding: 2rem;
-    margin-left: -($AU-grid-12-gutter-width / 2);
-    margin-right: -($AU-grid-12-gutter-width / 2);
+    margin-left: -(math.div($AU-grid-12-gutter-width, 2));
+    margin-right: -(math.div($AU-grid-12-gutter-width, 2));
     box-shadow: 0 -7px 11px 0px rgba(0, 0, 0, .2);
     z-index: 9999;
 

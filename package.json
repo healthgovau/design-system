@@ -1,8 +1,8 @@
 {
   "name": "@health.gov.au/health-design-system",
-  "author": "Australian Government Department of Health <enquiries@health.gov.au> (https://www.health.gov.au)",
+  "author": "Australian Government Department of Health and Aged Care <enquiries@health.gov.au> (https://www.health.gov.au)",
   "description": "Design system for health.gov.au and related products.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/healthgovau/health-design-system.git"
@@ -17,62 +17,37 @@
     "hdssetup": "bin/setup.js"
   },
   "dependencies": {
-    "@gold.au/accordion": "^8.0.0",
-    "@gold.au/body": "^3.0.0",
-    "@gold.au/breadcrumbs": "^4.0.0",
-    "@gold.au/buttons": "^4.0.0",
-    "@gold.au/callout": "^4.0.0",
-    "@gold.au/card": "^1.0.0",
-    "@gold.au/control-input": "^4.0.0",
-    "@gold.au/core": "^5.0.0",
-    "@gold.au/cta-link": "^3.0.0",
-    "@gold.au/direction-links": "^4.0.0",
-    "@gold.au/footer": "^4.0.0",
-    "@gold.au/grid-12": "^3.0.0",
-    "@gold.au/header": "^5.0.0",
-    "@gold.au/headings": "^3.0.0",
-    "@gold.au/inpage-nav": "^4.0.0",
-    "@gold.au/keyword-list": "^4.0.0",
-    "@gold.au/link-list": "^4.0.0",
-    "@gold.au/main-nav": "^2.0.0",
-    "@gold.au/page-alerts": "^3.0.0",
-    "@gold.au/pancake-js": "^2.0.0",
-    "@gold.au/responsive-media": "^3.0.0",
-    "@gold.au/select": "^3.0.0",
-    "@gold.au/side-nav": "^6.0.0",
-    "@gold.au/skip-link": "^3.0.0",
-    "@gold.au/tags": "^5.0.0",
-    "@gold.au/text-inputs": "3.0.0",
     "copy": "^0.3.2",
-    "fs-extra": "^10.0.0",
     "get-dependencies": "^1.1.0",
     "get-installed-path": "^4.0.8"
   },
   "devDependencies": {
     "@drupal/once": "^1.0.1",
-    "@frctl/fractal": "^1.5",
-    "@frctl/mandelbrot": "^1.2.1",
-    "backstopjs": "^5.3.4",
-    "del": "^5.0.0",
-    "eslint": "^8.10.0",
+    "@frctl/fractal": "^1.5.15",
+    "@frctl/mandelbrot": "^1.10.3",
+    "backstopjs": "^6.3.23",
+    "del": "^7.1.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
+    "fs-extra": "^11.2.0",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^4.0.1",
-    "gulp-debug": "^4.0.0",
+    "gulp-debug": "^5.0.1",
     "gulp-header": "^2.0.9",
     "gulp-minify": "^3.1.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "sass-versioning": "^0.4.0"
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8",
+    "sass-versioning": "^0.4.5"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": "20.x"
   },
   "scripts": {
-    "start": "cat .githooks/pre-commit > .git/hooks/pre-commit && chmod a+x .git/hooks/pre-commit && npm rebuild node-sass",
+    "start": "cat .githooks/pre-commit > .git/hooks/pre-commit && chmod a+x .git/hooks/pre-commit",
     "backstop:accept": "backstop approve --config=backstop.config.js",
     "backstop:approve": "backstop approve --config=backstop.config.js",
     "backstop:open": "backstop openReport --config=backstop.config.js",
@@ -81,30 +56,5 @@
     "gulp:watch": "gulp watch",
     "fractal:start": "cd style-guide && fractal start --sync",
     "fractal:build": "npm run gulp && cd style-guide && fractal build"
-  },
-  "pancake": {
-    "auto-save": false,
-    "plugins": true,
-    "ignore": [],
-    "css": {
-      "name": false
-    },
-    "sass": {
-      "modules": false,
-      "location": "./source/sass/vendors/",
-      "name": "govau-ds.scss"
-    },
-    "js": {
-      "minified": true,
-      "modules": false,
-      "location": "./source/js/src",
-      "name": "govau-ds.js"
-    },
-    "react": {
-      "location": false
-    },
-    "json": {
-      "enable": false
-    }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "version": 3,
+  "sources": [
+    "react.es5.js"
+  ],
+  "names": [
+    "AUskipLinkItem",
+    "link",
+    "text",
+    "className",
+    "attributeOptions",
+    "propTypes",
+    "PropTypes",
+    "string",
+    "isRequired",
+    "AUskipLink",
+    "links",
+    "ariaLabel",
+    "map",
+    "i",
+    "arrayOf",
+    "shape",
+    "defaultProps"
+  ],
+  "mappings": "uHASA,oDACA,6D,moCAGA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,GACO,GAAMA,CAAAA,cAAc,CAAG,QAAjBA,CAAAA,cAAiB,UAAGC,CAAAA,IAAH,MAAGA,IAAH,CAASC,IAAT,MAASA,IAAT,qBAAeC,SAAf,CAAeA,SAAf,yBAA2B,EAA3B,gBAAkCC,gBAAlC,6DAC7B,8CAAG,SAAS,8BAAyBD,SAAzB,CAAZ,CAAmD,IAAI,CAAGF,IAA1D,EAAsEG,gBAAtE,EAA2FF,IAA3F,CAD6B,CAAvB,C,sCAIPF,cAAc,CAACK,SAAf,CAA2B,CAC1BJ,IAAI,CAAEK,sBAAUC,MAAV,CAAiBC,UADG,CAE1BN,IAAI,CAAEI,sBAAUC,MAAV,CAAiBC,UAFG,CAG1BL,SAAS,CAAEG,sBAAUC,MAHK,CAA3B,CAOA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,GACA,GAAME,CAAAA,UAAU,CAAG,QAAbA,CAAAA,UAAa,WAAGC,CAAAA,KAAH,OAAGA,KAAH,uBAAUP,SAAV,CAAUA,SAAV,0BAAsB,EAAtB,iBAA0BQ,SAA1B,OAA0BA,SAA1B,CAAwCP,gBAAxC,+DAClB,gDAAK,SAAS,wBAAmBD,SAAnB,CAAd,CAA+C,aAAaQ,SAA5D,EAA6EP,gBAA7E,EAEEM,KAAK,CAACE,GAAN,CACC,SAAEX,IAAF,CAAQY,CAAR,qBAAe,gCAAC,cAAD,WAAgB,GAAG,CAAGA,CAAtB,EAA+BZ,IAA/B,EAAf,CADD,CAFF,CADkB,CAAnB,CAUAQ,UAAU,CAACJ,SAAX,CAAuB,CACtBK,KAAK,CAAEJ,sBAAUQ,OAAV,CACNR,sBAAUS,KAAV,CAAgB,CACfd,IAAI,CAAEK,sBAAUC,MAAV,CAAiBC,UADR,CAEfN,IAAI,CAAEI,sBAAUC,MAAV,CAAiBC,UAFR,CAAhB,CADM,EAKLA,UANoB,CAOtBG,SAAS,CAAEL,sBAAUC,MAPC,CAAvB,CAUAE,UAAU,CAACO,YAAX,CAA0B,CACzBL,SAAS,CAAE,uBADc,CAA1B,C,aAIeF,U",
+  "sourcesContent": [
+    "/*! @gold.au/skip-link v3.0.0 */\n/***************************************************************************************************************************************************************\n *\n * skip-link function\n *\n * Provide skip links to navigation and content.\n *\n **************************************************************************************************************************************************************/\n\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\n\n/**\n * One skip-link item\n *\n * @param  {string} link             - The href for the link\n * @param  {string} text             - The link text\n * @param  {string} className        - An additional class, optional\n * @param  {object} attributeOptions - Any other attribute options\n */\nexport const AUskipLinkItem = ({ link, text, className = '', ...attributeOptions }) => (\n\t<a className={`au-skip-link__link ${ className }`} href={ link } { ...attributeOptions }>{ text }</a>\n);\n\nAUskipLinkItem.propTypes = {\n\tlink: PropTypes.string.isRequired,\n\ttext: PropTypes.string.isRequired,\n\tclassName: PropTypes.string,\n};\n\n\n/**\n * DEFAULT\n * The skip-link component\n *\n * @param  {array}  links            - The links, format: { url: '', text: '' }\n * @param  {string} className        - An additional class, optional\n * @param  {string} ariaLabel        - The aria-label attribute, optional\n * @param  {object} attributeOptions - Any other attribute options\n */\nconst AUskipLink = ({ links, className = '', ariaLabel, ...attributeOptions }) => (\n\t<nav className={`au-skip-link ${ className }`} aria-label={ ariaLabel } { ...attributeOptions }>\n\t\t{\n\t\t\tlinks.map(\n\t\t\t\t( link, i ) => <AUskipLinkItem key={ i } { ...link } />\n\t\t\t)\n\t\t}\n\t</nav>\n);\n\nAUskipLink.propTypes = {\n\tlinks: PropTypes.arrayOf(\n\t\tPropTypes.shape({\n\t\t\tlink: PropTypes.string.isRequired,\n\t\t\ttext: PropTypes.string.isRequired,\n\t\t})\n\t).isRequired,\n\tariaLabel: PropTypes.string,\n};\n\nAUskipLink.defaultProps = {\n\tariaLabel: 'skip links navigation',\n}\n\nexport default AUskipLink;\n"
+  ]
+}

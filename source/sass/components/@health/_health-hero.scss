@@ -9,6 +9,7 @@
 
 // 1 - default boxed content hero
 .au-body {
+
   .health-hero {
     background: none;
     color: var(--hero-text);
@@ -195,7 +196,6 @@
         @include AU-media(lg) {
           background: linear-gradient(90deg, var(--hero-bg) 0%, var(--hero-bg) calc(var(--hero-content-width--lg) - 10%), transparent calc(var(--hero-content-width--lg) + 30%), transparent 100%);
         }
-
       }
     }
 

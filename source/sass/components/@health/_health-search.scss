@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .au-grid {
   .au-header .health-search {
     @include AU-media(sm) {
@@ -176,7 +178,7 @@
 
 form[class*='col-'].health-search__form {
   .health-search__form__submit {
-    right: $AU-grid-12-gutter-width/2;
+    right: math.div($AU-grid-12-gutter-width, 2);
   }
 }
 

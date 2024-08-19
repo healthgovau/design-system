@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // $grid-gutter-size logic ensures that the regsult gutter is applied except
 // for mobile ('xs' breakpoint) which halves it to match the page gutter.
 // This ensures that items are evenly spaced and not too 'gappy' on mobiles
@@ -16,7 +18,7 @@ $grid-gutter-size: $AU-grid-12-gutter-width;
     box-sizing: border-box;
     flex-basis: 100%;
     -ms-flex: auto;
-    margin-bottom: $grid-gutter-size/2;
+    margin-bottom: math.div($grid-gutter-size, 2);
     padding: 1rem;
 
     @include AU-media(sm) {
@@ -36,7 +38,7 @@ $grid-gutter-size: $AU-grid-12-gutter-width;
         flex-basis: health-grid-item-width();
         -ms-flex: auto;
         margin-right: 0;
-        margin-bottom: $grid-gutter-size/2;
+        margin-bottom: math.div($grid-gutter-size, 2);
       }
     }
 
@@ -113,8 +115,8 @@ $grid-gutter-size: $AU-grid-12-gutter-width;
           -ms-flex: auto;
 
           @if $bp=='xs' {
-            flex-basis: health-grid-item-width($i, $grid-gutter-size/2);
-            margin-bottom: $grid-gutter-size/2;
+            flex-basis: health-grid-item-width($i, math.div($grid-gutter-size, 2));
+            margin-bottom: math.div($grid-gutter-size, 2);
           }
 
           @else {
@@ -127,7 +129,7 @@ $grid-gutter-size: $AU-grid-12-gutter-width;
       >*:not(*:nth-child(#{$i}n + #{$i})) {
         @include AU-media($bp) {
           @if $bp=='xs' {
-            margin-right: $grid-gutter-size/2;
+            margin-right: math.div($grid-gutter-size, 2);
           }
 
           @else {

@@ -1,5 +1,5 @@
 /**
- * SCSS to theme the style guide 
+ * SCSS to theme the style guide
  * Run `gulp` in the project root to compile to `style-guide\public\styles\theme.css`
  */
 
@@ -7,7 +7,33 @@
 @import '../../source/sass/themes/theme-functions';
 @import '../../source/sass/themes/health/colours';
 @import '../../source/sass/themes/health/govau-variable-overrides';
-@import '../../source/sass/vendors/govau-ds';
+@import "../../node_modules/sass-versioning/dist/_index.scss";
+@import "../../libraries/@gold.au/core/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/accordion/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/body/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/link-list/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/breadcrumbs/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/buttons/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/callout/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/card/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/control-input/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/cta-link/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/direction-links/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/footer/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/grid-12/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/header/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/headings/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/inpage-nav/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/keyword-list/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/main-nav/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/page-alerts/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/responsive-media/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/select/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/side-nav/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/skip-link/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/tags/lib/sass/_module.scss";
+@import "../../libraries/@gold.au/text-inputs/lib/sass/_module.scss";
+
 @import '../../source/sass/abstracts/abstracts';
 @import '../../source/sass/themes/health/variables';
 @import '../../source/sass/themes/health/custom-property-map';
@@ -19,4 +45,3 @@
 @import 'documentation/components';
 @import 'components/components';
 
- 

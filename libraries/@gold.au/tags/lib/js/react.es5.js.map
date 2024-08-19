@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "sources": [
+    "react.es5.js"
+  ],
+  "names": [
+    "AUtag",
+    "link",
+    "dark",
+    "text",
+    "linkComponent",
+    "className",
+    "attributeOptions",
+    "TagContainer",
+    "LinkComponent",
+    "href",
+    "to",
+    "propTypes",
+    "PropTypes",
+    "string",
+    "isRequired",
+    "li",
+    "object",
+    "oneOfType",
+    "func",
+    "defaultProps",
+    "AUtagList",
+    "tags",
+    "map",
+    "tag",
+    "i",
+    "bool",
+    "arrayOf",
+    "shape"
+  ],
+  "mappings": "8GASA,oDACA,6D,opCAEA;AACA;AACA;AACA;AACA;AACA;AACA,GACO,GAAMA,CAAAA,KAAK,CAAG,QAARA,CAAAA,KAAQ,MAAyE,IAAtEC,CAAAA,IAAsE,MAAtEA,IAAsE,CAAhEC,IAAgE,MAAhEA,IAAgE,CAA1DC,IAA0D,MAA1DA,IAA0D,CAApDC,aAAoD,MAApDA,aAAoD,CAArCC,SAAqC,MAArCA,SAAqC,CAAvBC,gBAAuB,0CAE7F,GAAIC,CAAAA,YAAY,CAAG,MAAnB,CACA,GAAIC,CAAAA,aAAa,CAAGJ,aAApB,CAGA,GAAII,aAAa,GAAK,GAAtB,CAA4B,CAC3BF,gBAAgB,CAACG,IAAjB,CAAwBR,IACxB,CACD;AAHA,IAIK,IAAI,MAAOO,CAAAA,aAAP,GAAyB,UAA7B,CAA0C,CAC9CF,gBAAgB,CAACI,EAAjB,CAAsBT,IACtB,CAED,MACCA,CAAAA,IAAI,cACH,gCAAC,aAAD,WAAe,SAAS,kBAAaC,IAAI,CAAG,cAAH,CAAoB,EAArC,aAA2CG,SAA3C,CAAxB,EAAqFC,gBAArF,EAA0GH,IAA1G,CADG,cAGH,gCAAC,YAAD,aAAkBG,gBAAlB,EAAoC,SAAS,kBAAaJ,IAAI,CAAG,cAAH,CAAoB,EAArC,aAA2CG,SAA3C,CAA7C,GACEF,IADF,CAIF,CAtBM,C,oBAyBPH,KAAK,CAACW,SAAN,CAAkB,CACjBV,IAAI,CAAEW,sBAAUC,MADC,CAEjBV,IAAI,CAAES,sBAAUC,MAAV,CAAiBC,UAFN,CAGjBC,EAAE,CAAEH,sBAAUI,MAHG,CAIjBZ,aAAa,CAAEQ,sBAAUK,SAAV,CAAoB,CAAEL,sBAAUC,MAAZ,CAAoBD,sBAAUM,IAA9B,CAApB,CAJE,CAAlB,CAOAlB,KAAK,CAACmB,YAAN,CAAqB,CACpBf,aAAa,CAAE,GADK,CAEpBC,SAAS,CAAE,EAFS,CAArB,CAOA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,GACA,GAAMe,CAAAA,SAAS,CAAG,QAAZA,CAAAA,SAAY,WAAGlB,CAAAA,IAAH,OAAGA,IAAH,CAASmB,IAAT,OAASA,IAAT,uBAAehB,SAAf,CAAeA,SAAf,0BAA2B,EAA3B,iBAAkCC,gBAAlC,+DACjB,+CAAI,SAAS,uBAAmBD,SAAnB,CAAb,EAAoDC,gBAApD,EAEEe,IAAI,CAACC,GAAL,CACC,SAAEC,GAAF,CAAOC,CAAP,qBACC,+CAAI,GAAG,CAAEA,CAAT,EAAgBD,GAAG,CAACR,EAApB,eACC,gCAAC,KAAD,WACC,IAAI,CAAEb,IADP,CAEC,aAAa,CAAGqB,GAAG,CAACnB,aAFrB,CAGC,IAAI,CAAEmB,GAAG,CAACtB,IAHX,CAIC,IAAI,CAAEsB,GAAG,CAACpB,IAJX,EAKKoB,GAAG,CAACjB,gBALT,EADD,CADD,CADD,CAFF,CADiB,CAAlB,CAoBAc,SAAS,CAACT,SAAV,CAAsB,CACrBT,IAAI,CAAEU,sBAAUa,IADK,CAErBJ,IAAI,CAAET,sBAAUc,OAAV,CACLd,sBAAUe,KAAV,CAAgB,CACf1B,IAAI,CAAEW,sBAAUC,MADD,CAEfV,IAAI,CAAES,sBAAUC,MAAV,CAAiBC,UAFR,CAGfC,EAAE,CAAEH,sBAAUI,MAHC,CAAhB,CADK,EAMJF,UARmB,CASrBT,SAAS,CAAEO,sBAAUC,MATA,CAAtB,CAYAO,SAAS,CAACD,YAAV,CAAyB,CACxBjB,IAAI,CAAE,KADkB,CAAzB,C,aAIekB,S",
+  "sourcesContent": [
+    "/*! @gold.au/tags v5.0.0 */\n/***************************************************************************************************************************************************************\n *\n * tags function\n *\n * Use tags to apply a taxonomy and link to similar content.\n *\n **************************************************************************************************************************************************************/\n\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\n/**\n * TODO\n * @param  {string}  link             - The link for this tag, optional\n * @param  {string}  text             - The text for the tag\n * @param  {boolean} dark             - Add the dark variation class, optional\n * @param  {object}  attributeOptions - Any other attribute options\n */\nexport const AUtag = ({ link, dark, text, linkComponent, className, ...attributeOptions }) => {\n\n\tlet TagContainer = 'span';\n\tlet LinkComponent = linkComponent;\n\n\n\tif( LinkComponent === 'a' ) {\n\t\tattributeOptions.href = link;\n\t}\n\t// If we are using a link component\n\telse if( typeof LinkComponent === 'function' ) {\n\t\tattributeOptions.to = link;\n\t}\n\n\treturn (\n\t\tlink ?\n\t\t\t<LinkComponent className={`au-tag ${ dark ? 'au-tag--dark' : ''} ${className}`} { ...attributeOptions }>{ text }</LinkComponent>\n\t\t\t:\n\t\t\t<TagContainer {...attributeOptions} className={`au-tag ${ dark ? 'au-tag--dark' : ''} ${className}`}>\n\t\t\t\t{text}\n\t\t\t</TagContainer>\n\t)\n}\n\n\nAUtag.propTypes = {\n\tlink: PropTypes.string,\n\ttext: PropTypes.string.isRequired,\n\tli: PropTypes.object,\n\tlinkComponent: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ]),\n};\n\nAUtag.defaultProps = {\n\tlinkComponent: 'a',\n\tclassName: ''\n};\n\n\n\n/**\n * DEFAULT\n * The tags component\n *\n * @param  {boolean} dark             - Add the dark variation class, optional\n * @param  {array}   tags             - The tags, format: { link: '', text: '', onClick: () }\n * @param  {string}  className        - An additional class, optional\n * @param  {object}  li               - An additional object to be spread into the list item\n * @param  {object}  attributeOptions - Any other attribute options\n */\nconst AUtagList = ({ dark, tags, className = '', ...attributeOptions }) => (\n\t<ul className={ `au-tag-list ${ className }` } { ...attributeOptions }>\n\t\t{\n\t\t\ttags.map(\n\t\t\t\t( tag, i ) => (\n\t\t\t\t\t<li key={i} {...tag.li}>\n\t\t\t\t\t\t<AUtag\n\t\t\t\t\t\t\tdark={dark}\n\t\t\t\t\t\t\tlinkComponent={ tag.linkComponent }\n\t\t\t\t\t\t\tlink={tag.link}\n\t\t\t\t\t\t\ttext={tag.text}\n\t\t\t\t\t\t\t{...tag.attributeOptions}\n\t\t\t\t\t\t/>\n\t\t\t\t\t</li>\n\t\t\t\t)\n\t\t\t)\n\t\t}\n\t</ul>\n);\n\nAUtagList.propTypes = {\n\tdark: PropTypes.bool,\n\ttags: PropTypes.arrayOf(\n\t\tPropTypes.shape({\n\t\t\tlink: PropTypes.string,\n\t\t\ttext: PropTypes.string.isRequired,\n\t\t\tli: PropTypes.object,\n\t\t})\n\t).isRequired,\n\tclassName: PropTypes.string,\n};\n\nAUtagList.defaultProps = {\n\tdark: false\n};\n\nexport default AUtagList;\n"
+  ]
+}

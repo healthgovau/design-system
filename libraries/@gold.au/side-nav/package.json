@@ -1,0 +1,154 @@
+{
+  "_args": [
+    [
+      "@gold.au/side-nav@6.0.0",
+      "/home/bgunn/dev/git/health-design-system"
+    ]
+  ],
+  "_from": "@gold.au/side-nav@6.0.0",
+  "_id": "@gold.au/side-nav@6.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-aiiuFi0tivknWlvygQ8oAswxFic4pk6VuGUnNqcDraZMch3RzsXbhN+akeQFb/57L4ZPT+ezlzBibGeRRMRsIQ==",
+  "_location": "/@gold.au/side-nav",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@gold.au/side-nav@6.0.0",
+    "name": "@gold.au/side-nav",
+    "escapedName": "@gold.au%2fside-nav",
+    "scope": "@gold.au",
+    "rawSpec": "6.0.0",
+    "saveSpec": null,
+    "fetchSpec": "6.0.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@gold.au/side-nav/-/side-nav-6.0.0.tgz",
+  "_spec": "6.0.0",
+  "_where": "/home/bgunn/dev/git/health-design-system",
+  "author": {
+    "name": "Design System AU",
+    "email": "maintainers@designsystemau.org",
+    "url": "https://designsystemau.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/designsystemau/gold-design-system/issues"
+  },
+  "contributors": [
+    {
+      "name": "Alex Page",
+      "email": "alex@alexpage.com.au",
+      "url": "https://alexpage.com.au"
+    },
+    {
+      "name": "Sukhraj Ghuman",
+      "email": "sukhrajghuman@live.com",
+      "url": "https://github.com/sukhrajghuman"
+    },
+    {
+      "name": "Adam Zerella",
+      "email": "adam@commandshiftr.co",
+      "url": "https://github.com/adamzerella"
+    }
+  ],
+  "dependencies": {
+    "@gold.au/accordion": "^8.0.0",
+    "@gold.au/animate": "^2.0.0",
+    "@gold.au/core": "^5.0.0",
+    "@gold.au/link-list": "^4.0.0",
+    "@gold.au/pancake": "~2.0.0",
+    "@gold.au/pancake-js": "~2.0.0",
+    "@gold.au/pancake-json": "~2.0.0",
+    "@gold.au/pancake-react": "~2.0.0",
+    "@gold.au/pancake-sass": "~3.0.0"
+  },
+  "description": "A vertical list of links for site navigation typically placed next to the body content.",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.7",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^5.2.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^4.3.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">3.0.0"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "homepage": "https://gold.designsystemau.org/components/side-nav",
+  "keywords": [
+    "auds",
+    "pancake",
+    "pancake-module",
+    "sass",
+    "scss",
+    "css",
+    "gold.au",
+    "gov.au",
+    "Commonwealth of Australia",
+    "design guide",
+    "design system"
+  ],
+  "license": "MIT",
+  "main": "lib/js/react.es5.js",
+  "name": "@gold.au/side-nav",
+  "pancake": {
+    "pancake-module": {
+      "version": "1.0.0",
+      "plugins": [
+        "@gold.au/pancake-sass",
+        "@gold.au/pancake-js",
+        "@gold.au/pancake-react",
+        "@gold.au/pancake-json"
+      ],
+      "sass": {
+        "path": "lib/sass/_module.scss",
+        "sass-versioning": true
+      },
+      "js": {
+        "path": "lib/js/module.js"
+      },
+      "react": {
+        "path": "lib/js/react.js"
+      }
+    }
+  },
+  "peerDependencies": {
+    "@gold.au/core": "^5.0.0",
+    "@gold.au/animate": "^2.0.0",
+    "@gold.au/accordion": "^8.0.0",
+    "@gold.au/link-list": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designsystemau/gold-design-system.git"
+  },
+  "scripts": {
+    "build": "npm run build:pre && npm run build:js && npm run build:react",
+    "build:js": "node ../../scripts/helper.js compile",
+    "build:pre": "node ../../scripts/helper.js precompile publish",
+    "build:react": "cd tests/react/ && webpack",
+    "postinstall": "pancake",
+    "prepublish": "npm run test:helper && npm run build:pre",
+    "serve": "browser-sync tests --files 'tests/**/*.html, tests/**/*.css, tests/**/*.js'",
+    "test": "npm-run-all --parallel test:*",
+    "test:a11y": "node ../../scripts/a11y.js",
+    "test:helper": "node ../../scripts/helper.js test",
+    "watch": "npm run build && npm-run-all --parallel serve watch:*",
+    "watch:js": "onchange 'src/js/*.js' -- npm run build:js",
+    "watch:jsx": "onchange 'src/js/react.js' 'tests/react/index.js' -- npm run build",
+    "watch:sass": "onchange 'src/sass/*.scss' 'tests/site/test.scss' -- npm run build"
+  },
+  "version": "6.0.0"
+}

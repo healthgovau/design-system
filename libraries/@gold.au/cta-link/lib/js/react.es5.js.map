@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "sources": [
+    "react.es5.js"
+  ],
+  "names": [
+    "AUctaLink",
+    "linkComponent",
+    "dark",
+    "link",
+    "text",
+    "className",
+    "attributeOptions",
+    "LinkComponent",
+    "href",
+    "to",
+    "propTypes",
+    "PropTypes",
+    "bool",
+    "string",
+    "isRequired",
+    "oneOfType",
+    "func",
+    "defaultProps"
+  ],
+  "mappings": "gGASA,oDACA,6DAMA,6B,6mCAGA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,GACA,GAAMA,CAAAA,SAAS,CAAG,QAAZA,CAAAA,SAAY,MAA8E,IAA3EC,CAAAA,aAA2E,MAA3EA,aAA2E,CAA5DC,IAA4D,MAA5DA,IAA4D,CAAtDC,IAAsD,MAAtDA,IAAsD,CAAhDC,IAAgD,MAAhDA,IAAgD,qBAA1CC,SAA0C,CAA1CA,SAA0C,yBAA9B,EAA8B,gBAAvBC,gBAAuB,0CAC/F,GAAMC,CAAAA,aAAa,CAAGN,aAAtB,CAEA,GAAIE,IAAJ,CAAW,CACV;AACA,GAAII,aAAa,GAAK,GAAtB,CAA4B,CAC3BD,gBAAgB,CAACE,IAAjB,CAAwBL,IACxB,CACD;AAHA,IAIK,IAAI,MAAOI,CAAAA,aAAP,GAAyB,UAA7B,CAA0C,CAC9CD,gBAAgB,CAACG,EAAjB,CAAsBN,IACtB,CAED,mBACC,gCAAC,aAAD,WAAe,SAAS,uBAAmBE,SAAnB,SAAiCH,IAAI,sBAA0B,EAA/D,CAAxB,EAAoGI,gBAApG,EAAyHF,IAAzH,CAED,CAbD,IAcK,CACJ,mBACC,mDAAQ,SAAS,sBAAkBF,IAAI,sBAA0B,EAAhD,CAAjB,EAA8EI,gBAA9E,EAAmGF,IAAnG,CAED,CACD,CAtBD,CAwBAJ,SAAS,CAACU,SAAV,CAAsB,CACrBR,IAAI,CAAES,sBAAUC,IADK,CAErBT,IAAI,CAAEQ,sBAAUE,MAFK,CAGrBT,IAAI,CAAEO,sBAAUE,MAAV,CAAiBC,UAHF,CAIrBT,SAAS,CAAEM,sBAAUE,MAJA,CAKrBZ,aAAa,CAAEU,sBAAUI,SAAV,CAAoB,CAAEJ,sBAAUE,MAAZ,CAAoBF,sBAAUK,IAA9B,CAApB,CALM,CAAtB,CAQAhB,SAAS,CAACiB,YAAV,CAAyB,CACxBhB,aAAa,CAAE,GADS,CAAzB,C,aAIeD,S",
+  "sourcesContent": [
+    "/*! @gold.au/cta-link v3.0.0 */\n/***************************************************************************************************************************************************************\n *\n * cta-link function\n *\n * Provide a see more/all link when there are too many items to show in the current context.\n *\n **************************************************************************************************************************************************************/\n\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\n\n// The following line will be replaced automatically with generic imports for the ES5 pipeline.\n// You can safely ignore this bit if you use this module with pancake\n//\nimport '../css/styles.css';\n\n\n/**\n * DEFAULT\n * The cta link component\n *\n * @param  {string}  linkComponent    - The component used for the link\n * @param  {boolean} dark             - Add the dark variation class, optional\n * @param  {string}  link             - The link target, if not supplied this will render as a button, optional\n * @param  {string}  text             - The text of the CTA link\n * @param  {string}  className        - An additional class, optional\n * @param  {object}  attributeOptions - Any other attribute options\n */\nconst AUctaLink = ({ linkComponent, dark, link, text, className = '', ...attributeOptions }) => {\n\tconst LinkComponent = linkComponent;\n\n\tif( link ) {\n\t\t// If we are using a normal link\n\t\tif( LinkComponent === 'a' ) {\n\t\t\tattributeOptions.href = link;\n\t\t}\n\t\t// If we are using a link component\n\t\telse if( typeof LinkComponent === 'function' ) {\n\t\t\tattributeOptions.to = link;\n\t\t}\n\n\t\treturn (\n\t\t\t<LinkComponent className={ `au-cta-link ${ className }${ dark ? ` au-cta-link--dark` : '' }` } { ...attributeOptions }>{ text }</LinkComponent>\n\t\t);\n\t}\n\telse {\n\t\treturn (\n\t\t\t<button className={ `au-cta-link${ dark ? ` au-cta-link--dark` : '' }` } { ...attributeOptions }>{ text }</button>\n\t\t);\n\t}\n}\n\nAUctaLink.propTypes = {\n\tdark: PropTypes.bool,\n\tlink: PropTypes.string,\n\ttext: PropTypes.string.isRequired,\n\tclassName: PropTypes.string,\n\tlinkComponent: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ])\n};\n\nAUctaLink.defaultProps = {\n\tlinkComponent: 'a',\n};\n\nexport default AUctaLink;\n"
+  ]
+}

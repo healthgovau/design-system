@@ -1,5 +1,7 @@
+@use 'sass:math';
+
 // Space/pad cards from global vars in _variables.scss
-$card-padding: ($component-padding/3)*2;
+$card-padding: math.div($component-padding, 3) * 2;
 $card-padding--mobile: $component-padding--mobile;
 
 .au-body {
@@ -16,7 +18,7 @@ $card-padding--mobile: $component-padding--mobile;
 
     // Top margin by default - to accommodate erroneous markup where *+.health-card won't work
     @include AU-space(margin-top, 2unit);
-    
+
     // ========================================================
     // Elements
     // ========================================================

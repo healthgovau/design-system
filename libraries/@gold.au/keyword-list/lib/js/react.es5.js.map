@@ -1,0 +1,41 @@
+{
+  "version": 3,
+  "sources": [
+    "react.es5.js"
+  ],
+  "names": [
+    "AUkeywordListItem",
+    "linkComponent",
+    "repeatedName",
+    "link",
+    "name",
+    "li",
+    "attributeOptions",
+    "LinkComponent",
+    "onClick",
+    "href",
+    "to",
+    "propTypes",
+    "PropTypes",
+    "string",
+    "isRequired",
+    "object",
+    "oneOfType",
+    "func",
+    "defaultProps",
+    "AUkeywordList",
+    "items",
+    "dark",
+    "className",
+    "map",
+    "item",
+    "i",
+    "bool",
+    "arrayOf",
+    "shape"
+  ],
+  "mappings": "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",
+  "sourcesContent": [
+    "/*! @gold.au/keyword-list v4.0.0 */\n/***************************************************************************************************************************************************************\n *\n * keyword-list function\n *\n * Headers provide a consistent start to pages.\n *\n **************************************************************************************************************************************************************/\n\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\n\n// The following line will be replaced automatically with generic imports for the ES5 pipeline.\n// You can safely ignore this bit if you use this module with pancake\n//\nimport '../css/styles.css';\n\n/**\n * An item inside the AUkeywordList component\n *\n * @param  {string}   repeatedName     - The repeated bit in each item\n * @param  {string}   link             - The link URL, optional\n * @param  {string}   linkComponent    - The component used for the link\n * @param  {string}   name             - The name of the item\n * @param  {object}   li               - An additional object to be spread into the wrapping element, optional\n * @param  {object}   attributeOptions - Any other attribute options\n */\nexport const AUkeywordListItem = ({ linkComponent, repeatedName, link, name, li = {}, ...attributeOptions }) => {\n\tconst LinkComponent = linkComponent;\n\n\tif( typeof attributeOptions.onClick === 'function' ) {\n\n\t\t// if we find an onClick event but no link we make it a link so onClick can be added (no button support yet)\n\t\tif( !link ) {\n\t\t\tlink = '#';\n\t\t}\n\t}\n\n\tif( link ){\n\n\t\t// If we are using a normal link\n\t\tif( LinkComponent === 'a' ) {\n\t\t\tattributeOptions.href = link;\n\t\t}\n\t\t// If we are using a link component\n\t\telse if( typeof LinkComponent === 'function' ) {\n\t\t\tattributeOptions.to = link;\n\t\t}\n\t}\n\n\treturn (\n\t\t<li { ...li }>\n\t\t\t{\n\t\t\t\tlink\n\t\t\t\t\t? <LinkComponent { ...attributeOptions }><small className=\"au-keyword-list__small\">{ repeatedName }</small>{ name }</LinkComponent>\n\t\t\t\t\t: <span><small className=\"au-keyword-list__small\">{ repeatedName }</small>{ name }</span>\n\t\t\t}\n\t\t</li>\n\t);\n};\n\nAUkeywordListItem.propTypes = {\n\trepeatedName: PropTypes.string.isRequired,\n\tlink: PropTypes.string,\n\tname: PropTypes.string.isRequired,\n\tli: PropTypes.object,\n\tlinkComponent: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ]),\n};\n\n\nAUkeywordListItem.defaultProps = {\n\tlinkComponent: 'a',\n};\n\n\n/**\n * DEFAULT\n * The keyword-list component\n *\n * @param  {string}  repeatedName     - The repeated bit in each item\n * @param  {array}   items            - All items in this list, format: { link: '', name: '', onClick: () }\n * @param  {boolean} dark             - Add the dark variation class, optional\n * @param  {string}  className        - An additional class, optional\n * @param  {string}  linkComponent    - The component used for the link\n * @param  {object}  attributeOptions - Any other attribute options\n */\nconst AUkeywordList = ({ repeatedName, linkComponent, items, dark, className = '', ...attributeOptions }) => (\n\t<ul className={ `au-keyword-list au-link-list ${ className }${ dark ? ' au-keyword-list--dark' : '' } `} { ...attributeOptions }>\n\t\t{\n\t\t\titems.map(\n\t\t\t\t( item, i ) => <AUkeywordListItem linkComponent={ linkComponent } key={ i } repeatedName={ repeatedName } { ...item } />\n\t\t\t)\n\t\t}\n\t</ul>\n);\n\nAUkeywordList.propTypes = {\n\trepeatedName: PropTypes.string.isRequired,\n\tdark: PropTypes.bool,\n\titems: PropTypes.arrayOf(\n\t\tPropTypes.shape({\n\t\t\tlink: PropTypes.string,\n\t\t\tname: PropTypes.string.isRequired,\n\t\t\tli: PropTypes.object,\n\t\t})\n\t).isRequired,\n\tclassName: PropTypes.string,\n\tlinkComponent: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ]),\n};\n\n\nAUkeywordList.defaultProps = {\n\tlinkComponent: 'a',\n};\n\n\nexport default AUkeywordList;\n"
+  ]
+}

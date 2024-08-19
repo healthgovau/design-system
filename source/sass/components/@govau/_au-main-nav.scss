@@ -2,6 +2,7 @@
 // Main nav
 //--------------------------------------------------------------
 
+@use 'sass:math';
 
 .js .au-main-nav__menu {
 
@@ -120,7 +121,7 @@
 // Implement via class="au-main-nav au-main-nav--dropdown"
 
 // Two variant desktop widths:
-// 1. Default - container width  
+// 1. Default - container width
 //
 //   Dropdown content layout is flexible but supports:
 //   a. Two-column flex (using class="au-link-list au-link-list--flex-halves")
@@ -179,8 +180,8 @@
       @include AU-media($AU-main-nav-breakpoint) {
         left: 0;
         width: calc(100% - $AU-grid-12-gutter-width);
-        @include AU-space(margin-left, $AU-grid-12-gutter-width/2);
-        @include AU-space(margin-right, $AU-grid-12-gutter-width/2);
+        @include AU-space(margin-left, math.div($AU-grid-12-gutter-width, 2));
+        @include AU-space(margin-right, math.div($AU-grid-12-gutter-width, 2));
 
         // First link to landing page (same target as control)
         .au-main-nav__dropdown-title {

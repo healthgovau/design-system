@@ -1,0 +1,28 @@
+{
+  "version": 3,
+  "sources": [
+    "react.es5.js"
+  ],
+  "names": [
+    "AUfooterNav",
+    "children",
+    "className",
+    "ariaLabel",
+    "attributeOptions",
+    "propTypes",
+    "PropTypes",
+    "node",
+    "isRequired",
+    "string",
+    "defaultProps",
+    "AUfooterEnd",
+    "AUfooter",
+    "dark",
+    "alt",
+    "bool"
+  ],
+  "mappings": "wIASA,oDACA,6DAMA,6B,orCAIA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,GACO,GAAMA,CAAAA,WAAW,CAAG,QAAdA,CAAAA,WAAc,UAAGC,CAAAA,QAAH,MAAGA,QAAH,qBAAaC,SAAb,CAAaA,SAAb,yBAAyB,EAAzB,gBAA6BC,SAA7B,MAA6BA,SAA7B,CAA2CC,gBAA3C,6DAC1B,gDAAK,SAAS,iCAA4BF,SAA5B,CAAd,CAAwD,aAAaC,SAArE,EAAsFC,gBAAtF,EACGH,QADH,CAD0B,CAApB,C,gCAMPD,WAAW,CAACK,SAAZ,CAAwB,CACvBJ,QAAQ,CAAEK,sBAAUC,IAAV,CAAeC,UADF,CAEvBN,SAAS,CAAEI,sBAAUG,MAFE,CAGvBN,SAAS,CAAEG,sBAAUG,MAHE,CAAxB,CAMAT,WAAW,CAACU,YAAZ,CAA2B,CAC1BP,SAAS,CAAE,QADe,CAA3B,CAKA;AACA;AACA;AACA;AACA;AACA;AACA,GACO,GAAMQ,CAAAA,WAAW,CAAG,QAAdA,CAAAA,WAAc,WAAGV,CAAAA,QAAH,OAAGA,QAAH,uBAAaC,SAAb,CAAaA,SAAb,0BAAyB,EAAzB,iBAAgCE,gBAAhC,+DAC1B,gDAAK,SAAS,0BAAqBF,SAArB,CAAd,EAAsDE,gBAAtD,EACGH,QADH,CAD0B,CAApB,C,gCAMPU,WAAW,CAACN,SAAZ,CAAwB,CACvBJ,QAAQ,CAAEK,sBAAUC,IAAV,CAAeC,UADF,CAEvBN,SAAS,CAAEI,sBAAUG,MAFE,CAAxB,CAMA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,GACA,GAAMG,CAAAA,QAAQ,CAAG,QAAXA,CAAAA,QAAW,WAAGC,CAAAA,IAAH,OAAGA,IAAH,CAASC,GAAT,OAASA,GAAT,CAAcb,QAAd,OAAcA,QAAd,uBAAwBC,SAAxB,CAAwBA,SAAxB,0BAAoC,EAApC,iBAA2CE,gBAA3C,+DAChB,mDACC,SAAS,qBAAiBF,SAAjB,SAA+BW,IAAI,CAAG,kBAAH,CAAwB,EAA3D,SAAkEC,GAAG,CAAG,iBAAH,CAAuB,EAA5F,KADV,EAEMV,gBAFN,EAGC,IAAI,CAAC,aAHN,GAKGH,QALH,CADgB,CAAjB,CAUAW,QAAQ,CAACP,SAAT,CAAqB,CACpBQ,IAAI,CAAEP,sBAAUS,IADI,CAEpBD,GAAG,CAAER,sBAAUS,IAFK,CAGpBd,QAAQ,CAAEK,sBAAUC,IAAV,CAAeC,UAHL,CAIpBN,SAAS,CAAEI,sBAAUG,MAJD,CAArB,C,aAOeG,Q",
+  "sourcesContent": [
+    "/*! @gold.au/footer v4.0.0 */\n/***************************************************************************************************************************************************************\n *\n * footer function\n *\n * Footers help users who reach the bottom of a page without finding what they want.\n *\n **************************************************************************************************************************************************************/\n\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\n\n// The following line will be replaced automatically with generic imports for the ES5 pipeline.\n// You can safely ignore this bit if you use this module with pancake\n//\nimport '../css/styles.css';\n\n\n\n/**\n * A section for the footer that contains navigational elements\n *\n * @param  {node}   children         - The inside of this section\n * @param  {string} className        - An additional class, optional\n * @param  {string} ariaLabel        - The aria-label attribute, optional\n * @param  {object} attributeOptions - Any other attribute options\n */\nexport const AUfooterNav = ({ children, className = '', ariaLabel, ...attributeOptions }) => (\n\t<nav className={`au-footer__navigation ${ className }`} aria-label={ ariaLabel } { ...attributeOptions }>\n\t\t{ children }\n\t</nav>\n);\n\nAUfooterNav.propTypes = {\n\tchildren: PropTypes.node.isRequired,\n\tclassName: PropTypes.string,\n\tariaLabel: PropTypes.string,\n};\n\nAUfooterNav.defaultProps = {\n\tariaLabel: 'footer',\n}\n\n\n/**\n * A section for the footer that sits at the end\n *\n * @param  {node}   children         - The inside of this section\n * @param  {string} className        - An additional class, optional\n * @param  {object} attributeOptions - Any other attribute options\n */\nexport const AUfooterEnd = ({ children, className = '', ...attributeOptions }) => (\n\t<div className={`au-footer__end ${ className }`} { ...attributeOptions }>\n\t\t{ children }\n\t</div>\n);\n\nAUfooterEnd.propTypes = {\n\tchildren: PropTypes.node.isRequired,\n\tclassName: PropTypes.string,\n};\n\n\n/**\n * DEFAULT\n * The footer component\n *\n * @param  {boolean} dark             - Add the dark variation class, optional\n * @param  {boolean} alt              - Add the alt variation class, optional\n * @param  {node}    children         - The inside of this section\n * @param  {string}  className        - An additional class, optional\n * @param  {object}  attributeOptions - Any other attribute options\n */\nconst AUfooter = ({ dark, alt, children, className = '', ...attributeOptions }) => (\n\t<footer\n\t\tclassName={ `au-footer ${ className }${ dark ? ' au-footer--dark' : '' }${ alt ? ' au-footer--alt' : '' } `}\n\t\t{ ...attributeOptions }\n\t\trole=\"contentinfo\"\n\t>\n\t\t{ children }\n\t</footer>\n);\n\nAUfooter.propTypes = {\n\tdark: PropTypes.bool,\n\talt: PropTypes.bool,\n\tchildren: PropTypes.node.isRequired,\n\tclassName: PropTypes.string,\n};\n\nexport default AUfooter;\n"
+  ]
+}

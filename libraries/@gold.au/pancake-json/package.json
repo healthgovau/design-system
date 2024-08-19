@@ -1,0 +1,141 @@
+{
+  "_args": [
+    [
+      "@gold.au/pancake-json@2.0.0",
+      "/home/bgunn/dev/git/health-design-system"
+    ]
+  ],
+  "_from": "@gold.au/pancake-json@2.0.0",
+  "_id": "@gold.au/pancake-json@2.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-bZ5PXQrKKjhdYLJTF0vjEEiLts8XlcHhuyp5gCK9ltOXmApqTtXPjUupoaircSoojfviIA8S8F/61PXw2/CETQ==",
+  "_location": "/@gold.au/pancake-json",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@gold.au/pancake-json@2.0.0",
+    "name": "@gold.au/pancake-json",
+    "escapedName": "@gold.au%2fpancake-json",
+    "scope": "@gold.au",
+    "rawSpec": "2.0.0",
+    "saveSpec": null,
+    "fetchSpec": "2.0.0"
+  },
+  "_requiredBy": [
+    "/@gold.au/accordion",
+    "/@gold.au/animate",
+    "/@gold.au/body",
+    "/@gold.au/breadcrumbs",
+    "/@gold.au/buttons",
+    "/@gold.au/callout",
+    "/@gold.au/card",
+    "/@gold.au/control-input",
+    "/@gold.au/core",
+    "/@gold.au/cta-link",
+    "/@gold.au/direction-links",
+    "/@gold.au/footer",
+    "/@gold.au/grid-12",
+    "/@gold.au/header",
+    "/@gold.au/headings",
+    "/@gold.au/inpage-nav",
+    "/@gold.au/keyword-list",
+    "/@gold.au/link-list",
+    "/@gold.au/main-nav",
+    "/@gold.au/page-alerts",
+    "/@gold.au/responsive-media",
+    "/@gold.au/select",
+    "/@gold.au/side-nav",
+    "/@gold.au/skip-link",
+    "/@gold.au/tags",
+    "/@gold.au/text-inputs"
+  ],
+  "_resolved": "https://registry.npmjs.org/@gold.au/pancake-json/-/pancake-json-2.0.0.tgz",
+  "_spec": "2.0.0",
+  "_where": "/home/bgunn/dev/git/health-design-system",
+  "author": {
+    "name": "Design System AU",
+    "email": "maintainers@designsystemau.org",
+    "url": "https://designsystemau.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/designsystemau/pancake/issues"
+  },
+  "contributors": [
+    {
+      "name": "Dominik Wilkowski",
+      "email": "hi@dominik-wilkowski.com",
+      "url": "https://dominik-wilkowski.com/"
+    },
+    {
+      "name": "Adam Zerella",
+      "email": "hello@adamzerella.com",
+      "url": "https://adamzerella.com/"
+    }
+  ],
+  "dependencies": {
+    "@gold.au/pancake": "~2.0.0"
+  },
+  "description": "A Pancake plugin to generate a json file from all pancake modules.",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "del": "^4.0.0",
+    "dirsum": "^0.1.1",
+    "jest-cli": "^24.5.0",
+    "onchange": "^5.2.0"
+  },
+  "engines": {
+    "npm": ">=6.0.0"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "homepage": "https://github.com/designsystemau/pancake",
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "\\.spec.js$",
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    }
+  },
+  "keywords": [
+    "npm",
+    "flat",
+    "peerDependencies",
+    "gold.au",
+    "gov.au",
+    "auds",
+    "Commonwealth of Australia",
+    "design guide",
+    "design system",
+    "cli",
+    "pancake-plugin",
+    "json"
+  ],
+  "license": "MIT",
+  "main": "./lib/pancake.js",
+  "name": "@gold.au/pancake-json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designsystemau/pancake.git"
+  },
+  "scripts": {
+    "build": "npm run build:js",
+    "build:js": "babel src --out-dir lib",
+    "build:watch": "npm run build:js && jest --coverage",
+    "prepublish": "npm run build && npm run test",
+    "test": "exit 0",
+    "watch": "npm run build:watch && onchange 'src/*.js' '__tests__/*.js' -- npm run build:watch"
+  },
+  "version": "2.0.0"
+}
