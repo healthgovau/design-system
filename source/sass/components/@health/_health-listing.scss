@@ -1,13 +1,15 @@
 .health-listing {
-
-  margin-top: 0;
   @include AU-clearfix;
+  & {
+    clear: both;
+    margin-top: 0;
+    padding: 0;
+    @include AU-space(margin-bottom, 2unit);
+  }
 
   *+& {
     @include AU-space(margin, 2unit 0 0 0);
   }
-
-  padding: 0;
 
   // If this listing is embedded amongst content, help separate it nicely from that content.
   @at-root *+.row &--embedded,
@@ -36,10 +38,6 @@
     border-top: $health-borderize--very-thin;
     @include AU-space(padding-top, 2unit);
   }
-
-  @include AU-space(margin-bottom, 2unit);
-
-  clear: both;
 
   // Compact variation.
   &--compact {

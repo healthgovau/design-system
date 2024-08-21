@@ -61,7 +61,9 @@
     }
   }
 
-  background-color: white;
+  & {
+    background-color: white;
+  }
 
   @media print {
     margin: inherit;

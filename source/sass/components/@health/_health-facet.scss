@@ -1,12 +1,10 @@
 .health-facet {
-
-  visibility: visible;
-  @include opacity(1);
+  background: $facet-bg-colour;
   height: auto;
-  transition: opacity 1s;
-
   @include AU-space(padding, $component-padding--mobile);
-
+  @include opacity(1);
+  transition: opacity 1s;
+  visibility: visible;
   @include AU-media('sm') {
     @include AU-space(padding, 2unit);
   }
@@ -28,7 +26,6 @@
     height: 0;
   }
 
-  background: $facet-bg-colour;
 
   &__more {
     font-size: 0.8em;

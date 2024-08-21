@@ -1,7 +1,14 @@
 .health-release-status {
-
   @include AU-space('padding-top', 0.75unit);
   @include AU-space('padding-bottom', 0.75unit);
+  font-size: 13px;
+  @include AU-media(md) {
+    font-size: inherit;
+  }
+
+  @media print {
+    display: none;
+  }
 
   &__icon {
     padding: 0 8px;
@@ -38,15 +45,6 @@
     @include AU-media(md) {
       display: none;
     }
-  }
-
-  font-size: 13px;
-  @include AU-media(md) {
-    font-size: inherit;
-  }
-
-  @media print {
-    display: none;
   }
 
   // Override max -width

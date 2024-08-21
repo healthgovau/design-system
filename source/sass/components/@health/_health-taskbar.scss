@@ -2,7 +2,7 @@
 //
 // A taskbar for displaying a wrappable list of task 'accelatorators' with icon.
 // Default display is plain but a 'tiled' version is available.
-// 
+//
 // taskbar--2 - Displays 2 items in a row
 // taskbar--3 - Displays 3 items in a row
 // taskbar--4 - Displays 4 items in a row
@@ -47,12 +47,10 @@
     display: block;
     border: 0;
     min-height: 0;
-
+    @include background-style(var(--subheader-gradient-bg--start), var(--subheader-gradient-end));
     @include AU-media('xs') {
       min-height: $minHeight-Taskbar;
     }
-
-    @include background-style(var(--subheader-gradient-bg--start), var(--subheader-gradient-end));
 
     &:hover,
     &:active,
@@ -160,11 +158,11 @@
 .taskbar--tiled--6 {
 
   &.view ul>.views-row {
+    margin: 0;
+
     &:hover {
       cursor: pointer;
     }
-
-    margin: 0;
 
     .node {
       @extend %taskbar__item;

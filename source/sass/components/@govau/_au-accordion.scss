@@ -17,8 +17,10 @@
       border: none;
       text-decoration: none;
       @include health-fontgrid(md);
-      @include border-radius($border-radius $border-radius 0 0);
-      background-color: var(--accordion-title-bg);
+      & {
+        @include border-radius($border-radius $border-radius 0 0);
+        background-color: var(--accordion-title-bg);
+      }
 
       &:hover {
         background-color: var(--accordion-title-bg--active);
@@ -53,10 +55,12 @@
     &.au-accordion--compact {
       .au-accordion__title {
         @include health-fontgrid(sm);
-        font-weight: normal;
-        @include AU-space(padding-top, .75unit);
-        @include AU-space(padding-bottom, .75unit);
-        @include AU-space(padding-left, .75unit);
+        & {
+          font-weight: normal;
+          @include AU-space(padding-top, .75unit);
+          @include AU-space(padding-bottom, .75unit);
+          @include AU-space(padding-left, .75unit);
+        }
 
         &:after {
           height: 0.75rem;

@@ -58,7 +58,9 @@
       }
     }
 
-    @include AU-space('padding-top', 1.5unit);
+    & {
+      @include AU-space('padding-top', 1.5unit);
+    }
 
     @include AU-media(sm) {
       padding-top: 0;
@@ -85,14 +87,12 @@
 
     // Hero content
     .health-sub-header__content {
-      @include AU-space(padding, 1.5unit math.div($AU-grid-12-gutter-width, 2));
-
-      @include AU-media(sm) {
-        @include AU-space(padding, 3unit);
-        border-radius: 6px;
-      }
-
       @include background-style(var(--subheader-gradient-content-bg--start), var(--subheader-gradient-content-bg--end));
+      @include AU-space(padding, 1.5unit math.div($AU-grid-12-gutter-width, 2));
+      @include AU-media(sm) {
+        border-radius: 6px;
+        @include AU-space(padding, 3unit);
+      }
     }
   }
 

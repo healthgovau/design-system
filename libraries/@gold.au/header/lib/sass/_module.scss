@@ -22,10 +22,12 @@
  */
 .au-header {
 	@include AU-fontgrid( sm );
-	@include AU-space( padding, 1.5unit 0 );
-	font-family: $AU-font;
-	color: $AU-color-foreground-text;
-	background: $AU-color-background;
+	& {
+		@include AU-space( padding, 1.5unit 0 );
+		font-family: $AU-font;
+		color: $AU-color-foreground-text;
+		background: $AU-color-background;
+	}
 
 	@include AU-media( sm ) {
 		@include AU-fontgrid( md );
@@ -56,9 +58,11 @@
  */
 .au-header__heading {
 	@include AU-fontgrid( md );
-	font-weight: bold;
-	margin: 0;
-	padding: 0;
+	& {
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+	}
 
 	@include AU-media( sm ) {
 		@include AU-fontgrid( xl );
@@ -80,7 +84,9 @@
  */
 .au-header__brand {
 	@include AU-clearfix();
-	@include AU-space( min-width, $AU-logo-width );
+	& {
+		@include AU-space( min-width, $AU-logo-width );
+	}
 
 	.au-header__brand-image {
 		display: block;
@@ -98,15 +104,19 @@
 		.au-header__brand-image {
 			float: left;
 			@include AU-space( max-width, $AU-logo-width-md );
-			@include AU-space( margin-right, -1 * $AU-logo-width-md );
+			& {
+			  @include AU-space( margin-right, -1 * $AU-logo-width-md );
+			}
 		}
 
 		.au-header__brand-image + .au-header__text {
 			@include AU-space( padding-left, 1unit );
-			@include AU-space( margin-left, $AU-logo-width-md + 1unit );
-			margin-top: 0;
-			float: left;
-			border-left: 1px solid $AU-color-foreground-border;
+			& {
+				@include AU-space( margin-left, $AU-logo-width-md + 1unit );
+				margin-top: 0;
+				float: left;
+				border-left: 1px solid $AU-color-foreground-border;
+			}
 
 			.au-header--dark & {
 				border-left-color: $AU-colordark-foreground-border;
@@ -118,9 +128,11 @@
 
 a.au-header__brand {
 	@include AU-focus();
-	display: inline-block;
-	color: $AU-color-foreground-text;
-	text-decoration: none;
+	& {
+		display: inline-block;
+		color: $AU-color-foreground-text;
+		text-decoration: none;
+	}
 
 	&:hover .au-header__text {
 		text-decoration: underline;
@@ -129,7 +141,9 @@ a.au-header__brand {
 
 	.au-header--dark & {
 		@include AU-focus( 'dark' );
-		color: $AU-colordark-foreground-text;
+		& {
+			color: $AU-colordark-foreground-text;
+		}
 	}
 }
 
@@ -148,9 +162,11 @@ a.au-header__brand {
 	// Reset the floated title
 	.au-header__brand-image + .au-header__text {
 		@include AU-space( margin-top, 2unit );
-		border: 0;
-		margin: 0;
-		padding: 0;
+		& {
+			border: 0;
+			margin: 0;
+			padding: 0;
+		}
 
 		.au-header__heading {
 			@include AU-space( margin-top, 2unit );

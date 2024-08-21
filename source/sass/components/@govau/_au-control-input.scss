@@ -8,7 +8,9 @@
           left: -4px;
           top: 2px;
           @include AU-space(width, 1.375unit);
-          @include AU-space(height, 1.375unit);
+          & {
+            @include AU-space(height, 1.375unit);
+          }
         }
       }
 

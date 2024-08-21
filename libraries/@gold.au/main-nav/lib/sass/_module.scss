@@ -25,8 +25,10 @@
 		@include AU-space( padding, 1unit );
 		@include AU-fontgrid( xs );
 		@include AU-focus();
-		color: $AU-color-foreground-action;
-		text-decoration: none;
+		& {
+			color: $AU-color-foreground-action;
+			text-decoration: none;
+		}
 
 		&:hover {
 			text-decoration: underline;
@@ -53,8 +55,10 @@
 	// Reset menus inside main-nav
 	.au-link-list {
 		@include AU-clearfix();
-		margin: 0;
-		padding: 0;
+		& {
+			margin: 0;
+			padding: 0;
+		}
 
 		li {
 			margin: 0;
@@ -93,7 +97,9 @@
 		a,
 		.au-main-nav__toggle {
 			@include AU-focus( 'dark' );
-			color: $AU-colordark-foreground-action;
+			& {
+				color: $AU-colordark-foreground-action;
+			}
 
 			&:hover {
 				color: $AU-colordark-foreground-text;
@@ -145,13 +151,17 @@
 		a,
 		.au-main-nav__toggle {
 			@include AU-fontgrid( sm );
-			@include AU-space( padding, 1unit );
+			& {
+				@include AU-space( padding, 1unit );
+			}
 		}
 
 		.active a {
 			@include AU-space( border-bottom, 0.5unit solid $AU-color-background );
-			@include AU-space( margin-bottom, -0.5unit );
-			font-weight: normal;
+			& {
+				@include AU-space( margin-bottom, -0.5unit );
+				font-weight: normal;
+			}
 		}
 	}
 }
@@ -160,18 +170,22 @@
 // The open and close toggles
 .au-main-nav__toggle {
 	@include AU-space( padding, 0.5unit 1unit 0.5unit );
-	@include AU-fontgrid( xs, nospace );
-	border: 0;
-	appearance: none;
-	background-color: transparent;
-	cursor: pointer;
-	display: none;
+	& {
+		@include AU-fontgrid( xs, nospace );
+		border: 0;
+		appearance: none;
+		background-color: transparent;
+		cursor: pointer;
+		display: none;
+	}
 
 	&:before {
 		@include AU-fontgrid( sm, nospace );
-		@include AU-space( margin-bottom, 0.25unit );
-		display: block;
-		text-align: center;
+		& {
+			@include AU-space( margin-bottom, 0.25unit );
+			display: block;
+			text-align: center;
+		}
 	}
 
 	// Menu icon

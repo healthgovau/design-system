@@ -67,14 +67,12 @@
         }
 
         &__subline {
-            margin-top: 0;
+            color: $text-colour--light;
             font-size: 1rem;
-
+            margin-top: 0;
             @include AU-media(sm) {
                 font-size: 1.5rem;
             }
-
-            color: $text-colour--light;
 
             &-key {
                 background: linear-gradient(top, #f9f9f9 0%, #D2D2D2 80%, #c0c0c0 100%);

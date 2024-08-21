@@ -46,19 +46,21 @@
 		box-sizing: border-box;
 
 		@include AU-clearfix;
-
-		margin-right: auto;
-		margin-left: auto;
-		padding-left: floor( math.div( $AU-grid-12-gutter-width, 2 ) );
-		padding-right: ceil( math.div( $AU-grid-12-gutter-width, 2 ) );
+		& {
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: floor( math.div( $AU-grid-12-gutter-width, 2 ) );
+			padding-right: ceil( math.div( $AU-grid-12-gutter-width, 2 ) );
+		}
 	}
 
 	//create row and clear floats inside
 	.row {
 		@include AU-clearfix;
-
-		margin-left: ceil( math.div( $AU-grid-12-gutter-width, -2 ) );
-		margin-right: floor( math.div( $AU-grid-12-gutter-width, -2 ) );
+		& {
+			margin-left: ceil( math.div( $AU-grid-12-gutter-width, -2 ) );
+			margin-right: floor( math.div( $AU-grid-12-gutter-width, -2 ) );
+		}
 	}
 
 	//create all classes

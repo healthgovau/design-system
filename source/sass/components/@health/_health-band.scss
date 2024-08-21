@@ -36,8 +36,10 @@
     }
 
     // Colours for band body contents
-    // Needs to use CSS custom properties given that sub-branded partials use this mixin 
-    color: var(--#{$variant}-body-text);
+    // Needs to use CSS custom properties given that sub-branded partials use this mixin
+    & {
+      color: var(--#{$variant}-body-text);
+    }
 
 
     a:not(.health-card__link) {
@@ -107,12 +109,14 @@
 .au-body {
   .health-band {
     @include AU-clearfix;
-    position: relative; // reqd for inner container behaviour
-    isolation: isolate;
-    background: none !important; // Remove as applies to container to allow layer management
-    background-color: none !important;
-    padding: 0 !important;
-    @include AU-space(margin, $component-margin--mobile 0);
+    & {
+      position: relative; // reqd for inner container behaviour
+      isolation: isolate;
+      background: none !important; // Remove as applies to container to allow layer management
+      background-color: none !important;
+      padding: 0 !important;
+      @include AU-space(margin, $component-margin--mobile 0);
+    }
 
     @include AU-media('md') {
       @include AU-space(margin, $component-margin 0);
@@ -123,14 +127,12 @@
     &[class*="health-band--"] {
       .health-band__container {
         @include AU-space(padding, $component-padding--mobile);
-
-        @include AU-media('sm') {
-          @include AU-space(padding, $component-padding);
-        }
-
         @include border-radius();
         @include box-shadow();
         @include AU-clearfix();
+        @include AU-media('sm') {
+          @include AU-space(padding, $component-padding);
+        }
       }
     }
 
@@ -153,12 +155,10 @@
 
       .health-band__container {
         @include AU-space(padding, $component-padding--mobile 0);
-
+        box-shadow: none;
         @include AU-media('sm') {
           @include AU-space(padding, $component-padding 0);
         }
-
-        box-shadow: none;
       }
     }
 
