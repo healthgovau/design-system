@@ -12,9 +12,11 @@
       padding-right: math.div($AU-grid-12-gutter-width, 2);
     }
 
-    background-color: $callout-bg-colour;
-    border-left-color: var(--callout-border--primary);
-    max-width: 100%;
+    & {
+      background-color: $callout-bg-colour;
+      border-left-color: var(--callout-border--primary);
+      max-width: 100%;
+    }
 
     // Remove the line wrapping
     p {

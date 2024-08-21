@@ -58,11 +58,12 @@
       }
 
       &.active {
+        font-weight: bold;
+
         a {
           border-bottom-color: var(--tab-border--active);
         }
 
-        font-weight: bold;
       }
     }
   }

@@ -163,11 +163,13 @@
         box-shadow: 0px 5px 0.375em rgba(0, 0, 0, 0.2);
       }
 
-      width: 100%;
-      margin-left: 0;
-      z-index: 500;
-      background: var(--main-nav-dropdown-bg);
-      padding: 0;
+      & {
+        width: 100%;
+        margin-left: 0;
+        z-index: 500;
+        background: var(--main-nav-dropdown-bg);
+        padding: 0;
+      }
 
       @include AU-media($AU-main-nav-breakpoint) {
         @include AU-space(padding, 1unit);

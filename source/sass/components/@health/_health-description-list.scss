@@ -3,20 +3,19 @@
 .au-body {
 
   dl.health-dl {
+    border-bottom: $health-borderize--very-thin;
+    margin-bottom: 0;
 
     * + & {
       @include AU-space(margin-top, 1.5unit);
     }
-    border-bottom: $health-borderize--very-thin;
-    margin-bottom: 0;
 
     dt {
+      border-top: $health-borderize--very-thin;
+      clear: both;
       font-weight: bold;
       @include AU-space('margin-bottom', 1unit);
-      border-top: $health-borderize--very-thin;
       @include AU-space('padding-top', 1unit);
-      clear: both;
-
       @include AU-media(sm) {
         float: left;
         width: 25%;
@@ -31,14 +30,13 @@
 
       @include AU-media(sm) {
         border-top: $health-borderize--very-thin;
+        float: left;
         @include AU-space('padding-left', 1unit);
         @include AU-space('padding-top', 1unit);
-        float: left;
         width: 75%;
       }
     }
 
     @include AU-clearfix;
-
   }
 }

@@ -15,11 +15,12 @@
     display: block;
     text-decoration: none;
     color: $AU-color-foreground-text;
+    @include AU-space(padding, 1unit);
+
     &:hover,
     &:focus {
       background: $AU-color-background-shade;
     }
-    @include AU-space(padding, 1unit);
   }
 
   &--right {

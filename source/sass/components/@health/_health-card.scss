@@ -29,19 +29,17 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     &__body {
+      display: flex;
+      flex-direction: column;
       @include AU-space(padding, $card-padding--mobile);
-
       @include AU-media('sm') {
         @include AU-space(padding, $card-padding);
       }
-
-      display: flex;
-      flex-direction: column;
     }
 
     &__title {
-      @include health-fontgrid('lg', 'heading');
       color: var(--card-text);
+      @include health-fontgrid('lg', 'heading');
     }
 
     &__link {
@@ -58,9 +56,9 @@ $card-padding--mobile: $component-padding--mobile;
     }
 
     &__date {
+      color: var(--card-text-minor);
       font-size: 0.9rem;
       @include AU-space(margin-top, 1unit); // TODO Review
-      color: var(--card-text-minor);
     }
 
     &__image {

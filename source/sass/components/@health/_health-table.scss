@@ -12,15 +12,18 @@
 @import '../../abstracts/mixins';
 
 table {
+  border: $health-borderize--very-thin;
+  border-collapse: collapse;
+  min-width: 43em;
+  @include AU-media(sm) {
+    min-width: inherit;
+  }
 
   // Spacing above.
   * + &,
   * + .health-table__responsive & {
     @include AU-space('margin-top', 1.5unit);
   }
-
-  border-collapse: collapse;
-  border: $health-borderize--very-thin;
 
   caption {
     text-align: left;
@@ -39,15 +42,14 @@ table {
 
   td,
   th {
-    @include AU-media('md') {
-      @include AU-space('padding', .5unit);
-      font-size: initial;
-    }
-
     border-bottom: $health-borderize--very-thin;
     @include AU-space('padding', .25unit);
     text-align: left;
     vertical-align: top;
+    @include AU-media('md') {
+      @include AU-space('padding', .5unit);
+      font-size: initial;
+    }
   }
 
   th {
@@ -56,11 +58,6 @@ table {
 
   thead {
     border-bottom: $health-borderize--very-thin;
-  }
-
-  min-width: 43em;
-  @include AU-media(sm) {
-    min-width: inherit;
   }
 
   @media print {

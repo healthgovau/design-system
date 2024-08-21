@@ -1,6 +1,7 @@
 @use 'sass:math';
 
 .au-grid {
+
   .au-header .health-search {
     @include AU-media(sm) {
       float: right;
@@ -10,20 +11,16 @@
 
 // Search bar.
 .au-body .health-search {
-
-  position: relative;
   display: inline-block;
+  max-width: 22.75em;
+  @include AU-space(margin-top, 1.5unit);
+  position: relative;
+  @include AU-media(sm) {
+    margin-top: 0;
+  }
 
   @media print {
     display: none;
-  }
-
-  max-width: 22.75em;
-
-  @include AU-space(margin-top, 1.5unit);
-
-  @include AU-media(sm) {
-    margin-top: 0;
   }
 
   // Global search for desktop
@@ -61,7 +58,9 @@
   &__form {
 
     @include AU-clearfix;
-    position: relative;
+    & {
+      position: relative;
+    }
 
     label {
       @include AU-sronly();
@@ -101,19 +100,20 @@
       text-indent: -999px;
       background-image: AU-svguri('<svg viewBox="-5 -5 32 32" fill="#{ $AU-color-background }" xmlns="http://www.w3.org/2000/svg"> <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
       margin: 0 !important;
+      border-radius: 0px 4px 4px 0;
 
       &:hover:not(:disabled),
       &:focus:not(:disabled) {
         background-color: #000;
       }
 
-      border-radius: 0px 4px 4px 0;
     }
   }
 }
 
 // Search results.
 .au-body {
+
   .health-search-result {
     &__link {
       text-decoration: none;
@@ -127,13 +127,12 @@
 
     &__link-path {
       color: $search-text-colour--path;
+      font-size: 0.9em;
+      word-break: break-all;
 
       a {
         color: $search-text-colour--path;
       }
-
-      font-size: 0.9em;
-      word-break: break-all;
     }
 
     & ol.health-search-result__link-path {
@@ -192,11 +191,11 @@ form[class*='col-'].health-search__form {
   position: absolute;
 
   li.ui-menu-item {
+    margin: 0;
+
     &:hover {
       cursor: pointer;
     }
-
-    margin: 0;
 
     .ui-menu-item-wrapper {
       @include AU-space(padding, 0.25unit 1.2unit);

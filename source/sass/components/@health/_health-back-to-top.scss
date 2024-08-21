@@ -18,13 +18,13 @@
     font-size: 0.85rem;
     @include AU-space( width, 4unit );
     @include AU-space( padding, 0.25unit .75unit .5unit .75unit);
+    background: $button-bg-colour--secondary;
+    border: none;
+    color: $AU-color-foreground-text;
     @include AU-media(md) {
       @include AU-space( width, 6unit );
       @include AU-space( padding, 0.5unit 1unit 1unit);
     }
-    background: $button-bg-colour--secondary;
-    border: none;
-    color: $AU-color-foreground-text;
 
     i {
       width: 1.5em;

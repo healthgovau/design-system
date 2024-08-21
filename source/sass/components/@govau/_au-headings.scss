@@ -14,12 +14,14 @@
     @include AU-fontgrid($fontsize-key, $lineheight-key);
   }
 
-  @if $weight=='heavy' {
-    font-weight: bold;
-  }
+  & {
+    @if $weight=='heavy' {
+      font-weight: bold;
+    }
 
-  @if $weight=='light' {
-    font-weight: normal;
+    @if $weight=='light' {
+      font-weight: normal;
+    }
   }
 }
 

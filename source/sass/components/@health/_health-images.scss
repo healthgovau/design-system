@@ -40,12 +40,10 @@ img {
 
 %image--full {
   @include AU-space('margin-bottom', 1unit);
-
+  width: 100%;
   @include AU-media(sm) {
     margin-bottom: 0;
   }
-
-  width: 100%;
 
   img {
     border: $health-borderize;
