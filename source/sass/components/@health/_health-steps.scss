@@ -1,6 +1,6 @@
 
 .au-body .health-steps {
-  
+
   // Reset list types
   ul, ol {
     margin: 0;
@@ -60,7 +60,7 @@
     }
 
     // Fields
-    &-date {
+    &-label {
       @include health-fontgrid(xs, default, light);
       color: var(--step-text-colour-minor); // TODO - replce with var
       margin: 0;
@@ -120,7 +120,7 @@
           }
         }
       }
-    } 
+    }
   }
 
   // Numbered variant styles
@@ -138,7 +138,7 @@
           content: counter(number);
         }
       }
-    } 
+    }
   }
 
   // Status variant styles
@@ -151,7 +151,7 @@
         // Use to style the node BG and border
         &::before {
           border-color: var(--step-border-colour--inprogress);
-        } 
+        }
         // Use to style the node contents and overlay
         &::after {
           content: '';
@@ -185,7 +185,7 @@
           z-index: 2;
         }
       }
-    } 
+    }
   }
 
 }
